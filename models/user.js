@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 const User = sequelize.define('Usuario', {
   user_id: {
@@ -59,21 +59,29 @@ const User = sequelize.define('Usuario', {
   hooks: {
     beforeCreate: async (user) => {
       if (user.password) {
-        const salt = await bcrypt.genSalt(10);
-        user.password = await bcrypt.hash(user.password, salt);
+        user.password = await bcrypt.hash(user.password, 10);
       }
     },
     beforeUpdate: async (user) => {
       if (user.changed('password')) {
-        const salt = await bcrypt.genSalt(10);
-        user.password = await bcrypt.hash(user.password, salt);
+        user.password = await bcrypt.hash(user.password, 10);
       }
+    }
+  },
+  instanceMethods: {
+    validPassword: async function(password) {
+      return await bcrypt.compare(password, this.password);
     }
   }
 });
 
-User.prototype.validPassword = async function(password) {
-  return await bcrypt.compare(password, this.password);
+User.prototype.comparePassword = async function(candidatePassword) {
+  try {
+    return await bcrypt.compare(candidatePassword, this.password);
+  } catch (error) {
+    console.error('Error comparing passwords:', error);
+    return false;
+  }
 };
 
 module.exports = User;
