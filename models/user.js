@@ -15,7 +15,7 @@ const User = sequelize.define('Usuario', {
   email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
+    unique: 'unique_email', // Nombre fijo para la restricción única
     validate: {
       isEmail: true
     }
@@ -45,7 +45,7 @@ const User = sequelize.define('Usuario', {
   },
   codigo_UDG: {
     type: DataTypes.STRING,
-    unique: true
+    unique: 'unique_codigo_udg' // Nombre fijo para la restricción única
   },
   resetPasswordToken: {
     type: DataTypes.STRING,
@@ -56,6 +56,19 @@ const User = sequelize.define('Usuario', {
     allowNull: true
   }
 }, {
+  // Configuración de índices explícita
+  indexes: [
+    {
+      name: 'unique_email',
+      unique: true,
+      fields: ['email']
+    },
+    {
+      name: 'unique_codigo_udg',
+      unique: true,
+      fields: ['codigo_UDG']
+    }
+  ],
   hooks: {
     beforeCreate: async (user) => {
       if (user.password) {
@@ -67,14 +80,10 @@ const User = sequelize.define('Usuario', {
         user.password = await bcrypt.hash(user.password, 10);
       }
     }
-  },
-  instanceMethods: {
-    validPassword: async function(password) {
-      return await bcrypt.compare(password, this.password);
-    }
   }
 });
 
+// Método para comparar contraseñas
 User.prototype.comparePassword = async function(candidatePassword) {
   try {
     return await bcrypt.compare(candidatePassword, this.password);
