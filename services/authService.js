@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 
 const authService = {
   // Registro de usuario
-  async registerUser({ nombre, email, password, codigo_UDG, telefono }) {
+  async registerUser({ nombre, email, password, codigo_UDG, telefono,rol }) {
     // Verificar email existente
     const existingUser = await User.findOne({ where: { email } });
     if (existingUser) throw new Error('El email ya está registrado');
@@ -33,7 +33,8 @@ const authService = {
       email,
       password,
       codigo_UDG,
-      telefono
+      telefono,
+      rol
     });
 
     // Generar token
