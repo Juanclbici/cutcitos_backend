@@ -5,6 +5,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 
 // Rutas públicas
 router.get('/', categoryController.getAllCategories);
+router.get('/:id', categoryController.getCategoryById); 
 
 // Rutas protegidas (solo admin)
 router.use(authMiddleware.verifyToken);

@@ -1,15 +1,31 @@
-const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
-const dbConfig = {
-    database: process.env.DB_NAME,
+module.exports = {
+  development: {
+    username: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'cutcitos_dev',
+    host: process.env.DB_HOST || '127.0.0.1',
+    dialect: 'mysql',
+    logging: console.log
+  },
+  test: {
     username: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME_TEST,
     host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    dialect: 'mysql'
-  };
-  
-  const sequelize = new Sequelize(dbConfig);
-
-module.exports = sequelize;
+    dialect: 'mysql',
+    logging: false
+  },
+  production: {
+    use_env_variable: 'DATABASE_URL',
+    dialect: 'mysql',
+    logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
+  }
+};

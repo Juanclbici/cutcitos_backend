@@ -30,4 +30,24 @@ exports.getAllCategories = async (req, res) => {
   }
 };
 
-// ... otros métodos (getById, update, delete)
+exports.getCategoryById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { includeInactive } = req.query;
+    
+    const category = await categoryService.getCategoryById(
+      id, 
+      includeInactive === 'true'
+    );
+    
+    res.json({
+      success: true,
+      data: category
+    });
+  } catch (error) {
+    res.status(404).json({
+      success: false,
+      message: error.message
+    });
+  }
+};

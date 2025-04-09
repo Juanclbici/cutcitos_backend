@@ -1,10 +1,20 @@
 module.exports = (sequelize, DataTypes) => {
-    const Favorito = sequelize.define('Favorito', {}, {});
-  
-    Favorito.associate = function(models) {
-      Favorito.belongsTo(models.User, { foreignKey: 'usuario_id' });
-      Favorito.belongsTo(models.Producto, { foreignKey: 'producto_id' });
-    };
-  
-    return Favorito;
+  const Favorite = sequelize.define('Favorite', {
+    favorito_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    fecha_agregado: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
+    }
+  });
+
+  Favorite.associate = function(models) {
+    Favorite.belongsTo(models.User, { foreignKey: 'usuario_id' });
+    Favorite.belongsTo(models.Product, { foreignKey: 'producto_id' });
   };
+
+  return Favorite;
+};

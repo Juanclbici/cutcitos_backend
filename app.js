@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const sequelize = require('./config/database');
+const db = require('./models');
 require('dotenv').config();
 
 // Importar rutas
@@ -13,8 +13,17 @@ const categoryRoutes = require('./routes/categoryRoutes');
 // Inicializar la aplicación
 const app = express();
 
+// Configuración de CORS
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
 // Middlewares
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -30,13 +39,20 @@ app.get('/', (req, res) => {
   res.send('API de Cutcitos funcionando');
 });
 
-// Sincronizar con la base de datos y arrancar el servidor
-const PORT = process.env.PORT;
+// Manejo de errores global
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: 'Ocurrió un error en el servidor' });
+});
 
-sequelize.sync({ alter: true })
+// Sincronizar con la base de datos y arrancar el servidor
+const PORT = process.env.PORT || 4000;
+
+db.sequelize.sync({ alter: true })
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Servidor corriendo en http://localhost:${PORT}`);
+      console.log(`Frontend permitido: ${corsOptions.origin}`);
     });
   })
   .catch(err => {

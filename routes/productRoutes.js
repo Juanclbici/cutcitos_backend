@@ -11,7 +11,7 @@ router.get('/', productController.getAllProducts);
 router.get('/:productId', productController.getProduct);
 
 // Middleware para verificar rol de vendedor
-router.use(authMiddleware.checkRole('vendedor'));
+router.use(authMiddleware.checkRole('seller'));
 
 // Rutas de vendedor
 router.post('/', productController.createProduct);

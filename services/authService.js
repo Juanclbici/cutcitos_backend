@@ -1,11 +1,11 @@
-const User = require('../models/user');
+const db = require('../models'); // Importamos todos los modelos desde el index
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const { Op } = require('sequelize');
 
-// Configuración de email (podrías mover esto a un config aparte)
+// Configuración de email (recomendado mover a config/email.js)
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
@@ -16,41 +16,52 @@ const transporter = nodemailer.createTransport({
 
 const authService = {
   // Registro de usuario
-  async registerUser({ nombre, email, password, codigo_UDG, telefono,rol }) {
+  async registerUser({ nombre, email, password, codigo_UDG, telefono, rol = 'buyer' }) {
     // Verificar email existente
-    const existingUser = await User.findOne({ where: { email } });
+    const existingUser = await db.User.findOne({ 
+      where: { email },
+      paranoid: false // Busca incluso usuarios eliminados lógicamente
+    });
     if (existingUser) throw new Error('El email ya está registrado');
 
     // Verificar código UDG si se proporciona
     if (codigo_UDG) {
-      const existingUDGCode = await User.findOne({ where: { codigo_UDG } });
+      const existingUDGCode = await db.User.findOne({ 
+        where: { codigo_UDG },
+        paranoid: false
+      });
       if (existingUDGCode) throw new Error('El código UDG ya está registrado');
     }
 
-    // Crear usuario
-    const newUser = await User.create({
+    // Crear usuario usando el modelo del index
+    const newUser = await db.User.create({
       nombre,
       email,
-      password,
+      password, // Se encripta automáticamente por los hooks
       codigo_UDG,
       telefono,
-      rol
+      rol: rol.toLowerCase() // Aseguramos minúsculas
     });
 
-    // Generar token
+    // Generar token JWT
     const token = jwt.sign(
-      { id: newUser.user_id, rol: newUser.rol },
+      { 
+        id: newUser.user_id, 
+        rol: newUser.rol,
+        email: newUser.email
+      },
       process.env.JWT_SECRET,
-      { expiresIn: '24h' }
+      { expiresIn: process.env.JWT_EXPIRES_IN || '24h' }
     );
 
+    // Retornamos datos seguros (excluyendo información sensible)
     return {
       user: {
         user_id: newUser.user_id,
         nombre: newUser.nombre,
         email: newUser.email,
         rol: newUser.rol,
-        codigo_UDG: newUser.codigo_UDG
+        foto_perfil: newUser.foto_perfil
       },
       token
     };
@@ -58,21 +69,33 @@ const authService = {
 
   // Inicio de sesión
   async loginUser({ email, password }) {
-    const user = await User.findOne({
-      where: { email },
-      attributes: ['user_id', 'nombre', 'email', 'password', 'rol', 'estado_cuenta']
+    // Usamos el scope 'withPassword' para incluir la contraseña
+    const user = await db.User.scope('withPassword').findOne({
+      where: { 
+        email,
+        estado_cuenta: 'active' // Solo cuentas activas pueden iniciar sesión
+      }
     });
 
-    if (!user) throw new Error('Usuario no encontrado');
-    if (user.estado_cuenta === 'bloqueado') throw new Error('Cuenta bloqueada');
-
-    const isMatch = await bcrypt.compare(password, user.password);
+    if (!user) throw new Error('Credenciales inválidas o cuenta inactiva');
+    
+    // Verificamos la contraseña usando el método del modelo
+    const isMatch = await user.comparePassword(password);
     if (!isMatch) throw new Error('Credenciales inválidas');
 
+    // Generar token JWT con más datos relevantes
     const token = jwt.sign(
-      { id: user.user_id, rol: user.rol },
+      { 
+        id: user.user_id, 
+        rol: user.rol,
+        email: user.email,
+        nombre: user.nombre
+      },
       process.env.JWT_SECRET,
-      { expiresIn: '24h' }
+      { 
+        expiresIn: process.env.JWT_EXPIRES_IN || '24h',
+        issuer: process.env.JWT_ISSUER || 'cutcitos-api'
+      }
     );
 
     return {
@@ -80,7 +103,9 @@ const authService = {
         user_id: user.user_id,
         nombre: user.nombre,
         email: user.email,
-        rol: user.rol
+        rol: user.rol,
+        foto_perfil: user.foto_perfil,
+        telefono: user.telefono
       },
       token
     };
@@ -88,30 +113,36 @@ const authService = {
 
   // Solicitud de reset de contraseña
   async requestPasswordReset(email, host) {
-    const user = await User.findOne({ where: { email } });
+    const user = await db.User.findOne({ 
+      where: { email },
+      paranoid: false // Busca incluso usuarios eliminados lógicamente
+    });
+    
     if (!user) throw new Error('Usuario no encontrado');
 
+    // Generar token seguro
     const resetToken = crypto.randomBytes(32).toString('hex');
     const resetTokenExpiry = Date.now() + 3600000; // 1 hora
 
     await user.update({
       resetPasswordToken: resetToken,
-      resetPasswordExpires: resetTokenExpiry
+      resetPasswordExpires: new Date(resetTokenExpiry)
     });
 
-    const resetUrl = `http://${host}/api/auth/reset-password/${resetToken}`;
+    const resetUrl = `${process.env.FRONTEND_URL || `http://${host}`}/reset-password/${resetToken}`;
 
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_FROM,
       subject: 'Restablecimiento de contraseña',
       html: `
-        <p>Hola,</p>
-        <p>Has solicitado restablecer tu contraseña en Cutcitos.</p>
-        <p>Al hacer clic en el siguiente enlace, tu contraseña será cambiada automáticamente a <strong>cutcitos123</strong>:</p>
-        <p><a href="${resetUrl}">${resetUrl}</a></p>
+        <p>Hola ${user.nombre},</p>
+        <p>Has solicitado restablecer tu contraseña en ${process.env.APP_NAME || 'Cutcitos'}.</p>
+        <p>Por favor, haz clic en el siguiente enlace para continuar con el proceso:</p>
+        <p><a href="${resetUrl}">Restablecer contraseña</a></p>
         <p>Este enlace expirará en 1 hora.</p>
-        <p>Si no solicitaste este cambio, ignora este mensaje.</p>
+        <p>Si no solicitaste este cambio, por favor ignora este mensaje.</p>
+        <p>Atentamente,<br>El equipo de ${process.env.APP_NAME || 'Cutcitos'}</p>
       `
     };
 
@@ -119,41 +150,60 @@ const authService = {
 
     return { 
       message: 'Correo de restablecimiento enviado',
+      // Solo en desarrollo devolvemos el token para testing
       token: process.env.NODE_ENV === 'development' ? resetToken : undefined
     };
   },
 
   // Reset de contraseña
-  async resetPassword(token) {
-    const user = await User.findOne({ 
+  async resetPassword(token, newPassword) {
+    const user = await db.User.findOne({ 
       where: { 
         resetPasswordToken: token,
-        resetPasswordExpires: { [Op.gt]: Date.now() }
+        resetPasswordExpires: { [Op.gt]: new Date() }
       }
     });
 
     if (!user) throw new Error('Token inválido o expirado');
-
-    const newPassword = 'cutcitos123';
-    const hashedPassword = await bcrypt.hash(newPassword, 10);
     
+    // Actualizamos la contraseña (se encriptará automáticamente por el hook)
     await user.update({
-      password: hashedPassword,
+      password: newPassword,
       resetPasswordToken: null,
       resetPasswordExpires: null
-    }, { hooks: false });
-
-    // Verificación
-    const updatedUser = await User.findOne({
-      where: { user_id: user.user_id },
-      attributes: ['password'],
-      raw: true
     });
 
-    const isMatch = await bcrypt.compare(newPassword, updatedUser.password);
-    if (!isMatch) throw new Error('Fallo en verificación post-actualización');
+    // Opcional: Invalidar tokens JWT existentes del usuario aquí
 
-    return { success: true };
+    return { 
+      success: true,
+      message: 'Contraseña actualizada correctamente'
+    };
+  },
+
+  // Verificación de token (para uso en middlewares)
+  async verifyToken(token) {
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const user = await db.User.findByPk(decoded.id, {
+        attributes: ['user_id', 'nombre', 'email', 'rol', 'estado_cuenta']
+      });
+      
+      if (!user || user.estado_cuenta !== 'active') {
+        throw new Error('Usuario no válido');
+      }
+      
+      return {
+        valid: true,
+        user,
+        decoded
+      };
+    } catch (error) {
+      return {
+        valid: false,
+        error: error.message
+      };
+    }
   }
 };
 

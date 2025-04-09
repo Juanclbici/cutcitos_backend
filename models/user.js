@@ -1,96 +1,146 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
 const bcrypt = require('bcrypt');
 
-const User = sequelize.define('Usuario', {
-  user_id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  nombre: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: 'unique_email', // Nombre fijo para la restricción única
-    validate: {
-      isEmail: true
-    }
-  },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  rol: {
-    type: DataTypes.ENUM('usuario', 'vendedor', 'admin'),
-    defaultValue: 'usuario'
-  },
-  fecha_registro: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
-  },
-  foto_perfil: {
-    type: DataTypes.STRING,
-    defaultValue: 'default.jpg'
-  },
-  telefono: {
-    type: DataTypes.STRING
-  },
-  estado_cuenta: {
-    type: DataTypes.ENUM('activo', 'bloqueado'),
-    defaultValue: 'activo'
-  },
-  codigo_UDG: {
-    type: DataTypes.STRING,
-    unique: 'unique_codigo_udg' // Nombre fijo para la restricción única
-  },
-  resetPasswordToken: {
-    type: DataTypes.STRING,
-    allowNull: true
-  },
-  resetPasswordExpires: {
-    type: DataTypes.DATE,
-    allowNull: true
-  }
-}, {
-  // Configuración de índices explícita
-  indexes: [
-    {
-      name: 'unique_email',
-      unique: true,
-      fields: ['email']
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    user_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
     },
-    {
-      name: 'unique_codigo_udg',
-      unique: true,
-      fields: ['codigo_UDG']
-    }
-  ],
-  hooks: {
-    beforeCreate: async (user) => {
-      if (user.password) {
-        user.password = await bcrypt.hash(user.password, 10);
+    nombre: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+        len: [2, 50]
       }
     },
-    beforeUpdate: async (user) => {
-      if (user.changed('password')) {
-        user.password = await bcrypt.hash(user.password, 10);
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: 'unique_email',
+      validate: {
+        isEmail: true,
+        notEmpty: true
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true,
+        len: [6, 100]
+      }
+    },
+    rol: {
+      type: DataTypes.ENUM('admin', 'seller', 'buyer'),
+      defaultValue: 'buyer',
+      validate: {
+        isIn: [['admin', 'seller', 'buyer']]
+      }
+    },
+    foto_perfil: {
+      type: DataTypes.STRING,
+      defaultValue: 'default.jpg',
+      validate: {
+        isUrl: true
+      }
+    },
+    telefono: {
+      type: DataTypes.STRING,
+      validate: {
+        is: /^[0-9]{10,15}$/
+      }
+    },
+    estado_cuenta: {
+      type: DataTypes.ENUM('active', 'inactive', 'suspended'),
+      defaultValue: 'active'
+    },
+    codigo_UDG: {
+      type: DataTypes.STRING,
+      unique: 'unique_codigo_udg',
+      validate: {
+        is: /^[A-Za-z0-9]{8,10}$/
+      }
+    },
+    resetPasswordToken: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    resetPasswordExpires: {
+      type: DataTypes.DATE,
+      allowNull: true
+    }
+  }, {
+    timestamps: true,
+    paranoid: true, // Para soft delete
+    indexes: [
+      {
+        name: 'unique_email',
+        unique: true,
+        fields: ['email']
+      },
+      {
+        name: 'unique_codigo_udg',
+        unique: true,
+        fields: ['codigo_UDG']
+      }
+    ],
+    defaultScope: {
+      attributes: { exclude: ['password', 'resetPasswordToken', 'resetPasswordExpires'] }
+    },
+    scopes: {
+      withPassword: {
+        attributes: {}
+      }
+    },
+    hooks: {
+      beforeCreate: async (user) => {
+        if (user.password) {
+          user.password = await bcrypt.hash(user.password, 10);
+        }
+      },
+      beforeUpdate: async (user) => {
+        if (user.changed('password')) {
+          user.password = await bcrypt.hash(user.password, 10);
+        }
       }
     }
-  }
-});
+  });
 
-// Método para comparar contraseñas
-User.prototype.comparePassword = async function(candidatePassword) {
-  try {
-    return await bcrypt.compare(candidatePassword, this.password);
-  } catch (error) {
-    console.error('Error comparing passwords:', error);
-    return false;
-  }
+  // Método para comparar contraseñas
+  User.prototype.comparePassword = async function(candidatePassword) {
+    try {
+      return await bcrypt.compare(candidatePassword, this.password);
+    } catch (error) {
+      console.error('Error comparing passwords:', error);
+      return false;
+    }
+  };
+
+  User.associate = function(models) {
+    User.hasMany(models.Product, { foreignKey: 'vendedor_id' });
+    User.hasMany(models.Order, { foreignKey: 'usuario_id' });
+    User.hasMany(models.Favorite, { foreignKey: 'usuario_id' });
+    User.hasMany(models.Message, { 
+      as: 'SentMessages',
+      foreignKey: 'usuario_id' 
+    });
+    User.hasMany(models.Message, { 
+      as: 'ReceivedMessages',
+      foreignKey: 'vendedor_id' 
+    });
+    User.hasMany(models.Notification, { foreignKey: 'usuario_id' });
+    User.hasMany(models.Calification, { 
+      as: 'GivenCalifications',
+      foreignKey: 'usuario_id' 
+    });
+    User.hasMany(models.Calification, { 
+      as: 'ReceivedCalifications',
+      foreignKey: 'vendedor_id' 
+    });
+    User.hasMany(models.RealTimeSale, { foreignKey: 'vendedor_id' });
+  };
+
+  return User;
 };
-
-module.exports = User;

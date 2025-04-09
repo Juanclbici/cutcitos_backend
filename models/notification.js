@@ -1,16 +1,31 @@
 module.exports = (sequelize, DataTypes) => {
-  const Notificacion = sequelize.define('Notificacion', {
-    tipo_notificacion: DataTypes.STRING,
-    mensaje: DataTypes.TEXT,
+  const Notification = sequelize.define('Notification', {
+    notificacion_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    tipo_notificacion: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    mensaje: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    fecha_envio: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW
+    },
     estado_notificacion: {
-      type: DataTypes.ENUM('pendiente', 'leída'),
-      defaultValue: 'pendiente'
+      type: DataTypes.ENUM('no_leida', 'leida'),
+      defaultValue: 'no_leida'
     }
-  }, {});
+  });
 
-  Notificacion.associate = function(models) {
-    Notificacion.belongsTo(models.User, { foreignKey: 'usuario_id' });
+  Notification.associate = function(models) {
+    Notification.belongsTo(models.User, { foreignKey: 'usuario_id' });
   };
 
-  return Notificacion;
+  return Notification;
 };
