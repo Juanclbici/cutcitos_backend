@@ -1,4 +1,4 @@
-const db = require('../models'); // Importamos todos los modelos desde el index
+const db = require('../models');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const bcrypt = require('bcrypt');

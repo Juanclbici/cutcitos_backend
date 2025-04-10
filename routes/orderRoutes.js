@@ -12,7 +12,7 @@ router.get('/history', orderController.getOrderHistory);
 router.put('/:pedidoId/cancel', orderController.cancelOrder);
 
 // Middleware para verificar rol de vendedor
-router.use(authMiddleware.checkRole('vendedor'));
+router.use(authMiddleware.checkRole('seller'));
 
 // Rutas para vendedores
 router.put('/:pedidoId/confirm', orderController.confirmOrder);

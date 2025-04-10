@@ -46,11 +46,12 @@ const productService = {
         include: [
           {
             model: db.User,
-            as: 'seller',
+            as: 'Vendedor',
             attributes: ['user_id', 'nombre', 'email']
           },
           {
             model: db.Category,
+            as: 'Categoria',
             attributes: ['categoria_id', 'nombre']
           }
         ]
@@ -143,6 +144,7 @@ const productService = {
         include: [
           {
             model: db.Category,
+            as: 'Categoria',
             attributes: ['categoria_id', 'nombre']
           }
         ],
@@ -166,6 +168,7 @@ const productService = {
           },
           {
             model: db.Category,
+            as: 'Categoria',
             attributes: ['categoria_id', 'nombre']
           }
         ],
@@ -191,6 +194,7 @@ const productService = {
         include: [
           {
             model: db.Category,
+            as: 'Categoria',
             attributes: ['categoria_id', 'nombre']
           }
         ]

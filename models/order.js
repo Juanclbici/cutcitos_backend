@@ -3,40 +3,75 @@ module.exports = (sequelize, DataTypes) => {
     pedido_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      field: 'pedido_id'
+    },
+    usuario_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      field: 'usuario_id'
+    },
+    producto_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      field: 'producto_id'
     },
     cantidad: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        min: 1
+      }
     },
     total: {
       type: DataTypes.DECIMAL(10, 2),
-      allowNull: false
+      allowNull: false,
+      validate: {
+        min: 0.01
+      }
     },
     estado_pedido: {
       type: DataTypes.ENUM('pendiente', 'confirmado', 'enviado', 'entregado', 'cancelado'),
       defaultValue: 'pendiente'
     },
-    fecha_pedido: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW
+    metodo_pago: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    direccion_entrega: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
     vendedor_confirmado: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    fecha_confirmacion_vendedor: DataTypes.DATE,
     venta_realizada: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
-    },
-    metodo_pago: DataTypes.STRING,
-    direccion_entrega: DataTypes.STRING
+    }
+  }, {
+    tableName: 'orders',
+    timestamps: true,
+    paranoid: true,
+    underscored: true,
+    hooks: {
+      beforeCreate: (order) => {
+        order.fecha_pedido = new Date();
+      }
+    }
   });
 
   Order.associate = function(models) {
-    Order.belongsTo(models.User, { foreignKey: 'usuario_id' });
-    Order.belongsTo(models.Product, { foreignKey: 'producto_id' });
+    Order.belongsTo(models.User, {
+      foreignKey: 'usuario_id',
+      as: 'Usuario'
+    });
+    
+    Order.belongsTo(models.Product, {
+      foreignKey: 'producto_id',
+      as: 'Producto'
+    });
   };
 
   return Order;
