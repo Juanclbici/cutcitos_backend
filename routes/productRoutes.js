@@ -9,6 +9,7 @@ router.use(authMiddleware.verifyToken);
 // Rutas públicas
 router.get('/', productController.getAllProducts);
 router.get('/:productId', productController.getProduct);
+router.get('/category/:categoryId', productController.getProductsByCategory);
 
 // Middleware para verificar rol de vendedor
 router.use(authMiddleware.checkRole('seller'));

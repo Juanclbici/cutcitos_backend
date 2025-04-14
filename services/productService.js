@@ -67,6 +67,40 @@ const productService = {
       throw error;
     }
   },
+  async getProductsByCategoryId(categoriaId) {
+    try {
+      // Verificar que la categoría exista
+      const category = await db.Category.findByPk(categoriaId);
+      if (!category) {
+        throw new Error('Categoría no encontrada');
+      }
+  
+      const products = await db.Product.findAll({
+        where: {
+          categoria_id: categoriaId,
+          estado_producto: 'disponible'
+        },
+        include: [
+          {
+            model: db.User,
+            as: 'Vendedor',
+            attributes: ['user_id', 'nombre']
+          },
+          {
+            model: db.Category,
+            as: 'Categoria',
+            attributes: ['categoria_id', 'nombre']
+          }
+        ],
+        order: [['fecha_publicacion', 'DESC']]
+      });
+  
+      return products;
+    } catch (error) {
+      console.error(`Error al obtener productos por categoría ${categoriaId}:`, error);
+      throw error;
+    }
+  },  
 
   async updateProduct(productId, vendorId, updateData) {
     try {
