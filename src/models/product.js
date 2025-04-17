@@ -98,26 +98,26 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     tableName: 'products', 
-    timestamps: true, // Crea createdAt y updatedAt
-    paranoid: true, // Habilita soft delete (deletedAt)
-    underscored: true, // Convierte camelCase a snake_case
+    timestamps: true, 
+    paranoid: true, 
+    underscored: true, 
     indexes: [
       {
-        fields: ['nombre'] // Índice para búsquedas por nombre
+        fields: ['nombre'] 
       },
       {
-        fields: ['precio'] // Índice para ordenar por precio
+        fields: ['precio']
       },
       {
-        fields: ['categoria_id'] // Índice para relaciones
+        fields: ['categoria_id'] 
       },
       {
-        fields: ['vendedor_id'] // Índice para relaciones
+        fields: ['vendedor_id'] 
       }
     ],
     hooks: {
       beforeValidate: (product) => {
-        // Convertir nombre a mayúscula la primera letra
+        
         if (product.nombre) {
           product.nombre = product.nombre.charAt(0).toUpperCase() + 
                           product.nombre.slice(1).toLowerCase();
@@ -163,6 +163,14 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'producto_id',
       as: 'Calificaciones'
     });
+
+    Product.belongsToMany(models.Order, {
+      through: models.OrderItem,
+      foreignKey: 'producto_id',
+      otherKey: 'order_id',
+      as: 'OrdenesPorProducto'
+    });
+    
   };
 
   // Métodos de instancia

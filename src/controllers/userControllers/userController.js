@@ -1,4 +1,5 @@
 const userService = require('../../services/userService');
+const { User } = require('../../models');
 
 exports.getUserProfile = async (req, res) => {
   try {
@@ -27,5 +28,19 @@ exports.updateUserProfile = async (req, res) => {
     res.status(400).json({ 
       message: error.message || 'Error al actualizar perfil'
     });
+  }
+};
+
+exports.getSellers = async (req, res) => {
+  try {
+    const sellers = await User.findAll({
+      where: { rol: 'seller', deleted_at: null },
+      attributes: ['user_id', 'nombre']
+    });
+
+    res.json({ success: true, data: sellers });
+  } catch (error) {
+    console.error('Error al obtener vendedores:', error);
+    res.status(500).json({ success: false, message: 'Error al obtener vendedores' });
   }
 };

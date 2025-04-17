@@ -12,4 +12,7 @@ router.get('/profile', userController.getUserProfile);
 // Actualizar perfil de usuario
 router.put('/profile', userController.updateUserProfile);
 
+// Obtener vendedores
+router.get('/sellers', userController.getSellers);
+
 module.exports = router;

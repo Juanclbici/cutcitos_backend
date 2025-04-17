@@ -11,17 +11,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       field: 'usuario_id'
     },
-    producto_id: {
+    vendedor_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      field: 'producto_id'
-    },
-    cantidad: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        min: 1
-      }
+      field: 'vendedor_id'
     },
     total: {
       type: DataTypes.DECIMAL(10, 2),
@@ -54,12 +47,7 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'orders',
     timestamps: true,
     paranoid: true,
-    underscored: true,
-    hooks: {
-      beforeCreate: (order) => {
-        order.fecha_pedido = new Date();
-      }
-    }
+    underscored: true
   });
 
   Order.associate = function(models) {
@@ -67,10 +55,17 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'usuario_id',
       as: 'Usuario'
     });
-    
-    Order.belongsTo(models.Product, {
-      foreignKey: 'producto_id',
-      as: 'Producto'
+
+    Order.belongsTo(models.User, {
+      foreignKey: 'vendedor_id',
+      as: 'Vendedor'
+    });
+
+    Order.belongsToMany(models.Product, {
+      through: models.OrderItem,
+      foreignKey: 'order_id',
+      otherKey: 'producto_id',
+      as: 'Productos'
     });
   };
 
