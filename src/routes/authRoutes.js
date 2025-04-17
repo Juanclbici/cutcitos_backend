@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const authController = require('../controllers/authController');
+const authController = require('../controllers/userControllers/authController');
 const { validateResetRequest, validateResetPassword } = require('../validators/authValidator');
 // Ruta para registro de usuarios
 router.post('/register', authController.register);
@@ -16,5 +16,8 @@ router.get('/reset-password/:token', authController.resetPassword);
 
 // 2. Procesamiento del reset (POST - cuando envían el formulario)
 router.post('/reset-password/:token', authController.resetPassword);
+
+// Ruta para validar el código de reseteo
+router.post('/validate-reset-code', authController.validateResetCode);
 
 module.exports = router;

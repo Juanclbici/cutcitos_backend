@@ -1,4 +1,4 @@
-const authService = require('../services/authService');
+const authService = require('../../services/authService');
 
 exports.register = async (req, res) => {
   try {
@@ -58,5 +58,17 @@ exports.resetPassword = async (req, res) => {
       success: false,
       message: error.message || 'Error al restablecer contraseña'
     });
+  }
+};
+
+exports.validateResetCode = async (req, res, next) => {
+  try {
+    const { email, code } = req.body;
+    
+    const result = await authService.validateResetCode(email, code);
+    
+    res.status(200).json(result);
+  } catch (error) {
+    next(error);
   }
 };

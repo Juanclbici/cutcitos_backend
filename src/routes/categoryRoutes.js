@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const categoryController = require('../controllers/categoryController');
+const categoryController = require('../controllers/productControllers/categoryController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // Rutas públicas

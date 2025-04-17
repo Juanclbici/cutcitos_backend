@@ -111,36 +111,35 @@ const authService = {
     };
   },
 
-  // Solicitud de reset de contraseña
-  async requestPasswordReset(email, host) {
+  // Solicitud de reset de contraseña con código de 5 dígitos
+  async requestPasswordReset(email) {
     const user = await db.User.findOne({ 
       where: { email },
-      paranoid: false // Busca incluso usuarios eliminados lógicamente
+      paranoid: false
     });
     
     if (!user) throw new Error('Usuario no encontrado');
 
-    // Generar token seguro
-    const resetToken = crypto.randomBytes(32).toString('hex');
-    const resetTokenExpiry = Date.now() + 3600000; // 1 hora
+    // Generar código de 5 dígitos
+    const resetCode = Math.floor(10000 + Math.random() * 90000).toString();
+    const resetCodeExpiry = Date.now() + 3600000; // 1 hora
 
     await user.update({
-      resetPasswordToken: resetToken,
-      resetPasswordExpires: new Date(resetTokenExpiry)
+      resetPasswordToken: resetCode,
+      resetPasswordExpires: new Date(resetCodeExpiry)
     });
-
-    const resetUrl = `${process.env.FRONTEND_URL || `http://${host}`}/reset-password/${resetToken}`;
 
     const mailOptions = {
       to: user.email,
       from: process.env.EMAIL_FROM,
-      subject: 'Restablecimiento de contraseña',
+      subject: 'Código para restablecer tu contraseña',
       html: `
         <p>Hola ${user.nombre},</p>
         <p>Has solicitado restablecer tu contraseña en ${process.env.APP_NAME || 'Cutcitos'}.</p>
-        <p>Por favor, haz clic en el siguiente enlace para continuar con el proceso:</p>
-        <p><a href="${resetUrl}">Restablecer contraseña</a></p>
-        <p>Este enlace expirará en 1 hora.</p>
+        <p>Tu código de verificación es: <strong>${resetCode}</strong></p>
+        <p>Ingresa este código en la aplicación para completar el proceso.</p>
+        <p><strong>Al ingresar este código, tu contraseña será cambiada automáticamente a: cutcitos123</strong></p>
+        <p>Este código expirará en 1 hora.</p>
         <p>Si no solicitaste este cambio, por favor ignora este mensaje.</p>
         <p>Atentamente,<br>El equipo de ${process.env.APP_NAME || 'Cutcitos'}</p>
       `
@@ -149,14 +148,68 @@ const authService = {
     await transporter.sendMail(mailOptions);
 
     return { 
-      message: 'Correo de restablecimiento enviado',
-      // Solo en desarrollo devolvemos el token para testing
-      token: process.env.NODE_ENV === 'development' ? resetToken : undefined
+      message: 'Correo con código de verificación enviado',
+      // Solo en desarrollo devolvemos el código para testing
+      code: process.env.NODE_ENV === 'development' ? resetCode : undefined
     };
   },
 
+  // Validación del código y reseteo de contraseña
+  async validateResetCode(email, code) {
+    // Validaciones básicas
+    if (!email || !code) {
+        throw new Error('Email y código son requeridos');
+    }
+
+    if (code.length !== 5 || !/^\d+$/.test(code)) {
+        throw new Error('El código debe ser de 5 dígitos numéricos');
+    }
+
+    const user = await db.User.findOne({ 
+        where: { 
+            email,
+            resetPasswordToken: code,
+            resetPasswordExpires: { [Op.gt]: new Date() }
+        }
+    });
+
+    if (!user) {
+        throw new Error('Código inválido, expirado o email incorrecto');
+    }
+    
+    // Establecemos la contraseña genérica
+    await user.update({
+        password: "cutcitos123",
+        resetPasswordToken: null,
+        resetPasswordExpires: null,
+        // Opcional: agregar un campo para forzar cambio de contraseña
+        mustChangePassword: true
+    });
+
+    // Opcional: enviar correo de confirmación
+    const mailOptions = {
+        to: user.email,
+        from: process.env.EMAIL_FROM,
+        subject: 'Contraseña actualizada',
+        html: `
+            <p>Hola ${user.nombre},</p>
+            <p>Tu contraseña ha sido actualizada exitosamente.</p>
+            <p>Tu nueva contraseña temporal es: <strong>cutcitos123</strong></p>
+            <p>Por seguridad, te recomendamos cambiar esta contraseña después de iniciar sesión.</p>
+            <p>Atentamente,<br>El equipo de ${process.env.APP_NAME || 'Cutcitos'}</p>
+        `
+    };
+    
+    await transporter.sendMail(mailOptions).catch(console.error);
+
+    return { 
+        success: true,
+        message: 'Contraseña actualizada correctamente. Por favor revisa tu correo para ver tu nueva contraseña temporal.',
+        email: user.email // Opcional: devolver el email para confirmación
+    };
+},
   // Reset de contraseña
-  async resetPassword(token, newPassword) {
+  async resetPassword(token) { // Eliminamos el parámetro newPassword ya que no lo usaremos
     const user = await db.User.findOne({ 
       where: { 
         resetPasswordToken: token,
@@ -166,20 +219,18 @@ const authService = {
 
     if (!user) throw new Error('Token inválido o expirado');
     
-    // Actualizamos la contraseña (se encriptará automáticamente por el hook)
+    // Establecemos siempre la contraseña genérica
     await user.update({
-      password: newPassword,
+      password: "cutcitos123", // Esta será encriptada automáticamente por el hook
       resetPasswordToken: null,
       resetPasswordExpires: null
     });
 
-    // Opcional: Invalidar tokens JWT existentes del usuario aquí
-
     return { 
       success: true,
-      message: 'Contraseña actualizada correctamente'
+      message: 'Contraseña actualizada correctamente a la contraseña temporal: cutcitos123'
     };
-  },
+},
 
   // Verificación de token (para uso en middlewares)
   async verifyToken(token) {
