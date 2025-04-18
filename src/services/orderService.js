@@ -28,7 +28,8 @@ const orderService = {
         total,
         metodo_pago,
         direccion_entrega,
-        estado_pedido: 'pendiente'
+        estado_pedido: 'pendiente',
+        createdAt: localDate 
       }, { transaction });
 
       // 4. Actualizar producto
@@ -55,7 +56,7 @@ const orderService = {
         where: { pedido_id: pedidoId },
         include: [{
           model: db.Product,
-          as: 'Producto',
+          as: 'Productos',
           where: { vendedor_id: vendorId }
         }],
         transaction
@@ -87,54 +88,57 @@ const orderService = {
   // Cancelar pedido (Estudiante o Vendedor con validaciones)
   async cancelOrder(userId, pedidoId, isVendor = false) {
     const transaction = await db.sequelize.transaction();
-    
+  
     try {
-      const whereClause = { pedido_id: pedidoId };
-      
-      if (isVendor) {
-        whereClause[Op.and] = [
-          { estado_pedido: 'pendiente' },
-          { '$Producto.vendedor_id$': userId }
-        ];
-      } else {
-        whereClause.usuario_id = userId;
-        whereClause.estado_pedido = { [Op.in]: ['pendiente', 'confirmado'] };
-      }
-
+      // Traer el pedido con productos
       const pedido = await db.Order.findOne({
-        where: whereClause,
-        include: isVendor ? [{ model: db.Product, as: 'Producto' }] : [],
+        where: { pedido_id: pedidoId },
+        include: [{
+          model: db.Product,
+          as: 'Productos',
+          include: [{
+            model: db.User,
+            as: 'Vendedor',
+            attributes: ['user_id']
+          }]
+        }],
         transaction
       });
-
+  
       if (!pedido) {
-        throw new Error('Pedido no encontrado o no se puede cancelar');
+        throw new Error('Pedido no encontrado');
       }
-
-      // Actualizar estado
+  
+      // Validar que esté cancelable
+      if (!['pendiente', 'confirmado'].includes(pedido.estado_pedido)) {
+        throw new Error('Este pedido no puede ser cancelado');
+      }
+  
+      // Verificar permisos
+      if (isVendor) {
+        const productos = pedido.Productos || [];
+        const esDelVendedor = productos.some(p => p.vendedor_id === userId);
+        if (!esDelVendedor) {
+          throw new Error('No autorizado: este pedido no pertenece a este vendedor');
+        }
+      } else {
+        if (pedido.usuario_id !== userId) {
+          throw new Error('No autorizado: este pedido no pertenece a este usuario');
+        }
+      }
+  
+      // Cancelar pedido
       await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
-
-      // Revertir cantidades en producto si está pendiente
-      if (pedido.estado_pedido === 'pendiente') {
-        await db.Product.update(
-          {
-            cantidad_disponible: db.sequelize.literal(`cantidad_disponible + ${pedido.cantidad}`),
-            cantidad_vendida: db.sequelize.literal(`cantidad_vendida - ${pedido.cantidad}`)
-          },
-          {
-            where: { producto_id: pedido.producto_id },
-            transaction
-          }
-        );
-      }
-
+  
+      // (Opcional: puedes aquí revertir stock si deseas)
       await transaction.commit();
       return pedido;
     } catch (error) {
       await transaction.rollback();
       throw error;
     }
-  },
+  },  
+  
 
   // Historial de pedidos por usuario
   async getOrderHistory(userId) {
@@ -143,7 +147,7 @@ const orderService = {
       include: [
         {
           model: db.Product,
-          as: 'Producto',
+          as: 'Productos',
           include: [{
             model: db.User,
             as: 'Vendedor',
@@ -161,7 +165,7 @@ const orderService = {
     return await db.Order.findAll({
       include: [{
         model: db.Product,
-        as: 'Producto',
+        as: 'Productos',
         where: { vendedor_id: vendorId },
         include: [{
           model: db.User,
@@ -181,30 +185,50 @@ const orderService = {
   // Marcar como entregado (Vendedor)
   async markAsDelivered(vendorId, pedidoId) {
     const transaction = await db.sequelize.transaction();
-    
+  
     try {
       const pedido = await db.Order.findOne({
-        where: { 
-          pedido_id: pedidoId, 
-          estado_pedido: 'confirmado' 
+        where: {
+          pedido_id: pedidoId,
+          estado_pedido: 'confirmado'
         },
-        include: [{
-          model: db.Product,
-          as: 'Producto',
-          where: { vendedor_id: vendorId }
-        }],
+        include: [
+          {
+            model: db.Product,
+            as: 'Productos',
+            where: { vendedor_id: vendorId },
+            through: { attributes: ['cantidad'] } // incluir cantidad del OrderItem
+          }
+        ],
         transaction
       });
-
+  
       if (!pedido) {
         throw new Error('Pedido no encontrado o no confirmado');
       }
-
+  
+      // Actualizar cada producto
+      for (const producto of pedido.Productos) {
+        const cantidad = producto.OrderItem.cantidad;
+  
+        await db.Product.update(
+          {
+            cantidad_disponible: db.sequelize.literal(`cantidad_disponible - ${cantidad}`),
+            cantidad_vendida: db.sequelize.literal(`cantidad_vendida + ${cantidad}`)
+          },
+          {
+            where: { producto_id: producto.producto_id },
+            transaction
+          }
+        );
+      }
+  
+      // Actualizar el estado del pedido
       const updatedPedido = await pedido.update({
         estado_pedido: 'entregado',
         venta_realizada: true
       }, { transaction });
-
+  
       await transaction.commit();
       return updatedPedido;
     } catch (error) {
@@ -212,7 +236,7 @@ const orderService = {
       throw error;
     }
   },
-
+  
   // Reportes de ventas para vendedores
   async getSalesReports(vendorId, startDate, endDate) {
     return await db.Order.findAll({
@@ -225,7 +249,7 @@ const orderService = {
       },
       include: [{
         model: db.Product,
-        as: 'Producto',
+        as: 'Productos',
         where: { vendedor_id: vendorId },
         attributes: ['nombre', 'precio']
       }],

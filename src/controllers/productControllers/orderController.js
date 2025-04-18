@@ -27,7 +27,8 @@ exports.createOrder = async (req, res) => {
       await nuevaOrden.addProducto(item.producto_id, { through: { cantidad: item.cantidad } });
     }
 
-    res.status(201).json({ success: true, order_id: nuevaOrden.id });
+    res.status(201).json({ success: true, order_id: nuevaOrden.pedido_id });
+
   } catch (error) {
     console.error("Error al crear pedido :/ :", error);
     res.status(500).json({ success: false, message: 'Error al crear el pedido X/' });
@@ -67,7 +68,7 @@ exports.confirmOrder = async (req, res) => {
 // Cancelar pedido
 exports.cancelOrder = async (req, res) => {
   try {
-    const isVendor = req.user.rol === 'vendedor';
+    const isVendor = req.user.rol === 'seller';
     const pedido = await orderService.cancelOrder(req.user.id, req.params.pedidoId, isVendor);
     res.json({
       success: true,

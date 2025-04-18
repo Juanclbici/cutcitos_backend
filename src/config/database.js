@@ -7,7 +7,11 @@ module.exports = {
     database: process.env.DB_NAME || 'cutcitos_dev',
     host: process.env.DB_HOST || '127.0.0.1',
     dialect: 'mysql',
-    logging: console.log
+    logging: console.log,
+    dialectOptions: {
+      timezone: '-06:00'
+    },
+    timezone: '-06:00'
   },
   test: {
     username: process.env.DB_USER,

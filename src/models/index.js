@@ -56,5 +56,23 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+sequelize.addHook('beforeCreate', (instance) => {
+  const now = new Date();
+  const localTime = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+  if (instance.dataValues.createdAt) {
+    instance.dataValues.createdAt = localTime;
+  }
+  if (instance.dataValues.updatedAt) {
+    instance.dataValues.updatedAt = localTime;
+  }
+});
+
+sequelize.addHook('beforeUpdate', (instance) => {
+  const now = new Date();
+  const localTime = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+  if (instance.dataValues.updatedAt) {
+    instance.dataValues.updatedAt = localTime;
+  }
+});
 
 module.exports = db;
