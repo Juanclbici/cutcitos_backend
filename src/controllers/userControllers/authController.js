@@ -2,8 +2,18 @@ const authService = require('../../services/authService');
 
 exports.register = async (req, res) => {
   try {
+    const { email } = req.body;
+
+    const correoValido = email.endsWith('@alumnos.udg.mx') ||
+                         email.endsWith('@academicos.udg.mx') ||
+                         email.endsWith('@gmail.com');
+
+    if (!correoValido) {
+      return res.status(400).json({ message: 'Correo no permitido' });
+    }
+
     const result = await authService.registerUser(req.body);
-    res.status(201).json({
+    res.status(200).json({
       message: 'Usuario registrado exitosamente',
       ...result
     });
@@ -14,6 +24,7 @@ exports.register = async (req, res) => {
     });
   }
 };
+
 
 exports.login = async (req, res) => {
   try {

@@ -130,7 +130,6 @@ const orderService = {
       // Cancelar pedido
       await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
   
-      // (Opcional: puedes aquí revertir stock si deseas)
       await transaction.commit();
       return pedido;
     } catch (error) {
@@ -156,7 +155,7 @@ const orderService = {
         }
       ],
       order: [['createdAt', 'DESC']],
-      paranoid: false // Para incluir pedidos eliminados lógicamente
+      paranoid: false
     });
   },
 
@@ -197,7 +196,7 @@ const orderService = {
             model: db.Product,
             as: 'Productos',
             where: { vendedor_id: vendorId },
-            through: { attributes: ['cantidad'] } // incluir cantidad del OrderItem
+            through: { attributes: ['cantidad'] } 
           }
         ],
         transaction
@@ -237,31 +236,6 @@ const orderService = {
     }
   },
   
-  // Reportes de ventas para vendedores
-  async getSalesReports(vendorId, startDate, endDate) {
-    return await db.Order.findAll({
-      where: {
-        estado_pedido: 'entregado',
-        venta_realizada: true,
-        createdAt: {
-          [Op.between]: [startDate, endDate]
-        }
-      },
-      include: [{
-        model: db.Product,
-        as: 'Productos',
-        where: { vendedor_id: vendorId },
-        attributes: ['nombre', 'precio']
-      }],
-      attributes: [
-        'producto_id',
-        [db.sequelize.fn('SUM', db.sequelize.col('cantidad')), 'total_vendido'],
-        [db.sequelize.fn('SUM', db.sequelize.col('total')), 'ingresos_totales']
-      ],
-      group: ['producto_id'],
-      raw: true
-    });
-  }
 };
 
 module.exports = orderService;

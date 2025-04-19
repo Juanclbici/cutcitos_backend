@@ -59,21 +59,27 @@ module.exports = (sequelize, DataTypes) => {
     codigo_UDG: {
       type: DataTypes.STRING,
       unique: 'unique_codigo_udg',
+      field: 'codigo_udg',
       validate: {
-        is: /^[A-Za-z0-9]{8,10}$/
+        is: {
+          args: /^[0-9]{8,10}$/,
+          msg: 'El código UDG debe contener entre 8 y 10 dígitos numéricos'
+        }
       }
     },
     resetPasswordToken: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      field: 'reset_password_token' 
     },
     resetPasswordExpires: {
       type: DataTypes.DATE,
-      allowNull: true
+      allowNull: true,
+      field: 'reset_password_expires'
     }
   }, {
     timestamps: true,
-    paranoid: true, // Para soft delete
+    paranoid: true,
     indexes: [
       {
         name: 'unique_email',
@@ -83,7 +89,7 @@ module.exports = (sequelize, DataTypes) => {
       {
         name: 'unique_codigo_udg',
         unique: true,
-        fields: ['codigo_UDG']
+        fields: ['codigo_udg']
       }
     ],
     defaultScope: {

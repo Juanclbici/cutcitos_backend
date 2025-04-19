@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const { Op } = require('sequelize');
 
-// Configuración de email (recomendado mover a config/email.js)
+// Configuración de email
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
@@ -20,10 +20,10 @@ const authService = {
     // Verificar email existente
     const existingUser = await db.User.findOne({ 
       where: { email },
-      paranoid: false // Busca incluso usuarios eliminados lógicamente
+      paranoid: false
     });
     if (existingUser) throw new Error('El email ya está registrado');
-
+  
     // Verificar código UDG si se proporciona
     if (codigo_UDG) {
       const existingUDGCode = await db.User.findOne({ 
@@ -32,17 +32,20 @@ const authService = {
       });
       if (existingUDGCode) throw new Error('El código UDG ya está registrado');
     }
-
-    // Crear usuario usando el modelo del index
+  
+    // Asignar rol según entorno
+    const assignedRole = process.env.NODE_ENV === 'test' ? rol.toLowerCase() : 'buyer';
+  
+    // Crear usuario
     const newUser = await db.User.create({
       nombre,
       email,
-      password, // Se encripta automáticamente por los hooks
+      password,
       codigo_UDG,
       telefono,
-      rol: rol.toLowerCase() // Aseguramos minúsculas
+      rol: assignedRole
     });
-
+  
     // Generar token JWT
     const token = jwt.sign(
       { 
@@ -53,8 +56,8 @@ const authService = {
       process.env.JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRES_IN || '24h' }
     );
-
-    // Retornamos datos seguros (excluyendo información sensible)
+  
+    // Retornar datos seguros
     return {
       user: {
         user_id: newUser.user_id,
@@ -65,7 +68,7 @@ const authService = {
       },
       token
     };
-  },
+  },  
 
   // Inicio de sesión
   async loginUser({ email, password }) {
@@ -182,11 +185,10 @@ const authService = {
         password: "cutcitos123",
         resetPasswordToken: null,
         resetPasswordExpires: null,
-        // Opcional: agregar un campo para forzar cambio de contraseña
         mustChangePassword: true
     });
 
-    // Opcional: enviar correo de confirmación
+    // enviar correo de confirmación
     const mailOptions = {
         to: user.email,
         from: process.env.EMAIL_FROM,
@@ -205,11 +207,11 @@ const authService = {
     return { 
         success: true,
         message: 'Contraseña actualizada correctamente. Por favor revisa tu correo para ver tu nueva contraseña temporal.',
-        email: user.email // Opcional: devolver el email para confirmación
+        email: user.email 
     };
 },
   // Reset de contraseña
-  async resetPassword(token) { // Eliminamos el parámetro newPassword ya que no lo usaremos
+  async resetPassword(token) { 
     const user = await db.User.findOne({ 
       where: { 
         resetPasswordToken: token,
@@ -221,7 +223,7 @@ const authService = {
     
     // Establecemos siempre la contraseña genérica
     await user.update({
-      password: "cutcitos123", // Esta será encriptada automáticamente por el hook
+      password: "cutcitos123", 
       resetPasswordToken: null,
       resetPasswordExpires: null
     });

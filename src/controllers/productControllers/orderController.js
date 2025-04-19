@@ -131,20 +131,3 @@ exports.markAsDelivered = async (req, res) => {
     });
   }
 };
-
-// Reportes de ventas
-exports.getSalesReports = async (req, res) => {
-  try {
-    const { startDate, endDate } = req.query;
-    const reportes = await orderService.getSalesReports(req.user.id, startDate, endDate);
-    res.json({
-      success: true,
-      data: reportes
-    });
-  } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
-  }
-};

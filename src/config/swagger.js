@@ -29,7 +29,7 @@ const options = {
       },
     ],
   },
-  apis: ['./src/routes/*.js'], // Ajusta si tus rutas están en subcarpetas
+  apis: ['./src/routes/*.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);

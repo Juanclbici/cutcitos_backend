@@ -12,10 +12,8 @@ const orderRoutes = require('./routes/orderRoutes');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 
-// Inicializar la aplicación
 const app = express();
 
-// Configuración de CORS
 const corsOptions = {
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
@@ -24,13 +22,16 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
-// Middlewares
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//swagger
+// Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.get('/swagger.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.send(swaggerSpec);
+});
 
 // Rutas
 app.use('/api/auth', authRoutes);
@@ -39,27 +40,15 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 
-// Ruta de prueba
+// Prueba
 app.get('/', (req, res) => {
   res.send('API de Cutcitos funcionando');
 });
 
-// Manejo de errores global
+// Errores globales
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Ocurrió un error en el servidor' });
 });
 
-// Sincronizar con la base de datos y arrancar el servidor
-const PORT = process.env.PORT || 4000;
-
-db.sequelize.sync({ alter: true })
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Servidor corriendo en http://localhost:${PORT}`);
-      console.log(`Frontend permitido: ${corsOptions.origin}`);
-    });
-  })
-  .catch(err => {
-    console.error('Error al conectar con la base de datos:', err);
-  });
+module.exports = app;

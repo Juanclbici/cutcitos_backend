@@ -159,34 +159,5 @@ router.get('/vendor', orderController.getVendorOrders);
  */
 router.put('/:pedidoId/deliver', orderController.markAsDelivered);
 
-/**
- * @swagger
- * /orders/reports:
- *   get:
- *     summary: Obtener reportes de ventas del vendedor autenticado
- *     tags: [Pedidos]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: query
- *         name: startDate
- *         required: true
- *         schema:
- *           type: string
- *           format: date
- *       - in: query
- *         name: endDate
- *         required: true
- *         schema:
- *           type: string
- *           format: date
- *     responses:
- *       200:
- *         description: Reporte de ventas generado correctamente
- *       403:
- *         description: Acceso denegado
- */
-router.get('/reports', orderController.getSalesReports);
-
 
 module.exports = router;
