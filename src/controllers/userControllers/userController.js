@@ -33,11 +33,7 @@ exports.updateUserProfile = async (req, res) => {
 
 exports.getSellers = async (req, res) => {
   try {
-    const sellers = await User.findAll({
-      where: { rol: 'seller', deleted_at: null },
-      attributes: ['user_id', 'nombre']
-    });
-
+    const sellers = await userService.getSellers();
     res.json({ success: true, data: sellers });
   } catch (error) {
     console.error('Error al obtener vendedores:', error);

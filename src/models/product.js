@@ -69,11 +69,15 @@ module.exports = (sequelize, DataTypes) => {
     },
     imagen: {
       type: DataTypes.STRING,
+      allowNull: false,
+      defaultValue: 'default_product.png',
       validate: {
-        isUrl: {
-          msg: 'La imagen debe ser una URL válida',
-          protocols: ['http','https'],
-          require_protocol: true
+        notEmpty: {
+          msg: 'La imagen no puede estar vacía'
+        },
+        is: {
+          args: /^[\w,\s-]+\.(jpg|jpeg|png)$/,
+          msg: 'La imagen debe tener un nombre de archivo válido'
         }
       }
     },

@@ -41,11 +41,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     foto_perfil: {
       type: DataTypes.STRING,
-      defaultValue: 'default.jpg',
-      validate: {
-        isUrl: true
-      }
-    },
+      defaultValue: 'default_profile.jpg',
+    }
+    ,
     telefono: {
       type: DataTypes.STRING,
       validate: {

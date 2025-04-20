@@ -9,7 +9,6 @@ const userService = {
           'password', 
           'resetPasswordToken', 
           'resetPasswordExpires',
-          'createdAt',
           'updatedAt',
           'deletedAt'
         ] 
@@ -93,7 +92,31 @@ const userService = {
       email: user.email,
       new_role: user.rol
     };
+  },
+  // Obtener lista de vendedores
+  async getSellers() {
+    try {
+      const sellers = await db.User.findAll({
+        where: { rol: 'seller', deleted_at: null },
+        attributes: [
+          'user_id',
+          'nombre',
+          'email',
+          'foto_perfil',
+          'telefono',
+          'codigo_UDG',
+          'rol'
+        ]
+      });
+
+      return sellers;
+    } catch (error) {
+      console.error('Error en userService.getSellers:', error);
+      throw new Error('No se pudieron obtener los vendedores');
+    }
   }
+
+
 };
 
 module.exports = userService;

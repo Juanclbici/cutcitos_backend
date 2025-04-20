@@ -44,6 +44,9 @@ app.use('/api/categories', categoryRoutes);
 app.get('/', (req, res) => {
   res.send('API de Cutcitos funcionando');
 });
+app.get('/ping', (req, res) => {
+  res.status(200).json({ message: 'Servidor activo ✅' });
+});
 
 // Errores globales
 app.use((err, req, res, next) => {
