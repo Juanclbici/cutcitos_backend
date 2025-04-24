@@ -69,17 +69,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     imagen: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       defaultValue: 'default_product.png',
-      validate: {
-        notEmpty: {
-          msg: 'La imagen no puede estar vacía'
-        },
-        is: {
-          args: /^[\w,\s-]+\.(jpg|jpeg|png)$/,
-          msg: 'La imagen debe tener un nombre de archivo válido'
-        }
-      }
     },
     fecha_publicacion: {
       type: DataTypes.DATE,

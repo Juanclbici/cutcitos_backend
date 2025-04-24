@@ -40,7 +40,6 @@ exports.updateProduct = async (req, res) => {
   try {
     const product = await productService.updateProduct(
       req.params.productId,
-      req.user.id,
       req.body
     );
     res.json({

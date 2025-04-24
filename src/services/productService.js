@@ -1,4 +1,12 @@
 const db = require('../models');
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
 
 const productService = {
   async createProduct(vendorId, { 
@@ -102,44 +110,44 @@ const productService = {
     }
   },  
 
-  async updateProduct(productId, vendorId, updateData) {
-    try {
-      const product = await db.Product.findOne({
-        where: {
-          producto_id: productId,
-          vendedor_id: vendorId
-        }
-      });
+  async updateProduct(productId, updateData) {
 
-      if (!product) {
-        throw new Error('Producto no encontrado o no autorizado');
-      }
-
-      // Validar campos permitidos para actualización
-      const allowedFields = [
-        'nombre', 
-        'descripcion', 
-        'precio', 
-        'cantidad_disponible', 
-        'imagen', 
-        'categoria_id',
-        'estado_producto'
-      ];
-      
-      const updates = {};
-      for (const field of allowedFields) {
-        if (updateData[field] !== undefined) {
-          updates[field] = updateData[field];
+    const product = await db.Product.findByPk(productId);
+    if (!product) throw new Error('Producto no encontrado');
+  
+    // Eliminar imagen anterior si se subió una nueva distinta
+    if (updateData.imagen && updateData.imagen !== product.imagen) {
+      const isOldCloudinaryImage = product.imagen?.startsWith('http') && !product.imagen.includes('default_product.png');
+  
+      if (isOldCloudinaryImage) {
+        try {
+          const publicId = product.imagen
+            .split('/')
+            .slice(-2)
+            .join('/')
+            .replace(/\.(jpg|jpeg|png|webp)/, '');
+          await cloudinary.uploader.destroy(publicId);
+          console.log('✅ Imagen anterior del producto eliminada:', publicId);
+        } catch (error) {
+          console.warn('⚠️ Error al eliminar la imagen anterior:', error.message);
         }
       }
-
-      await product.update(updates);
-      return product;
-    } catch (error) {
-      console.error(`Error al actualizar producto ${productId}:`, error);
-      throw error;
     }
-  },
+  
+    // Aseguramos que la imagen esté presente
+    const datosActualizados = {
+      ...updateData,
+      imagen: updateData.imagen || product.imagen,
+    };
+  
+    console.log("📤 Datos que se enviarán a la BD:", datosActualizados);
+  
+    // CAMBIO CLAVE: usamos .update() del objeto Sequelize
+    await product.update(datosActualizados);
+  
+    const updatedProduct = await db.Product.findByPk(productId);
+    return updatedProduct;
+  },  
 
   async deleteProduct(productId, vendorId) {
     try {

@@ -34,7 +34,9 @@ const authService = {
     }
   
     // Asignar rol según entorno
-    const assignedRole = process.env.NODE_ENV === 'test' ? rol.toLowerCase() : 'buyer';
+   // const assignedRole = process.env.NODE_ENV === 'test' ? rol.toLowerCase() : 'buyer'; para usar test usar este y comentar el de abajo
+    const assignedRole = rol ? rol.toLowerCase() : 'buyer';
+
   
     // Crear usuario
     const newUser = await db.User.create({
