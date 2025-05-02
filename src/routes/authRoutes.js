@@ -97,58 +97,6 @@ router.post('/login', authController.login);
  */
 router.post('/forgot-password', authController.requestPasswordReset);
 
-/**
- * @swagger
- * /auth/reset-password/{token}:
- *   get:
- *     summary: Validar token de reseteo
- *     tags: [Auth]
- *     parameters:
- *       - in: path
- *         name: token
- *         schema:
- *           type: string
- *         required: true
- *         description: Token enviado al correo
- *     responses:
- *       200:
- *         description: Token válido
- *       400:
- *         description: Token inválido o expirado
- */
-router.get('/reset-password/:token', authController.resetPassword);
-
-/**
- * @swagger
- * /auth/reset-password/{token}:
- *   post:
- *     summary: Cambiar contraseña usando token
- *     tags: [Auth]
- *     parameters:
- *       - in: path
- *         name: token
- *         schema:
- *           type: string
- *         required: true
- *         description: Token enviado al correo
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - nuevaPassword
- *             properties:
- *               nuevaPassword:
- *                 type: string
- *     responses:
- *       200:
- *         description: Contraseña actualizada correctamente
- *       400:
- *         description: Token inválido o error en actualización
- */
-router.post('/reset-password/:token', authController.resetPassword);
 
 /**
  * @swagger
@@ -164,11 +112,13 @@ router.post('/reset-password/:token', authController.resetPassword);
  *             type: object
  *             required:
  *               - email
- *               - codigo
+ *               - code
  *             properties:
  *               email:
  *                 type: string
- *               codigo:
+ *               code:
+ *                 type: string
+ *               npassword:
  *                 type: string
  *     responses:
  *       200:

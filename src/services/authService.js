@@ -34,8 +34,8 @@ const authService = {
     }
   
     // Asignar rol según entorno
-    const assignedRole = process.env.NODE_ENV === 'test' ? rol.toLowerCase() : 'buyer'; //para usar test usar este y comentar el de abajo
-    //const assignedRole = rol ? rol.toLowerCase() : 'buyer';
+    //const assignedRole = process.env.NODE_ENV === 'test' ? rol.toLowerCase() : 'buyer'; //para usar test usar este y comentar el de abajo
+    const assignedRole = rol ? rol.toLowerCase() : 'buyer';
 
   
     // Crear usuario
@@ -140,10 +140,10 @@ const authService = {
       subject: 'Código para restablecer tu contraseña',
       html: `
         <p>Hola ${user.nombre},</p>
-        <p>Has solicitado restablecer tu contraseña en ${process.env.APP_NAME || 'Cutcitos'}.</p>
+        <p>Has solicitado cambiar tu contraseña en ${process.env.APP_NAME || 'Cutcitos'}.</p>
         <p>Tu código de verificación es: <strong>${resetCode}</strong></p>
         <p>Ingresa este código en la aplicación para completar el proceso.</p>
-        <p><strong>Al ingresar este código, tu contraseña será cambiada automáticamente a: cutcitos123</strong></p>
+        <p><strong>Al ingresar este código, tu podrás cambiar tu contraseña</strong></p>
         <p>Este código expirará en 1 hora.</p>
         <p>Si no solicitaste este cambio, por favor ignora este mensaje.</p>
         <p>Atentamente,<br>El equipo de ${process.env.APP_NAME || 'Cutcitos'}</p>
@@ -160,10 +160,16 @@ const authService = {
   },
 
   // Validación del código y reseteo de contraseña
-  async validateResetCode(email, code) {
+  async validateResetCode(email, code, npassword) {
     // Validaciones básicas
-    if (!email || !code) {
-        throw new Error('Email y código son requeridos');
+    if (!email) {
+        throw new Error('Email es requerido');
+    }
+    if (!code) {
+      throw new Error('Código es requerido');
+    }
+    if (!npassword) {
+      throw new Error('Nuevo password es requerido');
     }
 
     if (code.length !== 5 || !/^\d+$/.test(code)) {
@@ -184,7 +190,7 @@ const authService = {
     
     // Establecemos la contraseña genérica
     await user.update({
-        password: "cutcitos123",
+        password: npassword,
         resetPasswordToken: null,
         resetPasswordExpires: null,
         mustChangePassword: true
@@ -198,8 +204,6 @@ const authService = {
         html: `
             <p>Hola ${user.nombre},</p>
             <p>Tu contraseña ha sido actualizada exitosamente.</p>
-            <p>Tu nueva contraseña temporal es: <strong>cutcitos123</strong></p>
-            <p>Por seguridad, te recomendamos cambiar esta contraseña después de iniciar sesión.</p>
             <p>Atentamente,<br>El equipo de ${process.env.APP_NAME || 'Cutcitos'}</p>
         `
     };
@@ -208,31 +212,8 @@ const authService = {
 
     return { 
         success: true,
-        message: 'Contraseña actualizada correctamente. Por favor revisa tu correo para ver tu nueva contraseña temporal.',
+        message: 'Contraseña actualizada correctamente.',
         email: user.email 
-    };
-},
-  // Reset de contraseña
-  async resetPassword(token) { 
-    const user = await db.User.findOne({ 
-      where: { 
-        resetPasswordToken: token,
-        resetPasswordExpires: { [Op.gt]: new Date() }
-      }
-    });
-
-    if (!user) throw new Error('Token inválido o expirado');
-    
-    // Establecemos siempre la contraseña genérica
-    await user.update({
-      password: "cutcitos123", 
-      resetPasswordToken: null,
-      resetPasswordExpires: null
-    });
-
-    return { 
-      success: true,
-      message: 'Contraseña actualizada correctamente a la contraseña temporal: cutcitos123'
     };
 },
 
