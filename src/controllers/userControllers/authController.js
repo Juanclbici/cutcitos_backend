@@ -6,10 +6,11 @@ exports.register = async (req, res) => {
 
     const correoValido = email.endsWith('@alumnos.udg.mx') ||
                          email.endsWith('@academicos.udg.mx') ||
+                         email.endsWith('@cutonala.udg.mx') ||
                          email.endsWith('@gmail.com');
 
     if (!correoValido) {
-      return res.status(400).json({ message: 'Correo no permitido' });
+      return res.status(400).json({ message: 'Correo no permitido, deber ser institucional de UDG' });
     }
 
     const result = await authService.registerUser(req.body);
@@ -56,27 +57,11 @@ exports.requestPasswordReset = async (req, res) => {
   }
 };
 
-exports.resetPassword = async (req, res) => {
-  try {
-    const result = await authService.resetPassword(req.params.token);
-    res.status(200).json({ 
-      success: true,
-      message: 'Contraseña restablecida exitosamente'
-    });
-  } catch (error) {
-    console.error('Error en resetPassword:', error);
-    res.status(400).json({ 
-      success: false,
-      message: error.message || 'Error al restablecer contraseña'
-    });
-  }
-};
-
 exports.validateResetCode = async (req, res, next) => {
   try {
-    const { email, code } = req.body;
+    const { email, code, npassword } = req.body;
     
-    const result = await authService.validateResetCode(email, code);
+    const result = await authService.validateResetCode(email, code, npassword);
     
     res.status(200).json(result);
   } catch (error) {
