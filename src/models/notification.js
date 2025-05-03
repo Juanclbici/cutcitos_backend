@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Notification = sequelize.define('Notification', {
-    notificacion_id: {
+    notification_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
@@ -20,8 +20,14 @@ module.exports = (sequelize, DataTypes) => {
     estado_notificacion: {
       type: DataTypes.ENUM('no_leida', 'leida'),
       defaultValue: 'no_leida'
+    },
+    usuario_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   });
+
+  Notification.name = 'Notification';
 
   Notification.associate = function(models) {
     Notification.belongsTo(models.User, { foreignKey: 'usuario_id' });
@@ -29,3 +35,4 @@ module.exports = (sequelize, DataTypes) => {
 
   return Notification;
 };
+
