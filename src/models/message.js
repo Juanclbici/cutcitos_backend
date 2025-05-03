@@ -1,10 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
   const Message = sequelize.define('Message', {
-    mensaje_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
     mensaje: {
       type: DataTypes.TEXT,
       allowNull: false
@@ -14,21 +9,24 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.NOW
     },
     estado_mensaje: {
-      type: DataTypes.ENUM('enviado', 'recibido', 'leido'),
+      type: DataTypes.ENUM('enviado', 'entregado', 'leído'),
       defaultValue: 'enviado'
+    },
+    remitente_id: {
+      type: DataTypes.INTEGER
+    },
+    destinatario_id: {
+      type: DataTypes.INTEGER
+    },
+    leido: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     }
+  }, {
+    tableName: 'messages',
+    timestamps: true,
+    paranoid: true
   });
-
-  Message.associate = function(models) {
-    Message.belongsTo(models.User, { 
-      as: 'Usuario',
-      foreignKey: 'usuario_id' 
-    });
-    Message.belongsTo(models.User, { 
-      as: 'Vendedor',
-      foreignKey: 'vendedor_id' 
-    });
-  };
 
   return Message;
 };
