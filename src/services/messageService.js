@@ -14,17 +14,19 @@ exports.crearMensaje = async ({ mensaje, remitente_id, destinatario_id }) => {
 };
 
 exports.obtenerConversacionEntreUsuarios = async (remitenteId, destinatarioId) => {
-    // Marcar mensajes como leídos
-    await Message.update(
-      { leido: true },
-      {
-        where: {
-          remitente_id: remitenteId,
-          destinatario_id: destinatarioId,
-          leido: false
-        }
+  // Marcar mensajes como leídos
+  await Message.update(
+    { leido: true,
+      estado_mensaje: "leído"
+     },
+    {
+      where: {
+        remitente_id: remitenteId,
+        destinatario_id: destinatarioId,
+        leido: false
       }
-    );
+    }
+  );
   
     // Obtener la conversación
     const mensajes = await Message.findAll({

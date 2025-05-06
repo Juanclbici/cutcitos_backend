@@ -4,7 +4,7 @@ const messageService = require('../../services/messageService');
 exports.crearMensaje = async (req, res) => {
   try {
     const { mensaje, destinatario_id } = req.body;
-    const remitente = req.user;
+    const remitente = req.user.id;
 
     if (!mensaje || !destinatario_id) {
       return res.status(400).json({ message: 'Faltan campos requeridos.' });
@@ -12,7 +12,7 @@ exports.crearMensaje = async (req, res) => {
 
     const nuevoMensaje = await messageService.crearMensaje({
       mensaje,
-      remitente_id: req.body.remitente_id || emisor.user_id,
+      remitente_id: remitente || emisor.user_id,
       destinatario_id
     });
 
@@ -26,7 +26,8 @@ exports.crearMensaje = async (req, res) => {
 // OBTENER UNA CONVERSACIÓN ENTRE DOS USUARIOS
 exports.obtenerConversacion = async (req, res) => {
   try {
-    const { remitenteId, destinatarioId } = req.params;
+    const { remitenteId } = req.params;
+    const destinatarioId = parseInt(req.user.id, 10);
 
     if (!remitenteId || !destinatarioId) {
       return res.status(400).json({ message: "Faltan IDs de usuarios." });
