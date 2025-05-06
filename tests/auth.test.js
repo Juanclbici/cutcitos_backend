@@ -63,3 +63,21 @@ describe('Auth Endpoints - Registro y Login', () => {
     expect(res.body.message).toBe('Credenciales inválidas');
   });
 });
+
+describe('Middleware - Rate Limiter en /auth/login', () => {
+  const loginPayload = {
+    email: 'test@alumnos.udg.mx',
+    password: 'incorrecta123'
+  };
+
+  it('debe bloquear el 6to intento de login con error 429', async () => {
+    for (let i = 0; i < 5; i++) {
+      await request(app).post('/api/auth/login').send(loginPayload);
+    }
+
+    const res = await request(app).post('/api/auth/login').send(loginPayload);
+
+    expect(res.statusCode).toBe(429);
+    expect(res.body.message).toMatch(/Demasiados intentos/i);
+  });
+});

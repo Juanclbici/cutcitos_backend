@@ -3,6 +3,7 @@ const cors = require('cors');
 const db = require('./models');
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./config/swagger');
+const simpleLogger = require('./middlewares/simpleLogger');
 require('dotenv').config();
 
 // Importar rutas
@@ -29,6 +30,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(simpleLogger);
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
