@@ -44,9 +44,9 @@ const favoriteService = {
                         as: 'Producto',
                         include: [
                             {
-                                model: db.Product,
+                                model: db.User,
                                 as: 'Vendedor',
-                                atributes: ['user_id', 'nombre']
+                                attributes: ['user_id', 'nombre']
                             },
                             {
                                 model: db.Category,
@@ -58,7 +58,7 @@ const favoriteService = {
                 ]
             });
 
-            return favoriteService.map(f => f.Producto);
+            return favorite.map(f => f.Producto);
         }   catch (error) {
             console.error('Error al obtener favoritos: ' , error);
             throw error;
