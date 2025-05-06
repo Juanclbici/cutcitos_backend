@@ -34,6 +34,8 @@ if (env === 'production' && config.use_env_variable) {
   );
 }
 
+db.Notification = require('./notification')(sequelize, Sequelize.DataTypes);
+
 // Cargar modelos automáticamente
 fs.readdirSync(__dirname)
   .filter(file => (
