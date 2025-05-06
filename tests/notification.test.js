@@ -9,29 +9,37 @@ beforeAll(async () => {
   await db.sequelize.sync({ force: true });
   await new Promise(resolve => setTimeout(resolve, 500));
 
-  const email = `notificador_${Date.now()}@cutcitos.com`;
+  // ✅ Usar dominio válido
+  const email = `notificador_${Date.now()}@alumnos.udg.mx`;
 
-  await request(app).post('/api/auth/register').send({
-    nombre: 'Notificador',
+  // 1. Registrar usuario
+  const registerRes = await request(app).post('/api/auth/register').send({
+    nombre: 'Usuario Noti',
     email,
     password: '123456',
-    telefono: '3333333333',
-    codigo_UDG: '123456789',
     rol: 'buyer'
   });
 
-  await db.User.update({ estado_cuenta: 'active' }, {
+  console.log('Registro response:', registerRes.body);
+
+  // 2. Activar cuenta
+  await db.User.update({ activo: true }, {
     where: { email }
   });
 
+  // 3. Iniciar sesión
   const loginRes = await request(app).post('/api/auth/login').send({
     email,
     password: '123456'
   });
 
+  console.log('Login response:', loginRes.body);
+
+  //Asignar token e ID
   userToken = `Bearer ${loginRes.body.token}`;
   userId = loginRes.body.user.user_id;
 
+  // 4. Crear notificaciones para el test
   await db.Notification.bulkCreate([
     {
       usuario_id: userId,

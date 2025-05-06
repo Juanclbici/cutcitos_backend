@@ -1,6 +1,6 @@
 const request = require('supertest');
-const app = require('../src/app');
-const db = require('../src/models');
+const app = require('../src/app'); 
+const { sequelize } = require('../src/models');
 
 let userToken;
 let remitenteId;
@@ -8,94 +8,87 @@ let destinatarioId;
 
 beforeAll(async () => {
   try {
-    await db.sequelize.sync({ force: true });
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await sequelize.sync({ force: true });
 
-    const emailRem = `rem_${Date.now()}@cutcitos.com`;
-    const emailDest = `dest_${Date.now()}@cutcitos.com`;
+    // Crear correos válidos con timestamp para que no choquen
+    const timestamp = Date.now();
+    const emailRemitente = `remitente_${timestamp}@alumnos.udg.mx`;
+    const emailDestinatario = `destinatario_${timestamp}@alumnos.udg.mx`;
 
-    // Registrar remitente
+    // Crear usuario remitente
     await request(app).post('/api/auth/register').send({
-      nombre: 'Rem',
-      email: emailRem,
+      nombre: 'Usuario Remitente',
+      email: emailRemitente,
       password: '123456',
-      telefono: '3311111111',
-      codigo_UDG: '123456789',
       rol: 'buyer'
     });
 
-    // Registrar destinatario
+    // Crear usuario destinatario
     await request(app).post('/api/auth/register').send({
-      nombre: 'Dest',
-      email: emailDest,
+      nombre: 'Usuario Destinatario',
+      email: emailDestinatario,
       password: '123456',
-      telefono: '3322222222',
-      codigo_UDG: '987654321',
       rol: 'seller'
     });
 
     // Activar cuentas
-    await db.User.update({ estado_cuenta: 'active' }, {
-      where: { email: [emailRem, emailDest] }
-    });
+    await sequelize.models.User.update({ activo: true }, { where: { email: [emailRemitente, emailDestinatario] } });
 
-    // Login del remitente
+    // Iniciar sesión con remitente
     const loginRemitente = await request(app).post('/api/auth/login').send({
-      email: emailRem,
+      email: emailRemitente,
       password: '123456'
     });
 
+    // Iniciar sesión con destinatario
+    const loginDestinatario = await request(app).post('/api/auth/login').send({
+      email: emailDestinatario,
+      password: '123456'
+    });
+
+    // Asignar token y IDs correctamente
     userToken = `Bearer ${loginRemitente.body.token}`;
-    remitenteId = loginRemitente.body.user.id;
-
-    // Login del destinatario (solo para obtener ID)
-    const loginDest = await request(app).post('/api/auth/login').send({
-      email: emailDest,
-      password: '123456'
-    });
-
-    destinatarioId = loginDest.body.user.id;
+    remitenteId = loginRemitente.body.user.user_id;
+    destinatarioId = loginDestinatario.body.user.user_id;
 
   } catch (error) {
-    console.error('Error en beforeAll de mensajes:', error);
+    console.error('Error en beforeAll:', error);
   }
 });
 
-describe('ENDPOINTS DE MENSAJERÍA Y NOTIFICACIONES', () => {
-  test('GET /api/messages/inbox → debe retornar bandeja de entrada', async () => {
-    const res = await request(app)
-      .get('/api/messages/inbox')
-      .set('Authorization', userToken);
-    expect(res.statusCode).toBe(200);
-    expect(Array.isArray(res.body)).toBe(true);
-  });
-
-  test('POST /api/messages/ → debe crear un nuevo mensaje', async () => {
-    const nuevoMensaje = {
-      mensaje: 'Mensaje desde Jest',
-      remitente_id: remitenteId,
-      destinatario_id: destinatarioId
-    };
-
+describe('Pruebas de mensajes', () => {
+  test('POST /api/messages - enviar mensaje', async () => {
     const res = await request(app)
       .post('/api/messages')
       .set('Authorization', userToken)
-      .send(nuevoMensaje);
+      .send({
+        destinatario_id: destinatarioId,
+        mensaje: 'Hola desde el test'
+      });
 
     expect(res.statusCode).toBe(201);
-    expect(res.body).toHaveProperty('mensaje', nuevoMensaje.mensaje);
+    expect(res.body).toHaveProperty('mensaje');
   });
 
-  test('GET /api/messages/conversation/:remitenteId/:destinatarioId', async () => {
+  test('GET /api/messages/inbox - bandeja tipo WhatsApp', async () => {
     const res = await request(app)
-      .get(`/api/messages/conversation/${remitenteId}/${destinatarioId}`)
+      .get('/api/messages/inbox')
       .set('Authorization', userToken);
 
     expect(res.statusCode).toBe(200);
     expect(Array.isArray(res.body)).toBe(true);
   });
 
-  test('GET /api/messages/conversations → historial completo del usuario', async () => {
+  test('GET /api/messages/conversation/:remitenteId/:destinatarioId - historial entre dos usuarios', async () => {
+    const res = await request(app)
+    .get(`/api/messages/conversation/${remitenteId}`)
+    .set('Authorization', userToken);  
+
+    expect(res.statusCode).toBe(200);
+    expect(Array.isArray(res.body)).toBe(true);
+  });
+
+  test('GET /api/messages/conversations - historial completo', async () => {
     const res = await request(app)
       .get('/api/messages/conversations')
       .set('Authorization', userToken);
@@ -103,8 +96,4 @@ describe('ENDPOINTS DE MENSAJERÍA Y NOTIFICACIONES', () => {
     expect(res.statusCode).toBe(200);
     expect(Array.isArray(res.body)).toBe(true);
   });
-});
-
-afterAll(async () => {
-  await db.sequelize.close();
 });
