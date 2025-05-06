@@ -28,7 +28,7 @@ exports.removeFavorite = async (req, res) => {
     }
 };
 
-exports.getFvorites = async (req, res) => {
+exports.getFavorites = async (req, res) => {
     try {
         const userId = req.user.id;
         const favorites = await favoriteService.getUserFavorites(userId);
