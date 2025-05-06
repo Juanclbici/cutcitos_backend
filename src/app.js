@@ -12,10 +12,9 @@ const orderRoutes = require('./routes/orderRoutes');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const cloudinaryRoutes = require('./routes/cloudinaryRoutes');
-const favoritesRoutes = require('./src/routes/favoriteRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
-
+const favoritesRoutes = require('./routes/favoriteRoutes');
 
 const app = express();
 

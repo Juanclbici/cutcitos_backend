@@ -12,7 +12,8 @@
         "test:users": "cross-env NODE_ENV=test jest tests/user.test.js",
         "test:products": "cross-env NODE_ENV=test jest tests/product.test.js",
         "test:messages": "cross-env NODE_ENV=test jest tests/messages.test.js",
-        "test:notifications": "cross-env NODE_ENV=test jest tests/notification.test.js"
+        "test:notifications": "cross-env NODE_ENV=test jest tests/notification.test.js",
+        "test:favorites": "cross-env NODE_ENV=test jest tests/favorite.test.js"
     },
     "dependencies": {
         "bcrypt": "^5.1.1",
