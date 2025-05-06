@@ -11,42 +11,20 @@ exports.createOrder = async (req, res) => {
       return res.status(400).json({ message: 'Se requiere al menos un producto' });
     }
 
-    const total = await calcularTotal(productos);
-
-    const nuevaOrden = await Order.create({
-      usuario_id: user_id, 
+    const nuevaOrden = await orderService.createOrder(
+      user_id,
       vendedor_id,
-      total,
-      estado_pedido: 'pendiente', 
+      productos,
       metodo_pago,
       direccion_entrega
-    });
-    
-    
-    for (const item of productos) {
-      await nuevaOrden.addProducto(item.producto_id, { through: { cantidad: item.cantidad } });
-    }
+    );
 
     res.status(201).json({ success: true, order_id: nuevaOrden.pedido_id });
-
   } catch (error) {
-    console.error("Error al crear pedido :/ :", error);
-    res.status(500).json({ success: false, message: 'Error al crear el pedido X/' });
+    console.error("Error al crear pedido:", error.message);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
-
-// Función auxiliar para sumar precios
-async function calcularTotal(productos) {
-  let total = 0;
-  for (const { producto_id, cantidad } of productos) {
-    const producto = await Product.findByPk(producto_id);
-    if (producto) {
-      total += producto.precio * cantidad;
-    }
-  }
-  return total;
-}
-
 
 // Confirmar pedido (Vendedor)
 exports.confirmOrder = async (req, res) => {

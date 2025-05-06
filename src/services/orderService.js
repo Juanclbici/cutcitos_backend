@@ -3,43 +3,39 @@ const { Op } = require('sequelize');
 
 const orderService = {
   // Crear nuevo pedido (Estudiante)
-  async createOrder(userId, { producto_id, cantidad, metodo_pago, direccion_entrega }) {
+  async createOrder(user_id, vendedor_id, productos, metodo_pago, direccion_entrega) {
     const transaction = await db.sequelize.transaction();
     
     try {
-      // 1. Verificar producto
-      const producto = await db.Product.findByPk(producto_id, { transaction });
-      if (!producto) {
-        throw new Error('Producto no encontrado');
-      }
+      let total = 0;
       
-      if (producto.cantidad_disponible < cantidad) {
-        throw new Error('Cantidad no disponible');
+      for (const item of productos) {
+        const producto = await db.Product.findByPk(item.producto_id, { transaction });
+        if (!producto) throw new Error(`Producto ID ${item.producto_id} no encontrado`);
+        if (producto.cantidad_disponible < item.cantidad)
+          throw new Error(`Stock insuficiente para producto ID ${item.producto_id}`);
+        total += producto.precio * item.cantidad;
       }
-
-      // 2. Calcular total
-      const total = producto.precio * cantidad;
-
-      // 3. Crear pedido
-      const pedido = await db.Order.create({
-        usuario_id: userId,
-        producto_id,
-        cantidad,
+  
+      const nuevaOrden = await db.Order.create({
+        usuario_id: user_id,
+        vendedor_id,
         total,
-        metodo_pago,
-        direccion_entrega,
         estado_pedido: 'pendiente',
-        createdAt: localDate 
+        metodo_pago,
+        direccion_entrega
       }, { transaction });
-
-      // 4. Actualizar producto
-      await producto.update({
-        cantidad_disponible: producto.cantidad_disponible - cantidad,
-        cantidad_vendida: producto.cantidad_vendida + cantidad
-      }, { transaction });
-
+  
+      for (const item of productos) {
+        await nuevaOrden.addProducto(item.producto_id, {
+          through: { cantidad: item.cantidad },
+          transaction
+        });
+      }
+  
       await transaction.commit();
-      return pedido;
+      return nuevaOrden;
+  
     } catch (error) {
       await transaction.rollback();
       throw error;

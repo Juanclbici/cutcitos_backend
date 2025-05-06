@@ -30,24 +30,41 @@ router.use(authMiddleware.verifyToken);
  *           schema:
  *             type: object
  *             required:
- *               - producto_id
- *               - cantidad
+ *               - vendedor_id
+ *               - productos
  *               - metodo_pago
  *               - direccion_entrega
  *             properties:
- *               producto_id:
+ *               vendedor_id:
  *                 type: integer
- *               cantidad:
- *                 type: integer
+ *                 example: 2
+ *               productos:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   required:
+ *                     - producto_id
+ *                     - cantidad
+ *                   properties:
+ *                     producto_id:
+ *                       type: integer
+ *                       example: 1
+ *                     cantidad:
+ *                       type: integer
+ *                       example: 2
  *               metodo_pago:
  *                 type: string
+ *                 example: efectivo
  *               direccion_entrega:
  *                 type: string
+ *                 example: "En la isla"
  *     responses:
  *       201:
  *         description: Pedido creado exitosamente
  *       400:
  *         description: Datos inválidos
+ *       500:
+ *         description: Error interno del servidor
  */
 router.post('/', orderController.createOrder);
 
