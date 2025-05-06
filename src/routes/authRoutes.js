@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authController = require('../controllers/userControllers/authController');
 const { validateResetRequest, validateResetPassword } = require('../validators/authValidator');
+const loginLimiter = require('../middlewares/rateLimiter');
 /**
  * @swagger
  * tags:
@@ -50,6 +51,9 @@ router.post('/register', authController.register);
  *   post:
  *     summary: Iniciar sesión con correo y contraseña
  *     tags: [Auth]
+ *     description: |
+ *       Endpoint de inicio de sesión con autenticación JWT.  
+ *       Limitado a **5 intentos cada 5 minutos por IP** para evitar ataques de fuerza bruta.
  *     requestBody:
  *       required: true
  *       content:
@@ -68,9 +72,11 @@ router.post('/register', authController.register);
  *       200:
  *         description: Login exitoso con token JWT
  *       401:
- *         description: Credenciales incorrectas
+ *         description: Credenciales incorrectas o cuenta inactiva
+ *       429:
+ *         description: Demasiadas solicitudes, intenta más tarde
  */
-router.post('/login', authController.login);
+router.post('/login', loginLimiter, authController.login);
 
 /**
  * @swagger
