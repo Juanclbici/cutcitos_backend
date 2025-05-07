@@ -4,7 +4,7 @@ const favoriteController = require('../controllers/productControllers/favoriteCo
 const authMiddleware = require('../middlewares/authMiddleware');
 const { verifyToken } = require('../services/authService');
 
-router.use(verifyToken);
+router.use(authMiddleware.verifyToken);
 
 /**
  * @swagger

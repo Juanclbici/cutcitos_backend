@@ -46,7 +46,7 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/categories', categoryRoutes);
 app.use('/api/cloudinary', cloudinaryRoutes);
-app.use('/favorites', favoritesRoutes);
+app.use('/api/favorites', favoritesRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
 

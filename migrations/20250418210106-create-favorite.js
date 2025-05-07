@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Favorites', {
@@ -11,4 +11,4 @@ module.exports = {
   async down(queryInterface) {
     await queryInterface.dropTable('Favorites');
   }
-};
+};*/

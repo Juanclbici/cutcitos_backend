@@ -1,5 +1,6 @@
 const db = require('../models');
 const cloudinary = require('cloudinary').v2;
+const logger = require('../utils/logger');
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -7,29 +8,20 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-
 const productService = {
-  async createProduct(vendorId, { 
-    nombre, 
-    descripcion, 
-    precio, 
-    cantidad_disponible, 
-    imagen, 
-    categoria_id 
-  }) {
+  async createProduct(vendorId, { nombre, descripcion, precio, cantidad_disponible, imagen, categoria_id }) {
     try {
-      // 1. Validar que la categoría exista
       const category = await db.Category.findByPk(categoria_id);
       if (!category) {
+        logger.warn(`Categoría no encontrada para nuevo producto`);
         throw new Error('La categoría especificada no existe');
       }
-  
-      // 2. Validaciones adicionales
+
       if (!nombre || !precio) {
+        logger.warn(`Datos incompletos al crear producto por vendedor ID ${vendorId}`);
         throw new Error('Nombre y precio son requeridos');
       }
-  
-      // 3. Crear el producto
+
       const product = await db.Product.create({
         nombre,
         descripcion: descripcion || null,
@@ -40,10 +32,11 @@ const productService = {
         vendedor_id: vendorId,
         estado_producto: 'disponible'
       });
-  
+
+      logger.info(`Producto creado: ${nombre}, Vendedor ID: ${vendorId}`);
       return product;
     } catch (error) {
-      console.error('Error al crear producto:', error);
+      logger.error(`Error al crear producto: ${error.message}`);
       throw error;
     }
   },
@@ -52,176 +45,147 @@ const productService = {
     try {
       const product = await db.Product.findByPk(productId, {
         include: [
-          {
-            model: db.User,
-            as: 'Vendedor',
-            attributes: ['user_id', 'nombre', 'email']
-          },
-          {
-            model: db.Category,
-            as: 'Categoria',
-            attributes: ['categoria_id', 'nombre']
-          }
+          { model: db.User, as: 'Vendedor', attributes: ['user_id', 'nombre', 'email'] },
+          { model: db.Category, as: 'Categoria', attributes: ['categoria_id', 'nombre'] }
         ]
       });
 
       if (!product) {
+        logger.warn(`Producto no encontrado - ID: ${productId}`);
         throw new Error('Producto no encontrado');
       }
 
+      logger.info(`Producto consultado - ID: ${productId}`);
       return product;
     } catch (error) {
-      console.error(`Error al obtener producto con ID ${productId}:`, error);
+      logger.error(`Error al obtener producto ${productId}: ${error.message}`);
       throw error;
     }
   },
+
   async getProductsByCategoryId(categoriaId) {
     try {
-      // Verificar que la categoría exista
       const category = await db.Category.findByPk(categoriaId);
       if (!category) {
+        logger.warn(`Intento de consulta por categoría inexistente - ID: ${categoriaId}`);
         throw new Error('Categoría no encontrada');
       }
-  
+
       const products = await db.Product.findAll({
-        where: {
-          categoria_id: categoriaId,
-          estado_producto: 'disponible'
-        },
+        where: { categoria_id: categoriaId, estado_producto: 'disponible' },
         include: [
-          {
-            model: db.User,
-            as: 'Vendedor',
-            attributes: ['user_id', 'nombre']
-          },
-          {
-            model: db.Category,
-            as: 'Categoria',
-            attributes: ['categoria_id', 'nombre']
-          }
+          { model: db.User, as: 'Vendedor', attributes: ['user_id', 'nombre'] },
+          { model: db.Category, as: 'Categoria', attributes: ['categoria_id', 'nombre'] }
         ],
         order: [['fecha_publicacion', 'DESC']]
       });
-  
+
+      logger.info(`Productos obtenidos por categoría - ID: ${categoriaId}`);
       return products;
     } catch (error) {
-      console.error(`Error al obtener productos por categoría ${categoriaId}:`, error);
+      logger.error(`Error al obtener productos por categoría ${categoriaId}: ${error.message}`);
       throw error;
     }
-  },  
+  },
 
   async updateProduct(productId, updateData) {
+    try {
+      const product = await db.Product.findByPk(productId);
+      if (!product) {
+        logger.warn(`Intento de actualizar producto inexistente - ID: ${productId}`);
+        throw new Error('Producto no encontrado');
+      }
 
-    const product = await db.Product.findByPk(productId);
-    if (!product) throw new Error('Producto no encontrado');
-  
-    // Eliminar imagen anterior si se subió una nueva distinta
-    if (updateData.imagen && updateData.imagen !== product.imagen) {
-      const isOldCloudinaryImage = product.imagen?.startsWith('http') && !product.imagen.includes('default_product.png');
-  
-      if (isOldCloudinaryImage) {
-        try {
-          const publicId = product.imagen
-            .split('/')
-            .slice(-2)
-            .join('/')
-            .replace(/\.(jpg|jpeg|png|webp)/, '');
-          await cloudinary.uploader.destroy(publicId);
-          console.log('✅ Imagen anterior del producto eliminada:', publicId);
-        } catch (error) {
-          console.warn('⚠️ Error al eliminar la imagen anterior:', error.message);
+      if (updateData.imagen && updateData.imagen !== product.imagen) {
+        const isOldCloudinaryImage = product.imagen?.startsWith('http') && !product.imagen.includes('default_product.png');
+        if (isOldCloudinaryImage) {
+          try {
+            const publicId = product.imagen.split('/').slice(-2).join('/').replace(/\.(jpg|jpeg|png|webp)/, '');
+            await cloudinary.uploader.destroy(publicId);
+            logger.info(`Imagen anterior del producto eliminada: ${publicId}`);
+          } catch (error) {
+            logger.warn(`Error al eliminar imagen anterior: ${error.message}`);
+          }
         }
       }
+
+      const datosActualizados = {
+        ...updateData,
+        imagen: updateData.imagen || product.imagen,
+      };
+
+      await product.update(datosActualizados);
+      logger.info(`Producto actualizado - ID: ${productId}`);
+      return await db.Product.findByPk(productId);
+    } catch (error) {
+      logger.error(`Error al actualizar producto ${productId}: ${error.message}`);
+      throw error;
     }
-  
-    // Aseguramos que la imagen esté presente
-    const datosActualizados = {
-      ...updateData,
-      imagen: updateData.imagen || product.imagen,
-    };
-  
-    console.log("📤 Datos que se enviarán a la BD:", datosActualizados);
-  
-    // CAMBIO CLAVE: usamos .update() del objeto Sequelize
-    await product.update(datosActualizados);
-  
-    const updatedProduct = await db.Product.findByPk(productId);
-    return updatedProduct;
-  },  
+  },
 
   async deleteProduct(productId, vendorId) {
     try {
       const product = await db.Product.findOne({
-        where: {
-          producto_id: productId,
-          vendedor_id: vendorId
-        }
+        where: { producto_id: productId, vendedor_id: vendorId }
       });
 
       if (!product) {
+        logger.warn(`Producto no encontrado o no autorizado - ID: ${productId}`);
         throw new Error('Producto no encontrado o no autorizado');
       }
 
-      // Verificar si el producto tiene órdenes asociadas
       const ordersCount = await db.Order.count({
         where: { producto_id: productId }
       });
 
       if (ordersCount > 0) {
+        logger.warn(`Intento de eliminar producto con órdenes - ID: ${productId}`);
         throw new Error('No se puede eliminar un producto con órdenes asociadas');
       }
 
       await product.destroy();
+      logger.info(`Producto eliminado - ID: ${productId}`);
       return { success: true, message: 'Producto eliminado correctamente' };
     } catch (error) {
-      console.error(`Error al eliminar producto ${productId}:`, error);
+      logger.error(`Error al eliminar producto ${productId}: ${error.message}`);
       throw error;
     }
   },
 
   async getVendorProducts(vendorId) {
     try {
-      return await db.Product.findAll({
+      const products = await db.Product.findAll({
         where: { vendedor_id: vendorId },
-        include: [
-          {
-            model: db.Category,
-            as: 'Categoria',
-            attributes: ['categoria_id', 'nombre']
-          }
-        ],
+        include: [{ model: db.Category, as: 'Categoria', attributes: ['categoria_id', 'nombre'] }],
         order: [['fecha_publicacion', 'DESC']]
       });
+
+      logger.info(`Productos del vendedor ID ${vendorId} consultados`);
+      return products;
     } catch (error) {
-      console.error(`Error al obtener productos del vendedor ${vendorId}:`, error);
+      logger.error(`Error al obtener productos del vendedor ${vendorId}: ${error.message}`);
       throw error;
     }
   },
 
   async getAllAvailableProducts() {
     try {
-      return await db.Product.findAll({
+      const products = await db.Product.findAll({
         where: { estado_producto: 'disponible' },
         include: [
-          {
-            model: db.User,
-            as: 'Vendedor',
-            attributes: ['user_id', 'nombre']
-          },
-          {
-            model: db.Category,
-            as: 'Categoria',
-            attributes: ['categoria_id', 'nombre']
-          }
+          { model: db.User, as: 'Vendedor', attributes: ['user_id', 'nombre'] },
+          { model: db.Category, as: 'Categoria', attributes: ['categoria_id', 'nombre'] }
         ],
         order: [['fecha_publicacion', 'DESC']]
       });
+
+      logger.info(`Consulta de productos disponibles realizada`);
+      return products;
     } catch (error) {
-      console.error('Error al obtener productos disponibles:', error);
+      logger.error(`Error al obtener productos disponibles: ${error.message}`);
       throw error;
     }
   },
-
 
   async searchProducts(searchTerm, categoryId = null) {
     try {
@@ -233,22 +197,18 @@ const productService = {
             { descripcion: { [db.Sequelize.Op.like]: `%${searchTerm}%` } }
           ]
         },
-        include: [
-          {
-            model: db.Category,
-            as: 'Categoria',
-            attributes: ['categoria_id', 'nombre']
-          }
-        ]
+        include: [{ model: db.Category, as: 'Categoria', attributes: ['categoria_id', 'nombre'] }]
       };
 
       if (categoryId) {
         options.where.categoria_id = categoryId;
       }
 
-      return await db.Product.findAll(options);
+      const results = await db.Product.findAll(options);
+      logger.info(`Búsqueda de productos realizada - término: "${searchTerm}", categoría: ${categoryId || 'todas'}`);
+      return results;
     } catch (error) {
-      console.error('Error al buscar productos:', error);
+      logger.error(`Error en búsqueda de productos: ${error.message}`);
       throw error;
     }
   }

@@ -1,0 +1,75 @@
+[2025-05-07T00:47:42.800Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T00:49:00.079Z] INFO: Solicitud de reseteo de contraseña para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T00:51:00.163Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T00:58:41.488Z] INFO: Intento de registro para Mauricio@gmail.com
+[2025-05-07T00:58:41.490Z] INFO: Intento de registro para Mauricio@gmail.com
+[2025-05-07T00:58:41.584Z] INFO: Usuario creado exitosamente: Mauricio@gmail.com
+[2025-05-07T00:58:41.589Z] INFO: Token generado para: Mauricio@gmail.com
+[2025-05-07T00:58:41.590Z] INFO: Usuario registrado exitosamente: Mauricio@gmail.com
+[2025-05-07T00:59:00.193Z] INFO: Intento de registro para Mauricio@gmail.com
+[2025-05-07T00:59:00.193Z] INFO: Intento de registro para Mauricio@gmail.com
+[2025-05-07T00:59:00.201Z] WARN: Registro fallido - Email ya registrado: Mauricio@gmail.com
+[2025-05-07T00:59:00.201Z] ERROR: Error al registrar usuario: El email ya está registrado
+[2025-05-07T00:59:15.872Z] INFO: Intento de registro para Maurici0o@gmail.com
+[2025-05-07T00:59:15.873Z] INFO: Intento de registro para Maurici0o@gmail.com
+[2025-05-07T00:59:15.882Z] WARN: Registro fallido - Código UDG duplicado: 215445711
+[2025-05-07T00:59:15.883Z] ERROR: Error al registrar usuario: El código UDG ya está registrado
+[2025-05-07T01:00:34.582Z] INFO: Intento de registro para Maurici0o@g4mail.com
+[2025-05-07T01:00:34.583Z] WARN: Correo no permitido: Maurici0o@g4mail.com
+[2025-05-07T01:01:26.620Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:01:26.621Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:01:53.892Z] WARN: Login fallido - Usuario no encontrado o inactivo: juan.lopez45172@alumnos.udg.mx
+[2025-05-07T01:01:53.892Z] WARN: Error de login para juan.lopez45172@alumnos.udg.mx: Credenciales inválidas o cuenta inactiva
+[2025-05-07T01:02:27.467Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:02:27.467Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-05-07T01:03:08.723Z] INFO: Solicitud de reseteo de contraseña para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:03:08.723Z] INFO: Solicitud de reset para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:03:08.751Z] INFO: Código de recuperación generado para juan.lopez4572@alumnos.udg.mx: 86822
+[2025-05-07T01:03:10.051Z] INFO: Correo de recuperación enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:04:14.774Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:04:14.775Z] INFO: Validando código de reseteo para juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:04:14.851Z] INFO: Contraseña actualizada para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:04:16.288Z] INFO: Correo de confirmación de contraseña enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:05:12.974Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:05:12.975Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-05-07T01:05:19.269Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:05:19.269Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T01:16:15.359Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T01:16:58.394Z] INFO: Perfil actualizado para el usuario ID: 1
+[2025-05-07T01:17:19.893Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T01:19:20.102Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T01:19:20.103Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T01:19:31.460Z] INFO: Perfil actualizado para el usuario ID: 1
+[2025-05-07T01:19:31.460Z] INFO: Perfil actualizado para el usuario ID: 1
+[2025-05-07T01:20:58.814Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T01:20:58.817Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T01:21:52.893Z] WARN: Código UDG duplicado detectado: 215445725
+[2025-05-07T01:21:52.894Z] ERROR: Error al actualizar perfil del usuario ID 1: El código UDG ya está registrado
+[2025-05-07T01:26:11.501Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T01:26:57.945Z] INFO: Categoría creada: Prueba3
+[2025-05-07T01:26:57.946Z] INFO: Categoría creada desde controlador: Prueba3
+[2025-05-07T01:27:17.281Z] INFO: Categoría consultada con ID: 1
+[2025-05-07T01:54:52.817Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T01:57:38.236Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:00:36.815Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:02:24.688Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:02:36.015Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:04:52.862Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:34:33.110Z] INFO: Favorito creado - Usuario: 1 - Producto: 3
+[2025-05-07T02:34:33.112Z] INFO: Producto ID 3 marcado como favorito por usuario ID 1
+[2025-05-07T02:34:39.598Z] INFO: Favorito creado - Usuario: 1 - Producto: 2
+[2025-05-07T02:34:39.598Z] INFO: Producto ID 2 marcado como favorito por usuario ID 1
+[2025-05-07T02:34:44.022Z] INFO: Favorito creado - Usuario: 1 - Producto: 5
+[2025-05-07T02:34:44.022Z] INFO: Producto ID 5 marcado como favorito por usuario ID 1
+[2025-05-07T02:34:49.987Z] INFO: Consulta de favoritos - Usuario: 1 - Total: 3
+[2025-05-07T02:34:49.987Z] INFO: Favoritos obtenidos para usuario ID 1
+[2025-05-07T02:35:17.019Z] INFO: Verificación de favorito - Usuario: 1 - Producto: 1 - Resultado: false
+[2025-05-07T02:35:21.225Z] INFO: Verificación de favorito - Usuario: 1 - Producto: 2 - Resultado: true
+[2025-05-07T02:35:29.169Z] INFO: Favorito eliminado (true) - Usuario: 1 - Producto: 2
+[2025-05-07T02:35:29.170Z] INFO: Favorito eliminado - Usuario: 1 - Producto: 2
+[2025-05-07T02:35:42.557Z] INFO: Consulta de favoritos - Usuario: 1 - Total: 2
+[2025-05-07T02:35:42.558Z] INFO: Favoritos obtenidos para usuario ID 1
+[2025-05-07T02:35:51.268Z] INFO: Favoritos eliminados en total: 2 - Usuario ID: 1
+[2025-05-07T02:35:51.268Z] INFO: Todos los favoritos eliminados para usuario ID 1
+[2025-05-07T02:35:54.123Z] INFO: Consulta de favoritos - Usuario: 1 - Total: 0
+[2025-05-07T02:35:54.124Z] INFO: Favoritos obtenidos para usuario ID 1
