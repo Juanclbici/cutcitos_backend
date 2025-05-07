@@ -73,3 +73,734 @@
 [2025-05-07T02:35:51.268Z] INFO: Todos los favoritos eliminados para usuario ID 1
 [2025-05-07T02:35:54.123Z] INFO: Consulta de favoritos - Usuario: 1 - Total: 0
 [2025-05-07T02:35:54.124Z] INFO: Favoritos obtenidos para usuario ID 1
+[2025-05-07T02:56:43.124Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T02:56:43.125Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T02:56:43.306Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T02:56:43.306Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T02:56:43.913Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T02:56:43.915Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T02:56:43.926Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:56:43.926Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:56:43.929Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:56:43.929Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:57:07.941Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T02:57:07.941Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T02:57:10.280Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T02:57:10.280Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T02:57:12.204Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T02:57:12.205Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T02:57:27.697Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T02:57:27.698Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T02:57:37.236Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:57:37.236Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:57:44.288Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T02:57:44.289Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T02:57:45.597Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T02:57:45.598Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T02:57:52.758Z] INFO: Pedido creado exitosamente - ID: 22, Usuario: 1
+[2025-05-07T02:57:52.758Z] INFO: Pedido creado con ID 22 por usuario ID 1
+[2025-05-07T02:57:54.075Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T02:57:54.076Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T02:58:05.594Z] INFO: Pedido cancelado - ID: 22, Por: usuario ID 1
+[2025-05-07T02:58:05.594Z] INFO: Pedido cancelado ID 22 por usuario ID 1
+[2025-05-07T02:58:05.661Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T02:58:05.661Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T02:58:11.280Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T02:58:11.281Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T02:58:13.262Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T02:58:13.265Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:58:13.265Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:58:20.464Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T02:58:20.465Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T02:58:25.988Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:58:25.989Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:58:28.843Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T02:58:28.848Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T02:58:41.341Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T02:58:41.341Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T02:59:04.663Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T02:59:04.667Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T02:59:04.667Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T02:59:08.660Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T02:59:08.660Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:15:30.550Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:15:30.562Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:15:30.563Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:15:32.012Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T03:15:32.012Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:15:32.040Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:15:32.041Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:19:40.025Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:19:40.027Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:19:41.003Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:19:41.029Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:19:41.029Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:19:56.683Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T03:19:56.683Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:19:56.721Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:19:56.722Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:19:59.035Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:19:59.041Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:20:05.174Z] INFO: Mensaje creado en la DB de 1 a 2
+[2025-05-07T03:20:05.174Z] INFO: Mensaje enviado de 1 a 2
+[2025-05-07T03:20:05.217Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:20:05.221Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:20:09.908Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T03:20:09.908Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:20:10.037Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:20:10.038Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:20:11.912Z] INFO: Mensajes entre 3 y 1 marcados como leídos
+[2025-05-07T03:20:11.914Z] INFO: Conversación entre 3 y 1 consultada
+[2025-05-07T03:20:15.172Z] INFO: Mensaje creado en la DB de 1 a 3
+[2025-05-07T03:20:15.173Z] INFO: Mensaje enviado de 1 a 3
+[2025-05-07T03:20:15.290Z] INFO: Mensajes entre 3 y 1 marcados como leídos
+[2025-05-07T03:20:15.294Z] INFO: Conversación entre 3 y 1 consultada
+[2025-05-07T03:20:16.679Z] INFO: Inbox generado para usuario ID 1 con 2 conversaciones
+[2025-05-07T03:20:16.680Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:20:16.975Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:20:16.975Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:20:19.767Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:20:19.774Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:20:19.775Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:20:21.490Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:20:21.491Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:20:23.053Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:20:23.053Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:20:24.099Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:20:24.099Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:20:25.930Z] INFO: Pedido creado exitosamente - ID: 23, Usuario: 1
+[2025-05-07T03:20:25.931Z] INFO: Pedido creado con ID 23 por usuario ID 1
+[2025-05-07T03:20:26.974Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:20:26.974Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:20:32.067Z] INFO: Pedido cancelado - ID: 23, Por: usuario ID 1
+[2025-05-07T03:20:32.067Z] INFO: Pedido cancelado ID 23 por usuario ID 1
+[2025-05-07T03:20:32.099Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:20:32.100Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:20:35.549Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:20:35.552Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:20:35.553Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:20:37.249Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T03:20:37.250Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T03:20:40.209Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:20:40.210Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:20:51.077Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:20:51.077Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:20:52.685Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:20:52.685Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:20:54.874Z] INFO: Mensajes entre 15 y 1 marcados como leídos
+[2025-05-07T03:20:54.876Z] INFO: Conversación entre 15 y 1 consultada
+[2025-05-07T03:21:00.061Z] INFO: Mensaje creado en la DB de 1 a 15
+[2025-05-07T03:21:00.061Z] INFO: Mensaje enviado de 1 a 15
+[2025-05-07T03:21:00.090Z] INFO: Mensajes entre 15 y 1 marcados como leídos
+[2025-05-07T03:21:00.093Z] INFO: Conversación entre 15 y 1 consultada
+[2025-05-07T03:21:05.688Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:21:05.688Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:21:08.470Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:21:08.471Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:21:09.830Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:21:09.831Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:21:16.089Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:21:16.091Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:21:20.168Z] INFO: Mensaje creado en la DB de 1 a 2
+[2025-05-07T03:21:20.168Z] INFO: Mensaje enviado de 1 a 2
+[2025-05-07T03:21:20.224Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:21:20.227Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:21:25.635Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:21:25.636Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:21:27.389Z] INFO: Pedido creado exitosamente - ID: 24, Usuario: 1
+[2025-05-07T03:21:27.389Z] INFO: Pedido creado con ID 24 por usuario ID 1
+[2025-05-07T03:21:28.422Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:21:28.422Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:21:30.665Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:21:30.683Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:21:30.684Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:21:34.270Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:21:47.407Z] INFO: Categoría creada: prueba 7
+[2025-05-07T03:21:47.407Z] INFO: Categoría creada desde controlador: prueba 7
+[2025-05-07T03:21:47.532Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:21:56.874Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:21:56.875Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:21:56.903Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:21:56.903Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:21:57.620Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:21:57.622Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:21:57.623Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:22:02.452Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:22:02.452Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:22:02.478Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:22:02.478Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:22:07.706Z] INFO: Mensajes entre 15 y 1 marcados como leídos
+[2025-05-07T03:22:07.710Z] INFO: Conversación entre 15 y 1 consultada
+[2025-05-07T03:22:10.021Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:22:10.022Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:22:10.069Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:22:10.069Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:22:23.057Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-05-07T03:22:23.057Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-05-07T03:22:23.106Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T03:22:23.107Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T03:22:23.228Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:22:23.230Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:22:23.231Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:22:26.270Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T03:22:26.270Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T03:22:29.845Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:22:29.930Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:22:29.931Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:22:32.151Z] INFO: Historial de pedidos obtenido para usuario ID: 2
+[2025-05-07T03:22:32.151Z] INFO: Historial de pedidos consultado por usuario ID 2
+[2025-05-07T03:22:38.177Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:22:38.191Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:22:38.192Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:22:40.757Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T03:22:40.757Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T03:22:41.831Z] INFO: Inbox generado para usuario ID 2 con 2 conversaciones
+[2025-05-07T03:22:41.832Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T03:22:41.857Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:22:41.857Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:22:45.711Z] INFO: Mensajes entre 1 y 2 marcados como leídos
+[2025-05-07T03:22:45.716Z] INFO: Conversación entre 1 y 2 consultada
+[2025-05-07T03:22:51.719Z] INFO: Mensaje creado en la DB de 2 a 1
+[2025-05-07T03:22:51.720Z] INFO: Mensaje enviado de 2 a 1
+[2025-05-07T03:22:51.745Z] INFO: Mensajes entre 1 y 2 marcados como leídos
+[2025-05-07T03:22:51.747Z] INFO: Conversación entre 1 y 2 consultada
+[2025-05-07T03:22:52.999Z] INFO: Inbox generado para usuario ID 2 con 2 conversaciones
+[2025-05-07T03:22:53.000Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T03:22:53.051Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:22:53.052Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:22:59.556Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:22:59.556Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:23:01.621Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:23:01.621Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:23:02.671Z] INFO: Mensajes entre 2 y 2 marcados como leídos
+[2025-05-07T03:23:02.674Z] INFO: Conversación entre 2 y 2 consultada
+[2025-05-07T03:23:07.478Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:23:07.478Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:23:09.203Z] INFO: Mensajes entre 15 y 2 marcados como leídos
+[2025-05-07T03:23:09.209Z] INFO: Conversación entre 15 y 2 consultada
+[2025-05-07T03:23:17.025Z] INFO: Mensaje creado en la DB de 2 a 15
+[2025-05-07T03:23:17.025Z] INFO: Mensaje enviado de 2 a 15
+[2025-05-07T03:23:17.047Z] INFO: Mensajes entre 15 y 2 marcados como leídos
+[2025-05-07T03:23:17.049Z] INFO: Conversación entre 15 y 2 consultada
+[2025-05-07T03:23:27.736Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T03:23:27.737Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T03:23:32.208Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:32.208Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:23:36.968Z] INFO: Pedido confirmado - ID: 24, Vendedor: 2
+[2025-05-07T03:23:36.969Z] INFO: Pedido confirmado ID 24 por vendedor ID 2
+[2025-05-07T03:23:37.003Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:37.003Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:23:40.064Z] INFO: Pedido entregado - ID: 24, Vendedor: 2
+[2025-05-07T03:23:40.064Z] INFO: Pedido marcado como entregado ID 24 por vendedor ID 2
+[2025-05-07T03:23:40.101Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:40.102Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:23:47.970Z] INFO: Pedido cancelado - ID: 21, Por: vendedor ID 2
+[2025-05-07T03:23:47.971Z] INFO: Pedido cancelado ID 21 por usuario ID 2
+[2025-05-07T03:23:48.080Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:48.081Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:23:57.104Z] INFO: Pedido confirmado - ID: 17, Vendedor: 2
+[2025-05-07T03:23:57.104Z] INFO: Pedido confirmado ID 17 por vendedor ID 2
+[2025-05-07T03:23:57.138Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:57.138Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:23:58.713Z] INFO: Pedido entregado - ID: 17, Vendedor: 2
+[2025-05-07T03:23:58.713Z] INFO: Pedido marcado como entregado ID 17 por vendedor ID 2
+[2025-05-07T03:23:58.773Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:23:58.773Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:24:33.422Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:24:33.495Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:24:33.496Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:24:47.256Z] INFO: Producto actualizado - ID: 11
+[2025-05-07T03:24:47.258Z] INFO: Producto actualizado - ID: 11
+[2025-05-07T03:24:47.361Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:24:47.361Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:24:53.399Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:24:53.400Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:24:53.404Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:25:00.255Z] INFO: Productos obtenidos por categoría - ID: 7
+[2025-05-07T03:25:00.255Z] INFO: Productos consultados por categoría ID: 7
+[2025-05-07T03:25:03.386Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:25:03.520Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:25:03.521Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:25:07.087Z] INFO: Producto eliminado - ID: 11
+[2025-05-07T03:25:07.087Z] INFO: Producto eliminado - ID: 11, por Usuario ID: 2
+[2025-05-07T03:25:07.108Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:25:07.108Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:25:12.462Z] INFO: Productos obtenidos por categoría - ID: 6
+[2025-05-07T03:25:12.462Z] INFO: Productos consultados por categoría ID: 6
+[2025-05-07T03:25:13.413Z] INFO: Productos obtenidos por categoría - ID: 7
+[2025-05-07T03:25:13.414Z] INFO: Productos consultados por categoría ID: 7
+[2025-05-07T03:25:15.072Z] INFO: Productos obtenidos por categoría - ID: 5
+[2025-05-07T03:25:15.073Z] INFO: Productos consultados por categoría ID: 5
+[2025-05-07T03:25:16.647Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:25:16.648Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:25:19.454Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:25:19.506Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:25:19.506Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:25:39.061Z] INFO: Producto creado: prueba 72, Vendedor ID: 2
+[2025-05-07T03:25:39.061Z] INFO: Producto creado por usuario ID 2 - ID: 12
+[2025-05-07T03:25:39.079Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:25:39.080Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:26:32.956Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T03:26:32.956Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T03:26:34.521Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T03:26:34.522Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T03:26:36.872Z] INFO: Productos obtenidos por categoría - ID: 7
+[2025-05-07T03:26:36.873Z] INFO: Productos consultados por categoría ID: 7
+[2025-05-07T03:26:40.916Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:26:40.976Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:26:40.977Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:26:45.944Z] INFO: Producto actualizado - ID: 12
+[2025-05-07T03:26:45.946Z] INFO: Producto actualizado - ID: 12
+[2025-05-07T03:26:45.979Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:26:45.980Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:26:49.122Z] INFO: Productos obtenidos por categoría - ID: 5
+[2025-05-07T03:26:49.123Z] INFO: Productos consultados por categoría ID: 5
+[2025-05-07T03:26:49.732Z] INFO: Productos obtenidos por categoría - ID: 7
+[2025-05-07T03:26:49.732Z] INFO: Productos consultados por categoría ID: 7
+[2025-05-07T03:26:54.838Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:26:54.858Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:26:54.859Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:26:59.504Z] INFO: Producto actualizado - ID: 12
+[2025-05-07T03:26:59.506Z] INFO: Producto actualizado - ID: 12
+[2025-05-07T03:26:59.569Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:26:59.569Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:27:05.312Z] INFO: Productos obtenidos por categoría - ID: 7
+[2025-05-07T03:27:05.312Z] INFO: Productos consultados por categoría ID: 7
+[2025-05-07T03:27:21.215Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:27:21.215Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:27:26.825Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:27:26.825Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:27:28.005Z] INFO: Inbox generado para usuario ID 2 con 3 conversaciones
+[2025-05-07T03:27:28.005Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T03:27:28.075Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:27:28.076Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:27:34.869Z] INFO: Historial de pedidos obtenido para usuario ID: 2
+[2025-05-07T03:27:34.870Z] INFO: Historial de pedidos consultado por usuario ID 2
+[2025-05-07T03:28:53.806Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:28:53.810Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:28:53.811Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:29:16.226Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T03:29:16.226Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T03:29:16.275Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:29:16.275Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:29:16.353Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:29:16.362Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:29:16.362Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:29:18.010Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:29:18.010Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:29:18.042Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:29:18.042Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:29:19.559Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:29:19.564Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:29:24.316Z] INFO: Mensaje creado en la DB de 1 a 2
+[2025-05-07T03:29:24.316Z] INFO: Mensaje enviado de 1 a 2
+[2025-05-07T03:29:24.338Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:29:24.341Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:29:25.605Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:29:25.605Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:29:25.647Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:29:25.647Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:29:33.615Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:29:33.616Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:29:34.832Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:29:34.833Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:29:45.352Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:29:45.361Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:29:45.361Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:30:13.332Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:30:13.332Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:34:31.559Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:34:31.563Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:34:31.564Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:34:33.933Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:34:33.933Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:34:34.824Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T03:34:34.824Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T03:34:36.147Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:34:36.148Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:34:39.706Z] INFO: Pedido creado exitosamente - ID: 25, Usuario: 1
+[2025-05-07T03:34:39.706Z] INFO: Pedido creado con ID 25 por usuario ID 1
+[2025-05-07T03:34:40.755Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:34:40.756Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:36:15.389Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:36:15.390Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:36:15.417Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:36:15.418Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:36:18.346Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T03:36:18.347Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T03:36:20.282Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:36:20.283Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:52:47.159Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:52:47.169Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:53:00.076Z] INFO: Mensaje creado en la DB de 1 a 2
+[2025-05-07T03:53:00.076Z] INFO: Mensaje enviado de 1 a 2
+[2025-05-07T03:53:00.121Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:53:00.123Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:53:03.647Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:53:03.647Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:53:03.717Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:53:03.719Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:53:06.540Z] INFO: Mensajes entre 2 y 1 marcados como leídos
+[2025-05-07T03:53:06.545Z] INFO: Conversación entre 2 y 1 consultada
+[2025-05-07T03:53:08.842Z] INFO: Inbox generado para usuario ID 1 con 3 conversaciones
+[2025-05-07T03:53:08.842Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T03:53:08.894Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:53:08.894Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:53:47.758Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T03:53:47.758Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T03:54:49.811Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-05-07T03:54:49.812Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-05-07T03:54:49.862Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T03:54:49.862Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T03:54:50.021Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:54:50.027Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:54:50.027Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:54:52.477Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:54:52.537Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T03:54:52.540Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T03:54:56.787Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:54:56.787Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T03:57:28.320Z] INFO: Mensajes entre 1 y 2 marcados como leídos
+[2025-05-07T03:57:28.323Z] INFO: Conversación entre 1 y 2 consultada
+[2025-05-07T03:57:43.418Z] INFO: Mensaje creado en la DB de 2 a 1
+[2025-05-07T03:57:43.418Z] INFO: Mensaje enviado de 2 a 1
+[2025-05-07T03:57:43.514Z] INFO: Mensajes entre 1 y 2 marcados como leídos
+[2025-05-07T03:57:43.517Z] INFO: Conversación entre 1 y 2 consultada
+[2025-05-07T03:57:46.424Z] INFO: Inbox generado para usuario ID 2 con 3 conversaciones
+[2025-05-07T03:57:46.424Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T03:57:46.491Z] INFO: getAllUsers: 17 usuarios encontrados
+[2025-05-07T03:57:46.491Z] INFO: Se obtuvo la lista de todos los usuarios (17)
+[2025-05-07T03:57:58.486Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T03:57:58.490Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T03:57:58.490Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T03:58:03.376Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T03:58:03.377Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:00:55.591Z] INFO: Solicitud de reseteo de contraseña para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:00:55.597Z] INFO: Solicitud de reset para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:00:55.682Z] INFO: Código de recuperación generado para juan.lopez4572@alumnos.udg.mx: 93813
+[2025-05-07T04:00:57.134Z] INFO: Correo de recuperación enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:43.862Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:43.865Z] INFO: Validando código de reseteo para juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:43.998Z] INFO: Contraseña actualizada para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:45.063Z] INFO: Correo de confirmación de contraseña enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:56.654Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:56.654Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:01:56.702Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:01:56.702Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:01:56.879Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:01:56.886Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:01:56.886Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:02:50.737Z] INFO: Intento de registro para pruebabuyer@gmail.com
+[2025-05-07T04:02:50.740Z] INFO: Intento de registro para pruebabuyer@gmail.com
+[2025-05-07T04:02:50.832Z] INFO: Usuario creado exitosamente: pruebabuyer@gmail.com
+[2025-05-07T04:02:50.834Z] INFO: Token generado para: pruebabuyer@gmail.com
+[2025-05-07T04:02:50.834Z] INFO: Usuario registrado exitosamente: pruebabuyer@gmail.com
+[2025-05-07T04:02:50.875Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:02:50.876Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:02:51.076Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:02:51.079Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:02:51.079Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:02:54.710Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:02:54.710Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:03:38.369Z] INFO: Intento de registro para pruebaseller@gmail.com
+[2025-05-07T04:03:38.370Z] INFO: Intento de registro para pruebaseller@gmail.com
+[2025-05-07T04:03:38.470Z] INFO: Usuario creado exitosamente: pruebaseller@gmail.com
+[2025-05-07T04:03:38.471Z] INFO: Token generado para: pruebaseller@gmail.com
+[2025-05-07T04:03:38.472Z] INFO: Usuario registrado exitosamente: pruebaseller@gmail.com
+[2025-05-07T04:03:38.515Z] INFO: Perfil solicitado para el usuario ID: 19
+[2025-05-07T04:03:38.515Z] INFO: Perfil consultado para el usuario ID: 19
+[2025-05-07T04:03:38.692Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:03:38.696Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:03:38.697Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:03:44.390Z] INFO: Perfil solicitado para el usuario ID: 19
+[2025-05-07T04:03:44.391Z] INFO: Perfil consultado para el usuario ID: 19
+[2025-05-07T04:05:00.883Z] INFO: Login exitoso para: pruebabuyer@gmail.com
+[2025-05-07T04:05:00.883Z] INFO: Inicio de sesión exitoso para: pruebabuyer@gmail.com
+[2025-05-07T04:05:00.998Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:05:00.998Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:05:01.198Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:05:01.203Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:05:01.204Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:05:06.591Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T04:05:06.592Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T04:05:07.513Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T04:05:07.514Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T04:05:08.323Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T04:05:08.323Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T04:05:10.472Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T04:05:10.473Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T04:05:11.609Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:05:11.610Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:05:13.107Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:05:13.108Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:05:15.325Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:05:15.326Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:05:17.926Z] INFO: Inbox generado para usuario ID 18 con 0 conversaciones
+[2025-05-07T04:05:17.927Z] INFO: Inbox obtenido para usuario ID: 18
+[2025-05-07T04:05:17.989Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:05:17.989Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:05:19.149Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:05:19.149Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:05:20.270Z] INFO: Pedido creado exitosamente - ID: 26, Usuario: 18
+[2025-05-07T04:05:20.271Z] INFO: Pedido creado con ID 26 por usuario ID 18
+[2025-05-07T04:05:21.732Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:05:21.733Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:05:25.177Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:05:25.181Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:05:25.181Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:05:27.553Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:05:27.553Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:05:28.788Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:05:28.789Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:05:29.956Z] INFO: Pedido creado exitosamente - ID: 27, Usuario: 18
+[2025-05-07T04:05:29.956Z] INFO: Pedido creado con ID 27 por usuario ID 18
+[2025-05-07T04:05:31.116Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:05:31.117Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:05:36.057Z] INFO: Pedido cancelado - ID: 27, Por: usuario ID 18
+[2025-05-07T04:05:36.058Z] INFO: Pedido cancelado ID 27 por usuario ID 18
+[2025-05-07T04:05:36.086Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:05:36.087Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:05:41.993Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:05:41.996Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:05:46.518Z] INFO: Mensaje creado en la DB de 18 a 2
+[2025-05-07T04:05:46.519Z] INFO: Mensaje enviado de 18 a 2
+[2025-05-07T04:05:46.547Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:05:46.549Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:05:49.593Z] INFO: Inbox generado para usuario ID 18 con 1 conversaciones
+[2025-05-07T04:05:49.593Z] INFO: Inbox obtenido para usuario ID: 18
+[2025-05-07T04:05:49.640Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:05:49.641Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:05:51.531Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:05:51.535Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:05:53.104Z] INFO: Inbox generado para usuario ID 18 con 1 conversaciones
+[2025-05-07T04:05:53.104Z] INFO: Inbox obtenido para usuario ID: 18
+[2025-05-07T04:05:53.146Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:05:53.146Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:06:06.848Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:06:06.848Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:06:08.551Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:06:08.623Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:06:08.623Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:06:18.899Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:06:18.899Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:06:25.192Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:06:25.193Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:06:28.678Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:06:28.679Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:06:31.196Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:06:31.197Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:06:34.339Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:06:34.343Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:06:39.858Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:06:39.858Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:06:46.472Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:06:46.473Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:06:53.442Z] INFO: Pedido creado exitosamente - ID: 28, Usuario: 18
+[2025-05-07T04:06:53.443Z] INFO: Pedido creado con ID 28 por usuario ID 18
+[2025-05-07T04:06:55.355Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:06:55.360Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:06:55.360Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:06:58.683Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:06:58.684Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:06:59.457Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:06:59.457Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:07:01.108Z] INFO: Pedido creado exitosamente - ID: 29, Usuario: 18
+[2025-05-07T04:07:01.108Z] INFO: Pedido creado con ID 29 por usuario ID 18
+[2025-05-07T04:07:02.649Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:07:02.650Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:07:36.197Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:07:36.197Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:07:36.987Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:07:36.998Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:07:36.998Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:07:48.552Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:07:48.553Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:08:34.035Z] INFO: Login exitoso para: pruebabuyer@gmail.com
+[2025-05-07T04:08:34.036Z] INFO: Inicio de sesión exitoso para: pruebabuyer@gmail.com
+[2025-05-07T04:08:34.092Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:08:34.092Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:08:34.303Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:08:34.304Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:08:34.508Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:08:40.955Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:08:40.955Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:08:42.392Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:08:42.393Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:08:51.432Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:08:51.435Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:08:51.435Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:08:55.162Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:08:55.163Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:08:56.375Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:08:56.376Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:08:58.760Z] INFO: Pedido creado exitosamente - ID: 30, Usuario: 18
+[2025-05-07T04:08:58.761Z] INFO: Pedido creado con ID 30 por usuario ID 18
+[2025-05-07T04:09:00.013Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:09:00.013Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:09:02.848Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:02.849Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:08.010Z] INFO: Mensaje creado en la DB de 18 a 2
+[2025-05-07T04:09:08.011Z] INFO: Mensaje enviado de 18 a 2
+[2025-05-07T04:09:08.048Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:08.050Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:12.945Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:12.947Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:17.451Z] INFO: Mensaje creado en la DB de 18 a 2
+[2025-05-07T04:09:17.452Z] INFO: Mensaje enviado de 18 a 2
+[2025-05-07T04:09:17.488Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:17.492Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:19.849Z] INFO: Inbox generado para usuario ID 18 con 1 conversaciones
+[2025-05-07T04:09:19.849Z] INFO: Inbox obtenido para usuario ID: 18
+[2025-05-07T04:09:20.339Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:09:20.339Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:09:22.159Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:22.164Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:24.127Z] INFO: Inbox generado para usuario ID 18 con 1 conversaciones
+[2025-05-07T04:09:24.128Z] INFO: Inbox obtenido para usuario ID: 18
+[2025-05-07T04:09:24.174Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:09:24.174Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:09:26.450Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:09:26.450Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:09:28.116Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:09:28.116Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:09:32.227Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:09:32.228Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:09:34.343Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:09:34.343Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:09:39.963Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:09:39.964Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:09:43.310Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:09:43.311Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:09:45.088Z] INFO: Pedido creado exitosamente - ID: 31, Usuario: 18
+[2025-05-07T04:09:45.088Z] INFO: Pedido creado con ID 31 por usuario ID 18
+[2025-05-07T04:09:46.873Z] INFO: Historial de pedidos obtenido para usuario ID: 18
+[2025-05-07T04:09:46.873Z] INFO: Historial de pedidos consultado por usuario ID 18
+[2025-05-07T04:09:49.786Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:49.791Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:51.936Z] INFO: Mensajes entre 2 y 18 marcados como leídos
+[2025-05-07T04:09:51.942Z] INFO: Conversación entre 2 y 18 consultada
+[2025-05-07T04:09:59.332Z] INFO: Perfil solicitado para el usuario ID: 18
+[2025-05-07T04:09:59.333Z] INFO: Perfil consultado para el usuario ID: 18
+[2025-05-07T04:10:05.299Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:10:05.300Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:10:05.302Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:10:07.069Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T04:10:07.069Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T04:10:08.299Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T04:10:08.300Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T04:10:09.223Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T04:10:09.224Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T04:10:11.259Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:10:11.259Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:10:41.395Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-05-07T04:10:41.396Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-05-07T04:10:41.463Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T04:10:41.463Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T04:10:41.842Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:10:41.851Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:10:41.851Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:10:47.170Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T04:10:47.171Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T04:10:55.580Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T04:10:55.581Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:10:59.820Z] INFO: Mensajes entre 18 y 2 marcados como leídos
+[2025-05-07T04:10:59.823Z] INFO: Conversación entre 18 y 2 consultada
+[2025-05-07T04:11:08.507Z] INFO: Mensaje creado en la DB de 2 a 18
+[2025-05-07T04:11:08.508Z] INFO: Mensaje enviado de 2 a 18
+[2025-05-07T04:11:08.852Z] INFO: Mensajes entre 18 y 2 marcados como leídos
+[2025-05-07T04:11:08.855Z] INFO: Conversación entre 18 y 2 consultada
+[2025-05-07T04:11:13.552Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-05-07T04:11:13.553Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T04:11:14.038Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:11:14.038Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:11:15.253Z] INFO: Mensajes entre 18 y 2 marcados como leídos
+[2025-05-07T04:11:15.257Z] INFO: Conversación entre 18 y 2 consultada
+[2025-05-07T04:11:16.877Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-05-07T04:11:16.877Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T04:11:16.980Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:11:16.980Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:11:17.894Z] INFO: Mensajes entre 1 y 2 marcados como leídos
+[2025-05-07T04:11:17.895Z] INFO: Conversación entre 1 y 2 consultada
+[2025-05-07T04:11:22.864Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-05-07T04:11:22.864Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T04:11:22.904Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:11:22.904Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:11:24.828Z] INFO: Mensajes entre 15 y 2 marcados como leídos
+[2025-05-07T04:11:24.830Z] INFO: Conversación entre 15 y 2 consultada
+[2025-05-07T04:11:25.910Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-05-07T04:11:25.910Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T04:11:25.937Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:11:25.937Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:11:26.664Z] INFO: Mensajes entre 3 y 2 marcados como leídos
+[2025-05-07T04:11:26.666Z] INFO: Conversación entre 3 y 2 consultada
+[2025-05-07T04:11:28.673Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-05-07T04:11:28.673Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-05-07T04:11:28.748Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-05-07T04:11:28.748Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-05-07T04:11:30.388Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:11:30.388Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:11:30.797Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:11:33.966Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T04:11:33.966Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:11:35.936Z] INFO: Pedido confirmado - ID: 31, Vendedor: 2
+[2025-05-07T04:11:35.936Z] INFO: Pedido confirmado ID 31 por vendedor ID 2
+[2025-05-07T04:11:36.121Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T04:11:36.121Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:11:39.144Z] INFO: Pedido entregado - ID: 31, Vendedor: 2
+[2025-05-07T04:11:39.144Z] INFO: Pedido marcado como entregado ID 31 por vendedor ID 2
+[2025-05-07T04:11:39.184Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T04:11:39.186Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:11:48.743Z] INFO: Pedido cancelado - ID: 30, Por: vendedor ID 2
+[2025-05-07T04:11:48.743Z] INFO: Pedido cancelado ID 30 por usuario ID 2
+[2025-05-07T04:11:48.860Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-05-07T04:11:48.860Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-05-07T04:11:54.820Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:11:54.820Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:11:55.849Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:12:00.553Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:12:00.649Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:00.649Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:12:09.715Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:12:09.770Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:09.772Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:12:14.838Z] INFO: Producto actualizado - ID: 10
+[2025-05-07T04:12:14.840Z] INFO: Producto actualizado - ID: 10
+[2025-05-07T04:12:15.064Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:15.064Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:12:20.290Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:12:20.291Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:12:27.177Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:12:27.442Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:27.442Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:12:33.030Z] INFO: Producto actualizado - ID: 10
+[2025-05-07T04:12:33.031Z] INFO: Producto actualizado - ID: 10
+[2025-05-07T04:12:33.206Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:33.206Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:12:36.546Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:12:36.546Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:12:38.837Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-05-07T04:12:38.837Z] INFO: Productos consultados por categoría ID: 2
+[2025-05-07T04:12:39.741Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-05-07T04:12:39.742Z] INFO: Productos consultados por categoría ID: 1
+[2025-05-07T04:12:40.459Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T04:12:40.460Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T04:12:43.792Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:12:44.863Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:12:44.863Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:13:04.696Z] INFO: Producto creado: pruebaz, Vendedor ID: 2
+[2025-05-07T04:13:04.696Z] INFO: Producto creado por usuario ID 2 - ID: 13
+[2025-05-07T04:13:04.721Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:13:04.721Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:13:11.470Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T04:13:11.471Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T04:13:16.440Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:13:16.492Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:13:16.492Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:13:28.342Z] INFO: Producto actualizado - ID: 13
+[2025-05-07T04:13:28.344Z] INFO: Producto actualizado - ID: 13
+[2025-05-07T04:13:29.385Z] INFO: Productos del vendedor ID 2 consultados
+[2025-05-07T04:13:29.385Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-05-07T04:13:35.989Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-05-07T04:13:35.990Z] INFO: Productos consultados por categoría ID: 4
+[2025-05-07T04:13:49.118Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-05-07T04:13:49.119Z] INFO: Perfil consultado para el usuario ID: 2

@@ -107,7 +107,7 @@ const userService = {
   },
 
   // Obtener todos los usuarios (para admin)
-  async getAllUsers() {
+  async getAllUsersadmin() {
     const users = await db.User.findAll({
       attributes: {
         exclude: [
@@ -168,6 +168,33 @@ const userService = {
     } catch (error) {
       logger.error(`Error al obtener vendedores: ${error.message}`);
       throw new Error('No se pudieron obtener los vendedores');
+    }
+  },
+  async getAllUsers() {
+    try {
+      const users = await db.User.findAll({
+        attributes: [
+          'user_id',
+          'nombre',
+          'email',
+          'rol',
+          'telefono',
+          'codigo_UDG',
+          'estado_cuenta',
+          'foto_perfil',
+          'createdAt'
+        ],
+        where: {
+          estado_cuenta: 'active'  // si solo quieres activos; si no, elimina esta línea
+        },
+        order: [['nombre', 'ASC']]
+      });
+  
+      logger.info(`getAllUsers: ${users.length} usuarios encontrados`);
+      return users;
+    } catch (error) {
+      logger.error(`Error en getAllUsers: ${error.message}`);
+      throw new Error('No se pudo obtener la lista de usuarios');
     }
   }
 };
