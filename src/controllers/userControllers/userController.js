@@ -41,3 +41,14 @@ exports.getSellers = async (req, res) => {
     res.status(500).json({ success: false, message: 'Error al obtener vendedores' });
   }
 };
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    const users = await userService.getAllUsers();
+    logger.info(`Se obtuvo la lista de todos los usuarios (${users.length})`);
+    res.status(200).json(users);
+  } catch (error) {
+    logger.error(`Error al obtener todos los usuarios: ${error.message}`);
+    res.status(500).json({ message: 'Error al obtener los usuarios' });
+  }
+};

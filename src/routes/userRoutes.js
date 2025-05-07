@@ -76,4 +76,20 @@ router.put('/profile', userController.updateUserProfile);
  */
 router.get('/sellers', userController.getSellers);
 
+/**
+ * @swagger
+ * /users:
+ *   get:
+ *     summary: Obtener todos los usuarios (para bandeja de entrada)
+ *     tags: [Usuarios]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Lista de usuarios
+ *       401:
+ *         description: No autorizado
+ */
+router.get('/', userController.getAllUsers);
+
 module.exports = router;
