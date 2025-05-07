@@ -1,0 +1,8 @@
+[2025-05-07T00:59:00.201Z] ERROR: Error al registrar usuario: El email ya está registrado
+[2025-05-07T00:59:15.883Z] ERROR: Error al registrar usuario: El código UDG ya está registrado
+[2025-05-07T01:21:52.894Z] ERROR: Error al actualizar perfil del usuario ID 1: El código UDG ya está registrado
+[2025-05-07T01:57:38.236Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:00:36.815Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:02:24.688Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:02:36.015Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T02:04:52.862Z] ERROR: Error al verificar token: jwt must be a string

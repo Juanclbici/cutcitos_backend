@@ -1,6 +1,7 @@
 const db = require('../models');
-
 const cloudinary = require('cloudinary').v2;
+const logger = require('../utils/logger');
+const { Op } = require('sequelize');
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -8,73 +9,79 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-
 const userService = {
   // Obtener perfil de usuario
   async getUserProfile(userId) {
     const user = await db.User.findByPk(userId, {
-      attributes: { 
+      attributes: {
         exclude: [
-          'password', 
-          'resetPasswordToken', 
+          'password',
+          'resetPasswordToken',
           'resetPasswordExpires',
           'updatedAt',
           'deletedAt'
-        ] 
+        ]
       }
     });
-    
-    if (!user) throw new Error('Usuario no encontrado');
+
+    if (!user) {
+      logger.warn(`Perfil no encontrado para el usuario ID: ${userId}`);
+      throw new Error('Usuario no encontrado');
+    }
+
+    logger.info(`Perfil solicitado para el usuario ID: ${userId}`);
     return user;
   },
 
   // Actualizar perfil de usuario
   async updateUserProfile(userId, { nombre, telefono, codigo_UDG, foto_perfil }) {
     const user = await db.User.findByPk(userId);
-    if (!user) throw new Error('Usuario no encontrado');
-  
-    // Verificar duplicado de código UDG
-    if (codigo_UDG && codigo_UDG !== user.codigo_UDG) {
-      const existing = await db.User.findOne({ 
-        where: { codigo_UDG },
-        paranoid: false 
-      });
-      if (existing) throw new Error('El código UDG ya está registrado');
+    if (!user) {
+      logger.warn(`Intento de actualizar perfil - Usuario no encontrado: ${userId}`);
+      throw new Error('Usuario no encontrado');
     }
-  
+
+    if (codigo_UDG && codigo_UDG !== user.codigo_UDG) {
+      const existing = await db.User.findOne({
+        where: { codigo_UDG },
+        paranoid: false
+      });
+      if (existing) {
+        logger.warn(`Código UDG duplicado detectado: ${codigo_UDG}`);
+        throw new Error('El código UDG ya está registrado');
+      }
+    }
+
     const updates = {};
     if (nombre) updates.nombre = nombre;
     if (telefono) updates.telefono = telefono;
     if (codigo_UDG) updates.codigo_UDG = codigo_UDG;
-  
-    // Si se cambia la foto de perfil
+
     if (foto_perfil && foto_perfil !== user.foto_perfil) {
-      const isOldCloudinary = user.foto_perfil?.startsWith('http') && !user.foto_perfil.includes('default_profile.jpg');
-  
-      // Eliminar imagen anterior de Cloudinary si aplica
+      const isOldCloudinary = user.foto_perfil?.startsWith('http') &&
+        !user.foto_perfil.includes('default_profile.jpg');
+
       if (isOldCloudinary) {
         try {
           const publicId = user.foto_perfil
             .split('/')
             .slice(-2)
             .join('/')
-            .replace('.jpg', '')
-            .replace('.png', '')
-            .replace('.jpeg', '')
-            .replace('.webp', '');
-  
+            .replace(/\.(jpg|png|jpeg|webp)$/, '');
+
           await cloudinary.uploader.destroy(publicId);
-          console.log('✅ Imagen anterior eliminada:', publicId);
+          logger.info(`Imagen anterior eliminada de Cloudinary: ${publicId}`);
         } catch (err) {
-          console.warn('⚠️ No se pudo eliminar la imagen anterior:', err.message);
+          logger.warn(`No se pudo eliminar la imagen anterior: ${err.message}`);
         }
       }
-  
+
       updates.foto_perfil = foto_perfil;
     }
-  
+
     await user.update(updates);
-  
+    logger.info(`Perfil actualizado para el usuario ID: ${userId}`);
+
     return {
       user_id: user.user_id,
       nombre: user.nombre,
@@ -85,48 +92,61 @@ const userService = {
       rol: user.rol
     };
   },
-  
 
   // Eliminar usuario (soft delete)
   async deleteUser(userId) {
     const user = await db.User.findByPk(userId);
-    if (!user) throw new Error('Usuario no encontrado');
+    if (!user) {
+      logger.warn(`Intento de eliminar usuario - No encontrado: ${userId}`);
+      throw new Error('Usuario no encontrado');
+    }
 
     await user.destroy();
+    logger.info(`Usuario eliminado correctamente (soft delete) - ID: ${userId}`);
     return { message: 'Usuario eliminado correctamente' };
   },
 
   // Obtener todos los usuarios (para admin)
   async getAllUsers() {
-    return await db.User.findAll({
-      attributes: { 
+    const users = await db.User.findAll({
+      attributes: {
         exclude: [
-          'password', 
-          'resetPasswordToken', 
+          'password',
+          'resetPasswordToken',
           'resetPasswordExpires'
-        ] 
+        ]
       },
-      paranoid: false // Incluye usuarios eliminados lógicamente
+      paranoid: false
     });
+
+    logger.info(`Consulta de todos los usuarios (incluidos eliminados) realizada`);
+    return users;
   },
 
   // Cambiar rol de usuario (para admin)
   async changeUserRole(userId, newRole) {
     const validRoles = ['admin', 'seller', 'buyer'];
     if (!validRoles.includes(newRole)) {
+      logger.warn(`Intento de asignar rol inválido: ${newRole}`);
       throw new Error('Rol no válido');
     }
 
     const user = await db.User.findByPk(userId);
-    if (!user) throw new Error('Usuario no encontrado');
+    if (!user) {
+      logger.warn(`Cambio de rol fallido - Usuario no encontrado: ${userId}`);
+      throw new Error('Usuario no encontrado');
+    }
 
     await user.update({ rol: newRole });
+    logger.info(`Rol actualizado a '${newRole}' para el usuario ID: ${userId}`);
+
     return {
       user_id: user.user_id,
       email: user.email,
       new_role: user.rol
     };
   },
+
   // Obtener lista de vendedores
   async getSellers() {
     try {
@@ -143,14 +163,13 @@ const userService = {
         ]
       });
 
+      logger.info('Lista de vendedores obtenida correctamente');
       return sellers;
     } catch (error) {
-      console.error('Error en userService.getSellers:', error);
+      logger.error(`Error al obtener vendedores: ${error.message}`);
       throw new Error('No se pudieron obtener los vendedores');
     }
   }
-
-
 };
 
 module.exports = userService;

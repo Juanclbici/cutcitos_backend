@@ -1,5 +1,6 @@
 const orderService = require('../../services/orderService');
 const { Product, Order } = require('../../models');
+const logger = require('../../utils/logger');
 
 // Crear pedido (Estudiante)
 exports.createOrder = async (req, res) => {
@@ -8,6 +9,7 @@ exports.createOrder = async (req, res) => {
     const user_id = req.user.id;
 
     if (!productos || !Array.isArray(productos) || productos.length === 0) {
+      logger.warn(`Intento de crear pedido sin productos - usuario ID: ${user_id}`);
       return res.status(400).json({ message: 'Se requiere al menos un producto' });
     }
 
@@ -19,45 +21,40 @@ exports.createOrder = async (req, res) => {
       direccion_entrega
     );
 
+    logger.info(`Pedido creado con ID ${nuevaOrden.pedido_id} por usuario ID ${user_id}`);
     res.status(201).json({ success: true, order_id: nuevaOrden.pedido_id });
   } catch (error) {
-    console.error("Error al crear pedido:", error.message);
+    logger.error(`Error al crear pedido: ${error.message}`);
     res.status(500).json({ success: false, message: error.message });
   }
 };
 
 // Confirmar pedido (Vendedor)
 exports.confirmOrder = async (req, res) => {
-    try {
-      const pedido = await orderService.confirmOrder(req.user.id, req.params.pedidoId);
-      res.json({
-        success: true,
-        message: 'Pedido confirmado exitosamente',
-        data: pedido
-      });
-    } catch (error) {
-      res.status(400).json({
-        success: false,
-        message: error.message
-      });
-    }
-  };
+  try {
+    const pedido = await orderService.confirmOrder(req.user.id, req.params.pedidoId);
+    logger.info(`Pedido confirmado ID ${req.params.pedidoId} por vendedor ID ${req.user.id}`);
+    res.json({
+      success: true,
+      message: 'Pedido confirmado exitosamente',
+      data: pedido
+    });
+  } catch (error) {
+    logger.warn(`Confirmación fallida para pedido ID ${req.params.pedidoId}: ${error.message}`);
+    res.status(400).json({ success: false, message: error.message });
+  }
+};
 
 // Cancelar pedido
 exports.cancelOrder = async (req, res) => {
   try {
     const isVendor = req.user.rol === 'seller';
     const pedido = await orderService.cancelOrder(req.user.id, req.params.pedidoId, isVendor);
-    res.json({
-      success: true,
-      message: 'Pedido cancelado exitosamente',
-      data: pedido
-    });
+    logger.info(`Pedido cancelado ID ${req.params.pedidoId} por usuario ID ${req.user.id}`);
+    res.json({ success: true, message: 'Pedido cancelado exitosamente', data: pedido });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
+    logger.warn(`Cancelación fallida para pedido ID ${req.params.pedidoId}: ${error.message}`);
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
@@ -65,15 +62,11 @@ exports.cancelOrder = async (req, res) => {
 exports.getOrderHistory = async (req, res) => {
   try {
     const pedidos = await orderService.getOrderHistory(req.user.id);
-    res.json({
-      success: true,
-      data: pedidos
-    });
+    logger.info(`Historial de pedidos consultado por usuario ID ${req.user.id}`);
+    res.json({ success: true, data: pedidos });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
+    logger.error(`Error al obtener historial de pedidos: ${error.message}`);
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
@@ -81,15 +74,11 @@ exports.getOrderHistory = async (req, res) => {
 exports.getVendorOrders = async (req, res) => {
   try {
     const pedidos = await orderService.getVendorOrders(req.user.id);
-    res.json({
-      success: true,
-      data: pedidos
-    });
+    logger.info(`Pedidos del vendedor ID ${req.user.id} consultados`);
+    res.json({ success: true, data: pedidos });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
+    logger.error(`Error al obtener pedidos del vendedor: ${error.message}`);
+    res.status(400).json({ success: false, message: error.message });
   }
 };
 
@@ -97,15 +86,10 @@ exports.getVendorOrders = async (req, res) => {
 exports.markAsDelivered = async (req, res) => {
   try {
     const pedido = await orderService.markAsDelivered(req.user.id, req.params.pedidoId);
-    res.json({
-      success: true,
-      message: 'Pedido marcado como entregado',
-      data: pedido
-    });
+    logger.info(`Pedido marcado como entregado ID ${req.params.pedidoId} por vendedor ID ${req.user.id}`);
+    res.json({ success: true, message: 'Pedido marcado como entregado', data: pedido });
   } catch (error) {
-    res.status(400).json({
-      success: false,
-      message: error.message
-    });
+    logger.warn(`Error al marcar como entregado pedido ID ${req.params.pedidoId}: ${error.message}`);
+    res.status(400).json({ success: false, message: error.message });
   }
 };

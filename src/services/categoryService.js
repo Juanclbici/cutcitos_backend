@@ -1,4 +1,5 @@
 const db = require('../models');
+const logger = require('../utils/logger');
 
 const categoryService = {
   async createCategory({ nombre, descripcion, imagen }) {
@@ -8,26 +9,33 @@ const categoryService = {
     });
     
     if (existingCategory) {
+      logger.warn(`Intento de crear categoría duplicada: ${nombre}`);
       throw new Error('Ya existe una categoría con ese nombre');
     }
 
-    return await db.Category.create({
+    const newCategory = await db.Category.create({
       nombre,
       descripcion: descripcion || null,
       imagen: imagen || null,
       activa: true
     });
+
+    logger.info(`Categoría creada: ${nombre}`);
+    return newCategory;
   },
 
   async getAllCategories() {
     try {
-      return await db.Category.findAll({
+      const categories = await db.Category.findAll({
         attributes: ['categoria_id', 'nombre', 'descripcion', 'imagen'],
         order: [['nombre', 'ASC']],
         paranoid: false
       });
+
+      logger.info('Listado de todas las categorías obtenido');
+      return categories;
     } catch (error) {
-      console.error('Error al obtener categorías:', error);
+      logger.error(`Error al obtener categorías: ${error.message}`);
       throw error;
     }
   },
@@ -43,16 +51,17 @@ const categoryService = {
       const category = await db.Category.findOne(options);
       
       if (!category) {
+        logger.warn(`Categoría no encontrada con ID: ${id}`);
         throw new Error('Categoría no encontrada');
       }
-  
+
+      logger.info(`Categoría consultada con ID: ${id}`);
       return category;
     } catch (error) {
-      console.error(`Error al obtener categoría con ID ${id}:`, error);
+      logger.error(`Error al obtener categoría con ID ${id}: ${error.message}`);
       throw error;
     }
   }
-
 };
 
 module.exports = categoryService;
