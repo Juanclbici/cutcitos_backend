@@ -804,3 +804,184 @@
 [2025-05-07T04:13:35.990Z] INFO: Productos consultados por categoría ID: 4
 [2025-05-07T04:13:49.118Z] INFO: Perfil solicitado para el usuario ID: 2
 [2025-05-07T04:13:49.119Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-05-07T04:34:16.844Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:34:16.847Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-05-07T04:34:42.195Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:34:42.197Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-05-07T04:34:52.336Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:34:52.337Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-05-07T04:34:59.636Z] INFO: Solicitud de reseteo de contraseña para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:34:59.637Z] INFO: Solicitud de reset para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:34:59.700Z] INFO: Código de recuperación generado para juan.lopez4572@alumnos.udg.mx: 86331
+[2025-05-07T04:35:01.423Z] INFO: Correo de recuperación enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:32.791Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:32.792Z] INFO: Validando código de reseteo para juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:32.810Z] WARN: Código de reset inválido o expirado para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:32.810Z] ERROR: Código de reseteo inválido para juan.lopez4572@alumnos.udg.mx: Código inválido, expirado o email incorrecto
+[2025-05-07T04:35:52.210Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:52.211Z] INFO: Validando código de reseteo para juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:52.225Z] WARN: Código de reset inválido o expirado para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:35:52.229Z] ERROR: Código de reseteo inválido para juan.lopez4572@alumnos.udg.mx: Código inválido, expirado o email incorrecto
+[2025-05-07T04:36:40.895Z] INFO: Validando código de reseteo para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:40.897Z] INFO: Validando código de reseteo para juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:41.072Z] INFO: Contraseña actualizada para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:42.409Z] INFO: Correo de confirmación de contraseña enviado a: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:55.670Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:55.671Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-05-07T04:36:55.781Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:36:55.781Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:36:56.230Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:36:56.256Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:36:56.262Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:36:56.291Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:36:56.311Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:36:56.317Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:36:59.297Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:36:59.300Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:37:00.620Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:37:00.627Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:37:05.878Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:37:05.896Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:37:05.897Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:37:08.343Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:37:08.344Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:37:10.058Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:37:10.060Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:37:11.695Z] INFO: Pedido creado exitosamente - ID: 18, Usuario: 1
+[2025-05-07T04:37:11.695Z] INFO: Pedido creado con ID 18 por usuario ID 1
+[2025-05-07T04:37:12.780Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:37:12.781Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:37:14.293Z] INFO: Mensajes entre 5 y 1 marcados como leídos
+[2025-05-07T04:37:14.298Z] INFO: Conversación entre 5 y 1 consultada
+[2025-05-07T04:37:27.308Z] INFO: Mensaje creado en la DB de 1 a 5
+[2025-05-07T04:37:27.308Z] INFO: Mensaje enviado de 1 a 5
+[2025-05-07T04:37:27.385Z] INFO: Mensajes entre 5 y 1 marcados como leídos
+[2025-05-07T04:37:27.391Z] INFO: Conversación entre 5 y 1 consultada
+[2025-05-07T04:37:32.101Z] INFO: Inbox generado para usuario ID 1 con 1 conversaciones
+[2025-05-07T04:37:32.104Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T04:37:32.157Z] INFO: getAllUsers: 5 usuarios encontrados
+[2025-05-07T04:37:32.158Z] INFO: Se obtuvo la lista de todos los usuarios (5)
+[2025-05-07T04:37:33.506Z] INFO: Mensajes entre 5 y 1 marcados como leídos
+[2025-05-07T04:37:33.511Z] INFO: Conversación entre 5 y 1 consultada
+[2025-05-07T04:37:35.148Z] INFO: Inbox generado para usuario ID 1 con 1 conversaciones
+[2025-05-07T04:37:35.149Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T04:37:35.208Z] INFO: getAllUsers: 5 usuarios encontrados
+[2025-05-07T04:37:35.209Z] INFO: Se obtuvo la lista de todos los usuarios (5)
+[2025-05-07T04:37:37.077Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:37:37.079Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:37:38.501Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:37:38.502Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:37:41.020Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:37:41.020Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:37:46.189Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:37:46.190Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:37:48.548Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:37:48.548Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:37:50.450Z] INFO: Pedido creado exitosamente - ID: 19, Usuario: 1
+[2025-05-07T04:37:50.451Z] INFO: Pedido creado con ID 19 por usuario ID 1
+[2025-05-07T04:37:51.633Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:37:51.635Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:38:05.167Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:38:05.171Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:38:05.172Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:38:07.808Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:38:07.809Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:38:08.912Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:38:08.913Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:38:10.217Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:38:10.218Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:38:12.363Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:38:12.368Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:38:12.369Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:38:16.732Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:38:16.735Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:38:22.032Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:38:22.032Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:38:26.145Z] INFO: Pedido creado exitosamente - ID: 20, Usuario: 1
+[2025-05-07T04:38:26.146Z] INFO: Pedido creado con ID 20 por usuario ID 1
+[2025-05-07T04:38:27.013Z] INFO: Pedido creado exitosamente - ID: 21, Usuario: 1
+[2025-05-07T04:38:27.014Z] INFO: Pedido creado con ID 21 por usuario ID 1
+[2025-05-07T04:38:29.048Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:38:29.050Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:38:35.289Z] INFO: Pedido cancelado - ID: 21, Por: usuario ID 1
+[2025-05-07T04:38:35.290Z] INFO: Pedido cancelado ID 21 por usuario ID 1
+[2025-05-07T04:38:35.362Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:38:35.363Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:38:40.380Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:38:40.380Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:38:40.409Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:38:42.668Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:38:42.668Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:38:58.221Z] INFO: Perfil actualizado para el usuario ID: 1
+[2025-05-07T04:38:58.222Z] INFO: Perfil actualizado para el usuario ID: 1
+[2025-05-07T04:38:58.243Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-05-07T04:38:58.243Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-05-07T04:39:04.411Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:39:04.416Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:39:04.417Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:39:08.075Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:39:31.469Z] INFO: Categoría creada: Artesanías
+[2025-05-07T04:39:31.469Z] INFO: Categoría creada desde controlador: Artesanías
+[2025-05-07T04:39:31.513Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:39:37.455Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:39:37.456Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:39:40.033Z] INFO: Inbox generado para usuario ID 1 con 1 conversaciones
+[2025-05-07T04:39:40.033Z] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07T04:39:40.080Z] INFO: getAllUsers: 5 usuarios encontrados
+[2025-05-07T04:39:40.085Z] INFO: Se obtuvo la lista de todos los usuarios (5)
+[2025-05-07T04:39:40.785Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:39:40.790Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:39:40.791Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:39:58.616Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:39:58.618Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:40:00.017Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:40:00.021Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:40:02.885Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:40:02.886Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T04:40:08.238Z] INFO: Lista de vendedores obtenida correctamente
+[2025-05-07T04:40:08.239Z] INFO: Consulta de todos los vendedores realizada
+[2025-05-07T04:40:09.461Z] INFO: Historial de pedidos obtenido para usuario ID: 1
+[2025-05-07T04:40:09.465Z] INFO: Historial de pedidos consultado por usuario ID 1
+[2025-05-07T04:40:12.528Z] INFO: Listado de todas las categorías obtenido
+[2025-05-07T04:40:12.536Z] INFO: Consulta de productos disponibles realizada
+[2025-05-07T04:40:12.538Z] INFO: Listado de todos los productos disponibles consultado
+[2025-05-07T14:32:01.995Z] WARN: Correo no permitido: diana.4572@gmaiil.com
+[2025-05-07T14:32:34.275Z] INFO: Intento de registro para diana.4572@gmail.com
+[2025-05-07T14:32:34.277Z] INFO: Intento de registro para diana.4572@gmail.com
+[2025-05-07T14:32:34.600Z] INFO: Usuario creado exitosamente: diana.4572@gmail.com
+[2025-05-07T14:32:34.613Z] INFO: Token generado para: diana.4572@gmail.com
+[2025-05-07T14:32:34.616Z] INFO: Usuario registrado exitosamente: diana.4572@gmail.com
+[2025-05-07T14:33:10.335Z] INFO: Intento de registro para alejandra.4572@alumnos.udg.mx
+[2025-05-07T14:33:10.336Z] INFO: Intento de registro para alejandra.4572@alumnos.udg.mx
+[2025-05-07T14:33:10.577Z] INFO: Usuario creado exitosamente: alejandra.4572@alumnos.udg.mx
+[2025-05-07T14:33:10.582Z] INFO: Token generado para: alejandra.4572@alumnos.udg.mx
+[2025-05-07T14:33:10.584Z] INFO: Usuario registrado exitosamente: alejandra.4572@alumnos.udg.mx
+[2025-05-07T14:33:34.987Z] INFO: Intento de registro para alejandra.4572@academicos.udg.mx
+[2025-05-07T14:33:34.988Z] INFO: Intento de registro para alejandra.4572@academicos.udg.mx
+[2025-05-07T14:33:35.210Z] INFO: Usuario creado exitosamente: alejandra.4572@academicos.udg.mx
+[2025-05-07T14:33:35.214Z] INFO: Token generado para: alejandra.4572@academicos.udg.mx
+[2025-05-07T14:33:35.216Z] INFO: Usuario registrado exitosamente: alejandra.4572@academicos.udg.mx
+[2025-05-07T14:33:58.558Z] INFO: Intento de registro para alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:33:58.558Z] INFO: Intento de registro para alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:33:58.601Z] WARN: Registro fallido - Código UDG duplicado: 215445783
+[2025-05-07T14:33:58.602Z] ERROR: Error al registrar usuario: El código UDG ya está registrado
+[2025-05-07T14:34:28.041Z] INFO: Intento de registro para alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:34:28.042Z] INFO: Intento de registro para alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:34:28.267Z] INFO: Usuario creado exitosamente: alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:34:28.271Z] INFO: Token generado para: alejandra.4572@cutonala.udg.mx
+[2025-05-07T14:34:28.272Z] INFO: Usuario registrado exitosamente: alejandra.4572@cutonala.udg.mx
+[2025-05-07T15:04:37.866Z] INFO: Login exitoso para: alejandra.4572@cutonala.udg.mx
+[2025-05-07T15:04:37.873Z] INFO: Inicio de sesión exitoso para: alejandra.4572@cutonala.udg.mx
+[2025-05-07T15:04:37.892Z] INFO: ::1 - - [07/May/2025:15:04:37 +0000] "POST /api/auth/login HTTP/1.1" 200 474 "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[2025-05-07T15:05:37.993Z] INFO: Perfil solicitado para el usuario ID: 9
+[2025-05-07T15:05:37.994Z] INFO: Perfil consultado para el usuario ID: 9
+[2025-05-07T15:05:37.997Z] INFO: ::1 - - [07/May/2025:15:05:37 +0000] "GET /api/users/profile HTTP/1.1" 200 238 "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[2025-05-07 09:13:36] INFO: Perfil solicitado para el usuario ID: 9
+[2025-05-07 09:13:36] INFO: Perfil consultado para el usuario ID: 9
+[2025-05-07 09:13:36] INFO: ::1 - - [07/May/2025:15:13:36 +0000] "GET /api/users/profile HTTP/1.1" 304 - "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[2025-05-07 09:18:31] INFO: Perfil solicitado para el usuario ID: 9
+[2025-05-07 09:18:31] INFO: Perfil consultado para el usuario ID: 9
+[2025-05-07 09:18:31] INFO: ::1 - - [07/May/2025:15:18:31 +0000] "GET /api/users/profile HTTP/1.1" 304 - "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[2025-05-07 09:27:06] INFO: Perfil solicitado para el usuario ID: 9
+[2025-05-07 09:27:06] INFO: Perfil consultado para el usuario ID: 9
+[2025-05-07 09:27:06] INFO: ::1 - - [07/May/2025:15:27:06 +0000] "GET /api/users/profile HTTP/1.1" 304 - "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"

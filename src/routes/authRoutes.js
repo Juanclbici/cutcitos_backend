@@ -3,6 +3,7 @@ const router = express.Router();
 const authController = require('../controllers/userControllers/authController');
 const { validateResetRequest, validateResetPassword } = require('../validators/authValidator');
 const loginLimiter = require('../middlewares/rateLimiter');
+const validateEmail = require('../middlewares/validateEmail');
 /**
  * @swagger
  * tags:
@@ -43,7 +44,7 @@ const loginLimiter = require('../middlewares/rateLimiter');
  *       400:
  *         description: Datos inválidos o correo ya registrado
  */
-router.post('/register', authController.register);
+router.post('/register',validateEmail, authController.register);
 
 /**
  * @swagger

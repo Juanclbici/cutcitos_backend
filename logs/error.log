@@ -6,3 +6,6 @@
 [2025-05-07T02:02:24.688Z] ERROR: Error al verificar token: jwt must be a string
 [2025-05-07T02:02:36.015Z] ERROR: Error al verificar token: jwt must be a string
 [2025-05-07T02:04:52.862Z] ERROR: Error al verificar token: jwt must be a string
+[2025-05-07T04:35:32.810Z] ERROR: Código de reseteo inválido para juan.lopez4572@alumnos.udg.mx: Código inválido, expirado o email incorrecto
+[2025-05-07T04:35:52.229Z] ERROR: Código de reseteo inválido para juan.lopez4572@alumnos.udg.mx: Código inválido, expirado o email incorrecto
+[2025-05-07T14:33:58.602Z] ERROR: Error al registrar usuario: El código UDG ya está registrado

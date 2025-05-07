@@ -5,6 +5,8 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./config/swagger');
 const simpleLogger = require('./middlewares/simpleLogger');
 require('dotenv').config();
+const morgan = require('morgan');
+const logger = require('./utils/logger');
 
 // Importar rutas
 const authRoutes = require('./routes/authRoutes');
@@ -27,10 +29,15 @@ const corsOptions = {
   optionsSuccessStatus: 200
 };
 
+const morganStream = {
+  write: (message) => logger.info(message.trim())
+};
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(simpleLogger);
+app.use(morgan('combined', { stream: morganStream }));
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
