@@ -804,3 +804,101 @@
 [2025-05-07T04:13:35.990Z] INFO: Productos consultados por categoría ID: 4
 [2025-05-07T04:13:49.118Z] INFO: Perfil solicitado para el usuario ID: 2
 [2025-05-07T04:13:49.119Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-06T18:10:46.137Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-11-06T18:10:46.145Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-11-06T18:13:18.126Z] WARN: Login fallido - Contraseña incorrecta para: juan.lopez4572@alumnos.udg.mx
+[2025-11-06T18:13:18.127Z] WARN: Error de login para juan.lopez4572@alumnos.udg.mx: Credenciales inválidas
+[2025-11-06T18:13:32.759Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-06T18:13:32.760Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-06T18:13:32.952Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-06T18:13:32.953Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-06T18:13:33.564Z] INFO: Listado de todas las categorías obtenido
+[2025-11-06T18:13:33.566Z] INFO: Listado de todas las categorías obtenido
+[2025-11-06T18:13:33.598Z] INFO: Consulta de productos disponibles realizada
+[2025-11-06T18:13:33.598Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-06T18:13:33.616Z] INFO: Consulta de productos disponibles realizada
+[2025-11-06T18:13:33.616Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-06T18:13:46.473Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-06T18:13:46.474Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-06T18:13:56.912Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-06T18:13:56.913Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-06T18:14:59.948Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-06T18:14:59.948Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-06T18:15:00.029Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-06T18:15:00.029Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-06T18:15:00.290Z] INFO: Listado de todas las categorías obtenido
+[2025-11-06T18:15:00.337Z] INFO: Consulta de productos disponibles realizada
+[2025-11-06T18:15:00.338Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-06T18:15:02.592Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-06T18:15:02.593Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-06T18:15:04.693Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-06T18:15:04.693Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-06T18:15:06.483Z] INFO: Pedido creado exitosamente - ID: 32, Usuario: 3
+[2025-11-06T18:15:06.924Z] INFO: Pedido creado con ID 32 por usuario ID 3
+[2025-11-06T18:15:10.090Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-06T18:15:10.091Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-07T18:20:16.265Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-07T18:20:16.266Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-07T18:20:16.485Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:20:16.485Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:20:17.004Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:20:17.008Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:20:17.020Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:20:17.020Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:20:17.023Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:20:17.024Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:20:35.135Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:20:35.136Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:20:37.249Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T18:20:37.250Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T18:20:38.781Z] INFO: Pedido creado exitosamente - ID: 33, Usuario: 3
+[2025-11-07T18:20:38.981Z] INFO: Pedido creado con ID 33 por usuario ID 3
+[2025-11-07T18:20:40.612Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-07T18:20:40.612Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-07T18:25:24.424Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:25:24.425Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:25:25.185Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:25:25.185Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:25:25.187Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:25:36.589Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:25:36.590Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:25:39.909Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T18:25:39.909Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T18:25:42.343Z] INFO: Pedido creado exitosamente - ID: 34, Usuario: 3
+[2025-11-07T18:25:42.503Z] INFO: Pedido creado con ID 34 por usuario ID 3
+[2025-11-07T18:27:11.424Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:27:11.425Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:27:11.427Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:27:16.289Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:27:16.289Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:27:18.288Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T18:27:18.288Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T18:27:20.555Z] INFO: Pedido creado exitosamente - ID: 35, Usuario: 3
+[2025-11-07T18:27:20.726Z] INFO: Pedido creado con ID 35 por usuario ID 3
+[2025-11-07T18:35:53.769Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-07T18:35:53.770Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-07T18:35:54.838Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:35:54.839Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:35:55.950Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:35:55.954Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:35:55.963Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:35:55.964Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:35:55.968Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:35:55.969Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:36:03.078Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:36:03.078Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:36:04.088Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T18:36:04.088Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T18:36:05.619Z] INFO: Pedido creado exitosamente - ID: 36, Usuario: 3
+[2025-11-07T18:36:05.796Z] INFO: Pedido creado con ID 36 por usuario ID 3
+[2025-11-07T18:36:26.463Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T18:36:26.463Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T18:36:26.467Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T18:40:07.877Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T18:40:07.878Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T18:40:09.328Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T18:40:09.329Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T18:40:10.938Z] INFO: Pedido creado exitosamente - ID: 37, Usuario: 3
+[2025-11-07T18:40:11.077Z] INFO: Pedido creado con ID 37 por usuario ID 3
+[2025-11-07T18:40:12.306Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-07T18:40:12.306Z] INFO: Historial de pedidos consultado por usuario ID 3

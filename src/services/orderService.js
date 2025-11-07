@@ -1,6 +1,8 @@
 const db = require('../models');
 const { Op } = require('sequelize');
 const logger = require('../utils/logger');
+const { logOrderOnBlockchain } = require("../services/blockchainService");
+
 
 const orderService = {
   // Crear nuevo pedido (Estudiante)
@@ -43,6 +45,7 @@ const orderService = {
 
       await transaction.commit();
       logger.info(`Pedido creado exitosamente - ID: ${nuevaOrden.pedido_id}, Usuario: ${user_id}`);
+      await logOrderOnBlockchain("CREAR", nuevaOrden);
       return nuevaOrden;
 
     } catch (error) {
@@ -85,6 +88,7 @@ const orderService = {
 
       await transaction.commit();
       logger.info(`Pedido confirmado - ID: ${pedidoId}, Vendedor: ${vendorId}`);
+      await logOrderOnBlockchain("CONFIRMAR", pedido);
       return pedido;
 
     } catch (error) {
@@ -140,6 +144,7 @@ const orderService = {
       await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
       await transaction.commit();
       logger.info(`Pedido cancelado - ID: ${pedidoId}, Por: ${isVendor ? 'vendedor' : 'usuario'} ID ${userId}`);
+      await logOrderOnBlockchain("CANCELAR", pedido);
       return pedido;
 
     } catch (error) {
@@ -251,6 +256,7 @@ const orderService = {
 
       await transaction.commit();
       logger.info(`Pedido entregado - ID: ${pedidoId}, Vendedor: ${vendorId}`);
+      await logOrderOnBlockchain("ENTREGAR", updatedPedido);
       return updatedPedido;
 
     } catch (error) {
