@@ -16,6 +16,7 @@ const cloudinaryRoutes = require('./routes/cloudinaryRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const favoritesRoutes = require('./routes/favoriteRoutes');
+const blockchainRoutes = require("./routes/blockchainRoutes.js");
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use('/api/cloudinary', cloudinaryRoutes);
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use("/api/blockchain", blockchainRoutes);
 
 // Prueba
 app.get('/', (req, res) => {

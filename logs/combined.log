@@ -902,3 +902,33 @@
 [2025-11-07T18:40:11.077Z] INFO: Pedido creado con ID 37 por usuario ID 3
 [2025-11-07T18:40:12.306Z] INFO: Historial de pedidos obtenido para usuario ID: 3
 [2025-11-07T18:40:12.306Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-07T19:24:54.528Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T19:24:54.532Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T19:24:55.373Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T19:24:55.374Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T19:24:55.377Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T19:25:00.985Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T19:25:00.985Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T19:25:31.854Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-07T19:25:31.854Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-07T19:25:51.585Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T19:26:28.342Z] INFO: 📦 Se consultaron 0 registros de blockchain
+[2025-11-07T19:26:28.342Z] INFO: ✅ Registros de blockchain obtenidos correctamente
+[2025-11-07T19:28:49.854Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T19:28:49.860Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T19:28:49.860Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T19:28:52.728Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T19:28:52.729Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T19:28:53.981Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T19:28:53.981Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T19:28:55.824Z] INFO: Pedido creado exitosamente - ID: 38, Usuario: 3
+[2025-11-07T19:28:56.057Z] INFO: ✅ CREAR registrado en blockchain: 0xc214a6fdaac9b1effed73dbbc6aa4cf4942043418080d8451f3189ea4bf23b27
+[2025-11-07T19:28:56.058Z] INFO: Pedido creado con ID 38 por usuario ID 3
+[2025-11-07T19:28:57.374Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-07T19:28:57.375Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-07T19:29:06.485Z] INFO: 📦 Se consultaron 0 registros de blockchain
+[2025-11-07T19:29:06.485Z] INFO: ✅ Registros de blockchain obtenidos correctamente
+[2025-11-07T19:29:08.851Z] INFO: 📦 Se consultaron 0 registros de blockchain
+[2025-11-07T19:29:08.851Z] INFO: ✅ Registros de blockchain obtenidos correctamente
+[2025-11-07T19:33:54.824Z] INFO: 📦 Se consultaron 6 registros de blockchain
+[2025-11-07T19:33:54.826Z] INFO: ✅ Registros de blockchain obtenidos correctamente
