@@ -1,6 +1,7 @@
 const categoryService = require('../../services/categoryService');
 const logger = require('../../utils/logger');
 
+// Crear categoría
 exports.createCategory = async (req, res) => {
   try {
     const category = await categoryService.createCategory(req.body);
@@ -18,6 +19,7 @@ exports.createCategory = async (req, res) => {
   }
 };
 
+// Obtener todas las categorías
 exports.getAllCategories = async (req, res) => {
   try {
     const categories = await categoryService.getAllCategories();
@@ -34,6 +36,7 @@ exports.getAllCategories = async (req, res) => {
   }
 };
 
+// Obtener categoría po ID
 exports.getCategoryById = async (req, res) => {
   try {
     const { id } = req.params;

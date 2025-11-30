@@ -185,7 +185,7 @@ const userService = {
           'createdAt'
         ],
         where: {
-          estado_cuenta: 'active'  // si solo quieres activos; si no, elimina esta línea
+          estado_cuenta: 'active'
         },
         order: [['nombre', 'ASC']]
       });

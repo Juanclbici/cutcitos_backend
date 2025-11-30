@@ -1,6 +1,7 @@
 const favoriteService = require("../../services/favoriteService");
 const logger = require("../../utils/logger");
 
+// Añadir favorito
 exports.addFavorite = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -15,6 +16,7 @@ exports.addFavorite = async (req, res) => {
   }
 };
 
+//Remover favorito
 exports.removeFavorite = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -34,6 +36,7 @@ exports.removeFavorite = async (req, res) => {
   }
 };
 
+// Obtener favoritos
 exports.getFavorites = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -46,6 +49,7 @@ exports.getFavorites = async (req, res) => {
   }
 };
 
+// Verificación favorito
 exports.isFavorite = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -60,6 +64,7 @@ exports.isFavorite = async (req, res) => {
   }
 };
 
+// Eliminar favoritos
 exports.clearFavorites = async (req, res) => {
   try {
     const userId = req.user.id;

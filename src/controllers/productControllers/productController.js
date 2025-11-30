@@ -1,6 +1,7 @@
 const productService = require('../../services/productService');
 const logger = require('../../utils/logger');
 
+// Agregar producto
 exports.createProduct = async (req, res) => {
   try {
     const product = await productService.createProduct(req.user.id, req.body);
@@ -12,6 +13,7 @@ exports.createProduct = async (req, res) => {
   }
 };
 
+// Obtener los productos
 exports.getProduct = async (req, res) => {
   try {
     const product = await productService.getProductById(req.params.productId);
@@ -27,6 +29,8 @@ exports.getProduct = async (req, res) => {
   }
 };
 
+
+// Actualizar producto
 exports.updateProduct = async (req, res) => {
   try {
     const product = await productService.updateProduct(req.params.productId, req.body);
@@ -38,6 +42,7 @@ exports.updateProduct = async (req, res) => {
   }
 };
 
+// Eliminar producto
 exports.deleteProduct = async (req, res) => {
   try {
     await productService.deleteProduct(req.params.productId, req.user.id);
@@ -49,6 +54,7 @@ exports.deleteProduct = async (req, res) => {
   }
 };
 
+// Ontener productos de un vendedor
 exports.getVendorProducts = async (req, res) => {
   try {
     const products = await productService.getVendorProducts(req.user.id);
@@ -60,6 +66,7 @@ exports.getVendorProducts = async (req, res) => {
   }
 };
 
+// Obtener todos los productos de todos los vendedores
 exports.getAllProducts = async (req, res) => {
   try {
     const products = await productService.getAllAvailableProducts();
@@ -71,6 +78,7 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
+// Obtener los productos filtrados por categoría
 exports.getProductsByCategory = async (req, res) => {
   try {
     const products = await productService.getProductsByCategoryId(req.params.categoryId);

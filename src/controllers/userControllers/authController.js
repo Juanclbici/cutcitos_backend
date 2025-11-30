@@ -1,6 +1,8 @@
 const authService = require('../../services/authService');
 const logger = require('../../utils/logger');
 
+
+// Registrar usuario nuevo
 exports.register = async (req, res) => {
   try {
     const { email } = req.body;
@@ -31,6 +33,7 @@ exports.register = async (req, res) => {
   }
 };
 
+// Inicio de sesión 
 exports.login = async (req, res) => {
   try {
     const result = await authService.loginUser(req.body);
@@ -50,6 +53,7 @@ exports.login = async (req, res) => {
   }
 };
 
+// Solicitud de resetear contraseña
 exports.requestPasswordReset = async (req, res) => {
   try {
     logger.info(`Solicitud de reseteo de contraseña para: ${req.body.email}`);
@@ -63,6 +67,7 @@ exports.requestPasswordReset = async (req, res) => {
   }
 };
 
+// Validar el código de reseteo de contraseña
 exports.validateResetCode = async (req, res, next) => {
   try {
     const { email, code, npassword } = req.body;

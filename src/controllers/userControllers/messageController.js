@@ -1,6 +1,7 @@
 const messageService = require('../../services/messageService');
 const logger = require('../../utils/logger');
 
+// Enviar mensaje
 exports.crearMensaje = async (req, res) => {
   try {
     const { mensaje, destinatario_id } = req.body;
@@ -25,6 +26,7 @@ exports.crearMensaje = async (req, res) => {
   }
 };
 
+// Obtener conversación entre comprador y vendedor o visceversa
 exports.obtenerConversacion = async (req, res) => {
   try {
     const { remitenteId } = req.params;
@@ -45,6 +47,7 @@ exports.obtenerConversacion = async (req, res) => {
   }
 };
 
+// Obtener todos los chats con el ultimo mensaje de cada conversación
 exports.obtenerMisConversaciones = async (req, res) => {
   try {
     const remitente_id = req.user?.id;
@@ -63,6 +66,8 @@ exports.obtenerMisConversaciones = async (req, res) => {
   }
 };
 
+
+// Obtener inbox
 exports.obtenerInbox = async (req, res) => {
   try {
     const userId = req.user?.id;

@@ -9,6 +9,7 @@ cloudinary.config({
 });
 
 const productService = {
+  // Crear o agregar prodcto (vendedor)
   async createProduct(vendorId, { nombre, descripcion, precio, cantidad_disponible, imagen, categoria_id }) {
     try {
       const category = await db.Category.findByPk(categoria_id);
@@ -41,6 +42,7 @@ const productService = {
     }
   },
 
+  // Obtener información del produto por ID
   async getProductById(productId) {
     try {
       const product = await db.Product.findByPk(productId, {
@@ -63,6 +65,7 @@ const productService = {
     }
   },
 
+  // Obtener información de los productos filtrados po categoría
   async getProductsByCategoryId(categoriaId) {
     try {
       const category = await db.Category.findByPk(categoriaId);
@@ -88,6 +91,7 @@ const productService = {
     }
   },
 
+  // Actualizar información del producto (vemdedores)
   async updateProduct(productId, updateData) {
     try {
       const product = await db.Product.findByPk(productId);
@@ -123,6 +127,7 @@ const productService = {
     }
   },
 
+  // Eliminar producto (vendedores)
   async deleteProduct(productId, vendorId) {
     try {
       const product = await db.Product.findOne({
@@ -152,6 +157,7 @@ const productService = {
     }
   },
 
+  // Obtener los productos por vendedor
   async getVendorProducts(vendorId) {
     try {
       const products = await db.Product.findAll({
@@ -168,6 +174,7 @@ const productService = {
     }
   },
 
+  // Obtener todos los porductos disponibles a la venta
   async getAllAvailableProducts() {
     try {
       const products = await db.Product.findAll({
@@ -187,6 +194,7 @@ const productService = {
     }
   },
 
+  // Buscar productos
   async searchProducts(searchTerm, categoryId = null) {
     try {
       const options = {

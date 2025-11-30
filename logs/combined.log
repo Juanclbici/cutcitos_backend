@@ -1484,3 +1484,405 @@ notNull Violation: BlockchainBlock.prev_Hash cannot be null
 [2025-11-30T03:01:00.006Z] INFO: Pedido cancelado ID 35 por usuario ID 3
 [2025-11-30T03:01:00.056Z] INFO: Historial de pedidos obtenido para usuario ID: 3
 [2025-11-30T03:01:00.057Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:46:38.537Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:46:38.538Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:46:39.497Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:46:39.504Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:46:39.504Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:46:44.915Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:46:44.916Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:46:46.061Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T04:46:46.061Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T04:46:47.271Z] INFO: Pedido creado exitosamente - ID: 59
+[2025-11-30T04:46:47.271Z] INFO: Pedido creado con ID 59 por usuario ID 3
+[2025-11-30T04:46:50.428Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:46:50.429Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:47:18.880Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:47:18.880Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:47:18.884Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:47:21.041Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:47:21.041Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:47:22.088Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T04:47:22.089Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T04:47:23.344Z] INFO: Pedido creado exitosamente - ID: 60
+[2025-11-30T04:47:23.344Z] INFO: Pedido creado con ID 60 por usuario ID 3
+[2025-11-30T04:47:41.164Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:47:41.165Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:47:50.008Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T04:47:50.009Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T04:47:51.768Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:47:51.768Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:48:08.174Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-30T04:48:08.174Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-30T04:48:08.311Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T04:48:08.312Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T04:48:08.581Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:48:08.583Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:48:08.583Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:48:12.806Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:12.807Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:15.786Z] INFO: Pedido confirmado - ID: 60
+[2025-11-30T04:48:15.787Z] INFO: Pedido confirmado ID 60 por vendedor ID 2
+[2025-11-30T04:48:15.898Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:15.898Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:18.064Z] INFO: Pedido entregado - ID: 60
+[2025-11-30T04:48:18.100Z] INFO: Pedido marcado como entregado ID 60 por vendedor ID 2
+[2025-11-30T04:48:18.134Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:18.134Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:24.067Z] INFO: Pedido confirmado - ID: 59
+[2025-11-30T04:48:24.067Z] INFO: Pedido confirmado ID 59 por vendedor ID 2
+[2025-11-30T04:48:24.101Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:24.101Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:26.739Z] INFO: Pedido cancelado - ID: 59
+[2025-11-30T04:48:26.747Z] INFO: Pedido cancelado ID 59 por usuario ID 2
+[2025-11-30T04:48:26.841Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:26.842Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:30.229Z] INFO: Pedido confirmado - ID: 34
+[2025-11-30T04:48:30.230Z] INFO: Pedido confirmado ID 34 por vendedor ID 2
+[2025-11-30T04:48:30.463Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:30.463Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:32.230Z] INFO: Pedido confirmado - ID: 33
+[2025-11-30T04:48:32.231Z] INFO: Pedido confirmado ID 33 por vendedor ID 2
+[2025-11-30T04:48:32.519Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:48:32.520Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:48:46.101Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T04:48:46.102Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T04:48:46.143Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:48:46.143Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:48:46.260Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:48:46.272Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:48:46.272Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:48:47.812Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:48:47.812Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:48:51.909Z] INFO: Pedido cancelado - ID: 34
+[2025-11-30T04:48:51.920Z] INFO: Pedido cancelado ID 34 por usuario ID 3
+[2025-11-30T04:48:51.948Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:48:51.948Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:49:24.165Z] INFO: Pedido cancelado - ID: 33
+[2025-11-30T04:49:24.174Z] INFO: Pedido cancelado ID 33 por usuario ID 3
+[2025-11-30T04:49:24.254Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:49:24.254Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:49:37.610Z] INFO: Pedido cancelado - ID: 32
+[2025-11-30T04:49:37.610Z] INFO: Pedido cancelado ID 32 por usuario ID 3
+[2025-11-30T04:49:37.761Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:49:37.761Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:54:19.417Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:54:19.427Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:54:19.428Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:54:21.900Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:54:21.900Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:54:23.080Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:54:23.080Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:54:23.751Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:54:23.751Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:54:24.550Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T04:54:24.551Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T04:54:26.895Z] INFO: Pedido creado exitosamente - ID: 61
+[2025-11-30T04:54:26.896Z] INFO: Pedido creado con ID 61 por usuario ID 3
+[2025-11-30T04:54:28.304Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:54:28.307Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:54:28.307Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:54:29.591Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:54:29.591Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:54:30.588Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T04:54:30.589Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T04:54:31.902Z] INFO: Pedido creado exitosamente - ID: 62
+[2025-11-30T04:54:31.902Z] INFO: Pedido creado con ID 62 por usuario ID 3
+[2025-11-30T04:54:32.688Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:54:32.688Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:54:51.319Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-30T04:54:51.319Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-30T04:54:51.372Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T04:54:51.372Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T04:54:51.538Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:54:51.545Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:54:51.545Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:54:54.594Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:54:54.624Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T04:54:54.624Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T04:54:59.913Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:54:59.913Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:55:03.057Z] INFO: Pedido confirmado - ID: 61
+[2025-11-30T04:55:03.057Z] INFO: Pedido confirmado ID 61 por vendedor ID 2
+[2025-11-30T04:55:03.082Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:55:03.082Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:55:07.427Z] INFO: Pedido entregado - ID: 61
+[2025-11-30T04:55:07.443Z] INFO: Pedido marcado como entregado ID 61 por vendedor ID 2
+[2025-11-30T04:55:07.477Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:55:07.478Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:55:54.892Z] INFO: Pedido confirmado - ID: 62
+[2025-11-30T04:55:54.892Z] INFO: Pedido confirmado ID 62 por vendedor ID 2
+[2025-11-30T04:55:55.013Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:55:55.014Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:56:15.441Z] INFO: Pedido confirmado - ID: 29
+[2025-11-30T04:56:15.442Z] INFO: Pedido confirmado ID 29 por vendedor ID 2
+[2025-11-30T04:56:15.580Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:56:15.581Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:56:21.993Z] INFO: Pedido cancelado - ID: 29
+[2025-11-30T04:56:22.003Z] INFO: Pedido cancelado ID 29 por usuario ID 2
+[2025-11-30T04:56:22.035Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T04:56:22.035Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T04:57:15.554Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T04:57:15.554Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T04:57:15.596Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T04:57:15.596Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T04:57:15.696Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T04:57:15.702Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T04:57:15.702Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T04:57:17.590Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:57:17.591Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T04:57:21.499Z] INFO: Pedido cancelado - ID: 62
+[2025-11-30T04:57:21.511Z] INFO: Pedido cancelado ID 62 por usuario ID 3
+[2025-11-30T04:57:21.785Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T04:57:21.785Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:00:02.950Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:00:02.959Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:00:02.959Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:00:04.323Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:04.323Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:05.076Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:05.077Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:05.913Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:05.914Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:07.994Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:00:07.994Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:00:09.264Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:09.264Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:15.017Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:15.017Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:21.479Z] INFO: Pedido creado exitosamente - ID: 63
+[2025-11-30T05:00:21.479Z] INFO: Pedido creado con ID 63 por usuario ID 3
+[2025-11-30T05:00:26.204Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:00:26.204Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:00:26.209Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:00:27.833Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:27.834Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:29.238Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:00:29.239Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:00:30.953Z] INFO: Pedido creado exitosamente - ID: 64
+[2025-11-30T05:00:30.953Z] INFO: Pedido creado con ID 64 por usuario ID 3
+[2025-11-30T05:00:31.847Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:00:31.849Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:00:31.850Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:00:34.164Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:34.164Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:35.004Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:00:35.005Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:00:36.058Z] INFO: Pedido creado exitosamente - ID: 65
+[2025-11-30T05:00:36.059Z] INFO: Pedido creado con ID 65 por usuario ID 3
+[2025-11-30T05:00:37.101Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:00:37.110Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:00:37.111Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:00:40.777Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:40.778Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:41.396Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:00:41.396Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:00:43.091Z] INFO: Pedido creado exitosamente - ID: 66
+[2025-11-30T05:00:43.092Z] INFO: Pedido creado con ID 66 por usuario ID 3
+[2025-11-30T05:00:50.369Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:00:50.371Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:00:50.372Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:00:52.713Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:52.714Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:54.897Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:00:54.898Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:00:56.306Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-30T05:00:56.307Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-30T05:00:56.337Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:00:56.337Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:00:56.864Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:00:56.865Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:00:58.974Z] INFO: Pedido creado exitosamente - ID: 67
+[2025-11-30T05:00:58.974Z] INFO: Pedido creado con ID 67 por usuario ID 3
+[2025-11-30T05:01:29.885Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-30T05:01:29.885Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-30T05:01:29.920Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T05:01:29.920Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T05:01:30.015Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:01:30.019Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:01:30.019Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:02:18.361Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:02:18.361Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:02:21.472Z] INFO: Pedido confirmado - ID: 67
+[2025-11-30T05:02:21.472Z] INFO: Pedido confirmado ID 67 por vendedor ID 2
+[2025-11-30T05:02:21.504Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:02:21.505Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:02:44.104Z] INFO: Pedido entregado - ID: 67
+[2025-11-30T05:02:44.120Z] INFO: Pedido marcado como entregado ID 67 por vendedor ID 2
+[2025-11-30T05:02:44.240Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:02:44.241Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:02:55.848Z] INFO: Pedido confirmado - ID: 66
+[2025-11-30T05:02:55.848Z] INFO: Pedido confirmado ID 66 por vendedor ID 2
+[2025-11-30T05:02:55.964Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:02:55.964Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:02:58.958Z] INFO: Pedido cancelado - ID: 66
+[2025-11-30T05:02:58.968Z] INFO: Pedido cancelado ID 66 por usuario ID 2
+[2025-11-30T05:02:59.033Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:02:59.034Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:03:06.084Z] INFO: Pedido confirmado - ID: 65
+[2025-11-30T05:03:06.084Z] INFO: Pedido confirmado ID 65 por vendedor ID 2
+[2025-11-30T05:03:06.168Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:03:06.168Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:03:09.605Z] INFO: Pedido confirmado - ID: 64
+[2025-11-30T05:03:09.606Z] INFO: Pedido confirmado ID 64 por vendedor ID 2
+[2025-11-30T05:03:09.634Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:03:09.634Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:04:02.237Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T05:04:02.237Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T05:04:02.277Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:04:02.278Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:04:02.387Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:04:02.387Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:04:02.392Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:04:04.661Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:04:04.661Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:04:05.738Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:04:05.739Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:04:17.113Z] INFO: Pedido cancelado - ID: 65
+[2025-11-30T05:04:17.128Z] INFO: Pedido cancelado ID 65 por usuario ID 3
+[2025-11-30T05:04:17.179Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:04:17.180Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:48:32.357Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:48:32.358Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:48:34.106Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:48:34.106Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:48:39.924Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:48:39.928Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:48:39.929Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:48:43.536Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:48:43.536Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:48:50.262Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:48:50.263Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:48:54.000Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:48:54.001Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:48:56.860Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:48:56.861Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:48:59.189Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:48:59.194Z] INFO: Conversación entre 2 y 3 consultada
+[2025-11-30T05:49:09.540Z] INFO: Mensaje creado en la DB de 3 a 2
+[2025-11-30T05:49:09.540Z] INFO: Mensaje enviado de 3 a 2
+[2025-11-30T05:49:09.571Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:49:09.573Z] INFO: Conversación entre 2 y 3 consultada
+[2025-11-30T05:49:15.378Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-30T05:49:15.379Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-30T05:49:15.410Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:49:15.410Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:49:18.301Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:49:18.303Z] INFO: Conversación entre 2 y 3 consultada
+[2025-11-30T05:49:19.524Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-30T05:49:19.524Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-30T05:49:19.547Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:49:19.547Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:49:22.871Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:49:22.871Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:49:24.469Z] INFO: Pedido creado exitosamente - ID: 68
+[2025-11-30T05:49:24.469Z] INFO: Pedido creado con ID 68 por usuario ID 3
+[2025-11-30T05:49:25.686Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:49:25.687Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:49:28.067Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:49:28.069Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:49:28.069Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:49:42.065Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-30T05:49:42.066Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-30T05:49:42.102Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T05:49:42.102Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T05:49:42.192Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:49:42.196Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:49:42.197Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:49:45.578Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:49:45.634Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T05:49:45.635Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T05:49:57.465Z] INFO: Producto actualizado - ID: 2
+[2025-11-30T05:49:57.467Z] INFO: Producto actualizado - ID: 2
+[2025-11-30T05:49:57.511Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T05:49:57.511Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T05:50:02.655Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:50:02.693Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T05:50:02.693Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T05:50:10.229Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:50:10.230Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:50:14.520Z] INFO: Pedido confirmado - ID: 68
+[2025-11-30T05:50:14.521Z] INFO: Pedido confirmado ID 68 por vendedor ID 2
+[2025-11-30T05:50:14.670Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:50:14.670Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:50:17.782Z] INFO: Pedido entregado - ID: 68
+[2025-11-30T05:50:17.811Z] INFO: Pedido marcado como entregado ID 68 por vendedor ID 2
+[2025-11-30T05:50:17.843Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:50:17.843Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:50:34.674Z] INFO: Pedido cancelado - ID: 64
+[2025-11-30T05:50:34.686Z] INFO: Pedido cancelado ID 64 por usuario ID 2
+[2025-11-30T05:50:34.725Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:50:34.725Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:50:41.344Z] INFO: Pedido cancelado - ID: 63
+[2025-11-30T05:50:41.344Z] INFO: Pedido cancelado ID 63 por usuario ID 2
+[2025-11-30T05:50:41.471Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T05:50:41.472Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T05:51:15.684Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T05:51:15.684Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T05:51:18.212Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-11-30T05:51:18.212Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-11-30T05:51:18.228Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:51:18.228Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:51:21.423Z] INFO: Mensajes entre 3 y 2 marcados como leídos
+[2025-11-30T05:51:21.425Z] INFO: Conversación entre 3 y 2 consultada
+[2025-11-30T05:51:28.646Z] INFO: Mensaje creado en la DB de 2 a 3
+[2025-11-30T05:51:28.647Z] INFO: Mensaje enviado de 2 a 3
+[2025-11-30T05:51:28.669Z] INFO: Mensajes entre 3 y 2 marcados como leídos
+[2025-11-30T05:51:28.671Z] INFO: Conversación entre 3 y 2 consultada
+[2025-11-30T05:51:30.585Z] INFO: Inbox generado para usuario ID 2 con 4 conversaciones
+[2025-11-30T05:51:30.585Z] INFO: Inbox obtenido para usuario ID: 2
+[2025-11-30T05:51:30.630Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:51:30.630Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:51:40.037Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T05:51:40.037Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T05:51:40.080Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:51:40.081Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:51:40.162Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:51:40.164Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:51:40.165Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:51:42.065Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-30T05:51:42.065Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-30T05:51:42.081Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:51:42.081Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:51:43.835Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:51:43.837Z] INFO: Conversación entre 2 y 3 consultada
+[2025-11-30T05:51:48.802Z] INFO: Mensaje creado en la DB de 3 a 2
+[2025-11-30T05:51:48.803Z] INFO: Mensaje enviado de 3 a 2
+[2025-11-30T05:51:48.828Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:51:48.829Z] INFO: Conversación entre 2 y 3 consultada
+[2025-11-30T05:51:49.498Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-30T05:51:49.499Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-30T05:51:49.525Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-30T05:51:49.525Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-30T05:51:51.148Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:51:51.148Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:51:52.047Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:51:52.048Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:51:59.083Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:51:59.086Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:51:59.087Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:52:05.500Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:52:05.501Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:52:06.039Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:52:06.039Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:52:07.332Z] INFO: Pedido creado exitosamente - ID: 69
+[2025-11-30T05:52:07.333Z] INFO: Pedido creado con ID 69 por usuario ID 3
+[2025-11-30T05:52:08.232Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:52:08.232Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:52:10.498Z] INFO: Pedido cancelado - ID: 69
+[2025-11-30T05:52:10.498Z] INFO: Pedido cancelado ID 69 por usuario ID 3
+[2025-11-30T05:52:10.523Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:52:10.523Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:52:11.328Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T05:52:11.333Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T05:52:11.333Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T05:52:14.316Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T05:52:14.316Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T05:52:15.321Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T05:52:15.321Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T05:52:16.551Z] INFO: Pedido creado exitosamente - ID: 70
+[2025-11-30T05:52:16.551Z] INFO: Pedido creado con ID 70 por usuario ID 3
+[2025-11-30T05:52:18.666Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T05:52:18.667Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T05:52:20.934Z] INFO: Mensajes entre 2 y 3 marcados como leídos
+[2025-11-30T05:52:20.936Z] INFO: Conversación entre 2 y 3 consultada

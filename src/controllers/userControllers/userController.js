@@ -2,6 +2,7 @@ const userService = require('../../services/userService');
 const { User } = require('../../models');
 const logger = require('../../utils/logger');
 
+// Consultar un perfil
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await userService.getUserProfile(req.user.id);
@@ -15,6 +16,7 @@ exports.getUserProfile = async (req, res) => {
   }
 };
 
+// Actualizar perfil
 exports.updateUserProfile = async (req, res) => {
   try {
     const updatedUser = await userService.updateUserProfile(req.user.id, req.body);
@@ -31,6 +33,7 @@ exports.updateUserProfile = async (req, res) => {
   }
 };
 
+// Obtener perfiles de vendedores
 exports.getSellers = async (req, res) => {
   try {
     const sellers = await userService.getSellers();
@@ -42,6 +45,7 @@ exports.getSellers = async (req, res) => {
   }
 };
 
+// Obtener todos los perfiles
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await userService.getAllUsers();

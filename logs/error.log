@@ -31,3 +31,7 @@ notNull Violation: BlockchainBlock.prev_Hash cannot be null
 [2025-11-30T01:57:33.382Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
 [2025-11-30T01:57:42.492Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
 [2025-11-30T01:58:16.093Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T05:00:09.264Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:09.264Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:15.017Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13
+[2025-11-30T05:00:15.017Z] ERROR: Error al crear pedido: Stock insuficiente para producto ID 13

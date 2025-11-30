@@ -1,5 +1,6 @@
 const { Notification } = require('../models');
 
+// Notificaciones no leídas
 exports.contarNoLeidas = async (usuario_id) => {
   return await Notification.count({
     where: {

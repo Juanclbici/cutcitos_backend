@@ -14,6 +14,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const authService = {
+  // Registro de usuario
   async registerUser({ nombre, email, password, codigo_UDG, telefono, rol = 'buyer' }) {
     logger.info(`Intento de registro para ${email}`);
 
@@ -68,6 +69,7 @@ const authService = {
     };
   },
 
+  // Inicio de sesión
   async loginUser({ email, password }) {
     const user = await db.User.scope('withPassword').findOne({
       where: {
@@ -116,6 +118,7 @@ const authService = {
     };
   },
 
+  // Solicitud de reseteo de contraseña, por gmail
   async requestPasswordReset(email) {
     logger.info(`Solicitud de reset para: ${email}`);
 
@@ -158,6 +161,7 @@ const authService = {
     };
   },
 
+  // Validar el código de reseteo enviado por gmail
   async validateResetCode(email, code, npassword) {
     logger.info(`Validando código de reseteo para ${email}`);
 
@@ -214,6 +218,7 @@ const authService = {
     };
   },
 
+  // Verificar token de inicio se sesión
   async verifyToken(token) {
     try {
       const decoded = jwt.verify(token, process.env.JWT_SECRET);

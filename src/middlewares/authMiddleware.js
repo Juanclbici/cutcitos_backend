@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+// Verificar token de inicio de sesión
 exports.verifyToken = (req, res, next) => {
   const token = req.headers['authorization'];
   
@@ -20,6 +21,7 @@ exports.verifyToken = (req, res, next) => {
   }
 };
 
+// Verificar el rol si es seller o buyer
 exports.checkRole = (roles) => {
   return (req, res, next) => {
     // Si el usuario es admin, permitir acceso total

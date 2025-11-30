@@ -1,5 +1,7 @@
 const notificationService = require('../../services/notificationService');
 
+
+// Notiifcaciones no leídas
 exports.contarNotificacionesNoLeidas = async (req, res) => {
   try {
     const userId = req.user?.id;

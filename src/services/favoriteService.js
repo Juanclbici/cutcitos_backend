@@ -2,6 +2,7 @@ const db = require('../models');
 const logger = require('../utils/logger');
 
 const favoriteService = {
+  // Añadir favorito
   async addFavorite(userId, productId) {
     try {
       const product = await db.Product.findByPk(productId);
@@ -22,6 +23,7 @@ const favoriteService = {
     }
   },
 
+  // Remover favorito
   async removeFavorite(userId, productId) {
     try {
       const deleted = await db.Favorite.destroy({
@@ -36,6 +38,7 @@ const favoriteService = {
     }
   },
 
+  // Obtener favoritos
   async getUserFavorites(userId) {
     try {
       const favorites = await db.Favorite.findAll({
@@ -60,6 +63,7 @@ const favoriteService = {
     }
   },
 
+  // Verificar favorito
   async isFavorite(userId, productId) {
     try {
       const exists = await db.Favorite.findOne({
@@ -73,6 +77,7 @@ const favoriteService = {
     }
   },
 
+  // Eliminar favoritos
   async clearFavorites(userId) {
     try {
       const removed = await db.Favorite.destroy({ where: { user_id: userId } });

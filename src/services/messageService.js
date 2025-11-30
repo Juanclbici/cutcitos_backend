@@ -3,6 +3,7 @@ const { Message } = db;
 const { Op } = require('sequelize');
 const logger = require('../utils/logger');
 
+// Crear y enviar mensaje a vendedor y visceversa
 exports.crearMensaje = async ({ mensaje, remitente_id, destinatario_id }) => {
   try {
     const nuevoMensaje = await Message.create({
@@ -22,6 +23,7 @@ exports.crearMensaje = async ({ mensaje, remitente_id, destinatario_id }) => {
   }
 };
 
+// Obtener el chat completo entre dos usuarios
 exports.obtenerConversacionEntreUsuarios = async (remitenteId, destinatarioId) => {
   try {
     await Message.update(
@@ -54,6 +56,7 @@ exports.obtenerConversacionEntreUsuarios = async (remitenteId, destinatarioId) =
   }
 };
 
+// Obtener mensajes 
 exports.obtenerMensajesDelUsuario = async (userId) => {
   try {
     const mensajes = await Message.findAll({
@@ -74,6 +77,7 @@ exports.obtenerMensajesDelUsuario = async (userId) => {
   }
 };
 
+// Obtener inbox del usuario
 exports.obtenerInboxDelUsuario = async (userId) => {
   try {
     const mensajes = await Message.findAll({

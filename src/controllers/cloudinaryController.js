@@ -1,5 +1,6 @@
 const cloudinaryService = require('../services/cloudinaryService');
 
+// Obtener firma cloudinary
 exports.obtenerFirma = (req, res) => {
   const { upload_preset, folder } = req.body;
 

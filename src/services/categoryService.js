@@ -2,6 +2,7 @@ const db = require('../models');
 const logger = require('../utils/logger');
 
 const categoryService = {
+  // Crear categoría
   async createCategory({ nombre, descripcion, imagen }) {
     const existingCategory = await db.Category.findOne({ 
       where: { nombre },
@@ -24,6 +25,7 @@ const categoryService = {
     return newCategory;
   },
 
+  // Obtener todas las categorías
   async getAllCategories() {
     try {
       const categories = await db.Category.findAll({
@@ -40,6 +42,7 @@ const categoryService = {
     }
   },
 
+  // Obtener la categoría por su ID
   async getCategoryById(id) {
     try {
       const options = {
