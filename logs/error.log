@@ -6,3 +6,28 @@
 [2025-05-07T02:02:24.688Z] ERROR: Error al verificar token: jwt must be a string
 [2025-05-07T02:02:36.015Z] ERROR: Error al verificar token: jwt must be a string
 [2025-05-07T02:04:52.862Z] ERROR: Error al verificar token: jwt must be a string
+[2025-11-29T21:28:46.097Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:29:11.608Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:36:31.276Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:37:51.593Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:42:24.161Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:50:40.408Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:50:58.870Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:55:31.982Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:58:51.299Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:02:00.520Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:06:26.508Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:08:55.164Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:12:35.374Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.block_index cannot be null,
+notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:12:35.376Z] ERROR: Error al crear pedido: notNull Violation: BlockchainBlock.block_index cannot be null,
+notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:48:48.845Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:53:13.946Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T23:31:16.417Z] ERROR: Error en repairChain: db is not defined
+[2025-11-29T23:32:25.658Z] ERROR: Error en repairChain: db is not defined
+[2025-11-29T23:32:58.611Z] ERROR: Error en repairChain: db is not defined
+[2025-11-30T01:26:38.239Z] ERROR: Error al obtener perfil del usuario ID 3: Usuario no encontrado
+[2025-11-30T01:57:33.382Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T01:57:42.492Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T01:58:16.093Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function

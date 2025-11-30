@@ -1,10 +1,10 @@
 const db = require('../models');
 const { Op } = require('sequelize');
 const logger = require('../utils/logger');
-const { logOrderOnBlockchain } = require("../services/blockchainService");
-
+const { addRecord } = require("../services/blockchainService");
 
 const orderService = {
+
   // Crear nuevo pedido (Estudiante)
   async createOrder(user_id, vendedor_id, productos, metodo_pago, direccion_entrega) {
     const transaction = await db.sequelize.transaction();
@@ -14,15 +14,10 @@ const orderService = {
 
       for (const item of productos) {
         const producto = await db.Product.findByPk(item.producto_id, { transaction });
-        if (!producto) {
-          logger.warn(`Producto no encontrado: ${item.producto_id}`);
-          throw new Error(`Producto ID ${item.producto_id} no encontrado`);
-        }
+        if (!producto) throw new Error(`Producto ID ${item.producto_id} no encontrado`);
 
-        if (producto.cantidad_disponible < item.cantidad) {
-          logger.warn(`Stock insuficiente para producto ID ${item.producto_id}`);
+        if (producto.cantidad_disponible < item.cantidad)
           throw new Error(`Stock insuficiente para producto ID ${item.producto_id}`);
-        }
 
         total += producto.precio * item.cantidad;
       }
@@ -44,16 +39,17 @@ const orderService = {
       }
 
       await transaction.commit();
-      logger.info(`Pedido creado exitosamente - ID: ${nuevaOrden.pedido_id}, Usuario: ${user_id}`);
-      await logOrderOnBlockchain("CREAR", nuevaOrden);
+      logger.info(`Pedido creado exitosamente - ID: ${nuevaOrden.pedido_id}`);
+
       return nuevaOrden;
 
     } catch (error) {
       await transaction.rollback();
-      logger.error(`Error al crear pedido: ${error.message}`);
+      logger.error("Error al crear pedido: " + error.message);
       throw error;
     }
   },
+
 
   // Confirmar pedido (Vendedor)
   async confirmOrder(vendorId, pedidoId) {
@@ -70,15 +66,11 @@ const orderService = {
         transaction
       });
 
-      if (!pedido) {
-        logger.warn(`Confirmación fallida - Pedido no encontrado o no autorizado: ID ${pedidoId}`);
+      if (!pedido)
         throw new Error('Pedido no encontrado o no autorizado');
-      }
 
-      if (pedido.estado_pedido !== 'pendiente') {
-        logger.warn(`Intento de confirmar pedido no pendiente - ID ${pedidoId}`);
+      if (pedido.estado_pedido !== 'pendiente')
         throw new Error('El pedido no está pendiente');
-      }
 
       await pedido.update({
         estado_pedido: 'confirmado',
@@ -87,18 +79,19 @@ const orderService = {
       }, { transaction });
 
       await transaction.commit();
-      logger.info(`Pedido confirmado - ID: ${pedidoId}, Vendedor: ${vendorId}`);
-      await logOrderOnBlockchain("CONFIRMAR", pedido);
+      logger.info(`Pedido confirmado - ID: ${pedidoId}`);
+
       return pedido;
 
     } catch (error) {
       await transaction.rollback();
-      logger.error(`Error al confirmar pedido ID ${pedidoId}: ${error.message}`);
+      logger.error("Error al confirmar pedido: " + error.message);
       throw error;
     }
   },
 
-  // Cancelar pedido (Estudiante o Vendedor con validaciones)
+
+  // Cancelar pedido
   async cancelOrder(userId, pedidoId, isVendor = false) {
     const transaction = await db.sequelize.transaction();
 
@@ -117,44 +110,112 @@ const orderService = {
         transaction
       });
 
-      if (!pedido) {
-        logger.warn(`Cancelación fallida - Pedido no encontrado: ID ${pedidoId}`);
-        throw new Error('Pedido no encontrado');
-      }
+      if (!pedido) throw new Error('Pedido no encontrado');
 
-      if (!['pendiente', 'confirmado'].includes(pedido.estado_pedido)) {
-        logger.warn(`Intento de cancelar pedido no válido - ID ${pedidoId}`);
+      if (!['pendiente', 'confirmado'].includes(pedido.estado_pedido))
         throw new Error('Este pedido no puede ser cancelado');
-      }
 
       if (isVendor) {
         const productos = pedido.Productos || [];
         const esDelVendedor = productos.some(p => p.vendedor_id === userId);
-        if (!esDelVendedor) {
-          logger.warn(`Vendedor no autorizado para cancelar pedido ID ${pedidoId}`);
+        if (!esDelVendedor)
           throw new Error('No autorizado: este pedido no pertenece a este vendedor');
-        }
       } else {
-        if (pedido.usuario_id !== userId) {
-          logger.warn(`Usuario no autorizado para cancelar pedido ID ${pedidoId}`);
+        if (pedido.usuario_id !== userId)
           throw new Error('No autorizado: este pedido no pertenece a este usuario');
-        }
       }
 
       await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
+
       await transaction.commit();
-      logger.info(`Pedido cancelado - ID: ${pedidoId}, Por: ${isVendor ? 'vendedor' : 'usuario'} ID ${userId}`);
-      await logOrderOnBlockchain("CANCELAR", pedido);
+      logger.info(`Pedido cancelado - ID: ${pedidoId}`);
+
       return pedido;
 
     } catch (error) {
       await transaction.rollback();
-      logger.error(`Error al cancelar pedido ID ${pedidoId}: ${error.message}`);
+      logger.error("Error al cancelar pedido: " + error.message);
       throw error;
     }
   },
 
-  // Historial de pedidos por usuario
+
+  // Marcar como entregado
+// Marcar como entregado - VERSIÓN CORREGIDA
+async markAsDelivered(vendorId, pedidoId) {
+  const transaction = await db.sequelize.transaction();
+
+  try {
+    const pedido = await db.Order.findOne({
+      where: {
+        pedido_id: pedidoId,
+        estado_pedido: 'confirmado'
+      },
+      include: [{
+        model: db.Product,
+        as: 'Productos',
+        where: { vendedor_id: vendorId },
+        through: { attributes: ['cantidad'] }
+      }],
+      transaction
+    });
+
+    if (!pedido)
+      throw new Error('Pedido no encontrado o no confirmado');
+
+    // Actualizar stock
+    for (const producto of pedido.Productos) {
+      const cantidad = producto.OrderItem.cantidad;
+      await db.Product.update(
+        {
+          cantidad_disponible: db.sequelize.literal(`cantidad_disponible - ${cantidad}`),
+          cantidad_vendida: db.sequelize.literal(`cantidad_vendida + ${cantidad}`)
+        },
+        { where: { producto_id: producto.producto_id }, transaction }
+      );
+    }
+
+    // Actualizar estado del pedido
+    const updatedPedido = await pedido.update({
+      estado_pedido: 'entregado',
+      venta_realizada: true
+    }, { transaction });
+
+    await transaction.commit();
+    logger.info(`Pedido entregado - ID: ${pedidoId}`);
+
+    // 🔥 BLOCKCHAIN SOLO EN ENTREGAR - DATOS CONSISTENTES
+    try {
+      await addRecord({
+        action: "VENTA_COMPLETADA",
+        order_id: pedidoId,
+        vendor_id: vendorId,
+        user_id: pedido.usuario_id,
+        total: pedido.total, // ← Incluir total para consistencia
+        estado_final: "entregado",
+        timestamp_entrega: new Date().toISOString(), // ← Timestamp consistente
+        // Incluir info de productos para hacer único el bloque
+        productos: pedido.Productos.map(p => ({
+          producto_id: p.producto_id,
+          nombre: p.nombre,
+          precio: p.precio,
+          cantidad: p.OrderItem.cantidad
+        }))
+      });
+    } catch (err) {
+      logger.error("Blockchain error (ENTREGAR): " + err.message);
+    }
+
+    return updatedPedido;
+
+  } catch (error) {
+    await transaction.rollback();
+    logger.error("Error al marcar como entregado: " + error.message);
+    throw error;
+  }
+},
+
+   // Historial de pedidos por usuario
   async getOrderHistory(userId) {
     try {
       const pedidos = await db.Order.findAll({
@@ -208,63 +269,10 @@ const orderService = {
       logger.error(`Error al obtener pedidos del vendedor ${vendorId}: ${error.message}`);
       throw error;
     }
-  },
-
-  // Marcar como entregado (Vendedor)
-  async markAsDelivered(vendorId, pedidoId) {
-    const transaction = await db.sequelize.transaction();
-
-    try {
-      const pedido = await db.Order.findOne({
-        where: {
-          pedido_id: pedidoId,
-          estado_pedido: 'confirmado'
-        },
-        include: [{
-          model: db.Product,
-          as: 'Productos',
-          where: { vendedor_id: vendorId },
-          through: { attributes: ['cantidad'] }
-        }],
-        transaction
-      });
-
-      if (!pedido) {
-        logger.warn(`No se puede marcar como entregado - Pedido no encontrado o no confirmado: ID ${pedidoId}`);
-        throw new Error('Pedido no encontrado o no confirmado');
-      }
-
-      for (const producto of pedido.Productos) {
-        const cantidad = producto.OrderItem.cantidad;
-
-        await db.Product.update(
-          {
-            cantidad_disponible: db.sequelize.literal(`cantidad_disponible - ${cantidad}`),
-            cantidad_vendida: db.sequelize.literal(`cantidad_vendida + ${cantidad}`)
-          },
-          {
-            where: { producto_id: producto.producto_id },
-            transaction
-          }
-        );
-      }
-
-      const updatedPedido = await pedido.update({
-        estado_pedido: 'entregado',
-        venta_realizada: true
-      }, { transaction });
-
-      await transaction.commit();
-      logger.info(`Pedido entregado - ID: ${pedidoId}, Vendedor: ${vendorId}`);
-      await logOrderOnBlockchain("ENTREGAR", updatedPedido);
-      return updatedPedido;
-
-    } catch (error) {
-      await transaction.rollback();
-      logger.error(`Error al marcar como entregado pedido ID ${pedidoId}: ${error.message}`);
-      throw error;
-    }
   }
+  
 };
+
+
 
 module.exports = orderService;

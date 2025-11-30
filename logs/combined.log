@@ -932,3 +932,494 @@
 [2025-11-07T19:29:08.851Z] INFO: ✅ Registros de blockchain obtenidos correctamente
 [2025-11-07T19:33:54.824Z] INFO: 📦 Se consultaron 6 registros de blockchain
 [2025-11-07T19:33:54.826Z] INFO: ✅ Registros de blockchain obtenidos correctamente
+[2025-11-07T23:34:39.265Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T23:34:39.266Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T23:34:40.023Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T23:34:40.023Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T23:34:40.078Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T23:34:50.480Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T23:34:50.480Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T23:34:52.332Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T23:34:52.333Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T23:34:54.629Z] INFO: Pedido creado exitosamente - ID: 39, Usuario: 3
+[2025-11-07T23:34:54.923Z] INFO: CREAR registrado en blockchain: 0x4dec4af36a100214c9290e0a58684fb6ffe31e37e136bcb8c4f9e2391859fe8c
+[2025-11-07T23:34:54.924Z] INFO: Pedido creado con ID 39 por usuario ID 3
+[2025-11-07T23:35:28.140Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T23:35:28.148Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T23:35:28.149Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T23:35:30.481Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-07T23:35:30.482Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-07T23:50:09.117Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-07T23:50:09.150Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-07T23:50:09.582Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T23:50:09.583Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-07T23:50:10.387Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T23:50:10.444Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T23:50:10.447Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T23:50:10.454Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T23:50:10.460Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T23:50:10.461Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T23:50:13.995Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-07T23:50:13.996Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-07T23:50:15.752Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-07T23:50:15.752Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-07T23:50:15.829Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-07T23:50:15.831Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-07T23:50:19.111Z] INFO: Mensajes entre 1 y 3 marcados como leídos
+[2025-11-07T23:50:19.116Z] INFO: Conversación entre 1 y 3 consultada
+[2025-11-07T23:50:21.915Z] INFO: Inbox generado para usuario ID 3 con 2 conversaciones
+[2025-11-07T23:50:21.916Z] INFO: Inbox obtenido para usuario ID: 3
+[2025-11-07T23:50:22.019Z] INFO: getAllUsers: 19 usuarios encontrados
+[2025-11-07T23:50:22.020Z] INFO: Se obtuvo la lista de todos los usuarios (19)
+[2025-11-07T23:50:23.453Z] INFO: Listado de todas las categorías obtenido
+[2025-11-07T23:50:23.519Z] INFO: Consulta de productos disponibles realizada
+[2025-11-07T23:50:23.521Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-07T23:50:33.190Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-07T23:50:33.195Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T21:13:40.023Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-29T21:13:40.025Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-29T21:18:32.897Z] INFO: Registros de blockchain obtenidos correctamente
+[2025-11-29T21:18:48.894Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T21:18:48.894Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T21:18:50.518Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T21:18:50.521Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T21:28:28.312Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-29T21:28:28.315Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-29T21:28:28.739Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T21:28:28.740Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T21:28:29.772Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T21:28:29.830Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T21:28:29.830Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T21:28:29.840Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T21:28:29.840Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T21:28:29.849Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T21:28:42.380Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T21:28:42.380Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T21:28:44.084Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T21:28:44.084Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T21:28:46.092Z] INFO: Pedido creado exitosamente - ID: 40, Usuario: 3
+[2025-11-29T21:28:46.097Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:29:11.608Z] INFO: Pedido creado exitosamente - ID: 41, Usuario: 3
+[2025-11-29T21:29:11.608Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:36:31.269Z] INFO: Pedido creado exitosamente - ID: 42, Usuario: 3
+[2025-11-29T21:36:31.276Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:37:51.589Z] INFO: Pedido creado exitosamente - ID: 43, Usuario: 3
+[2025-11-29T21:37:51.593Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:42:24.156Z] INFO: Pedido creado exitosamente - ID: 44, Usuario: 3
+[2025-11-29T21:42:24.161Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:50:40.400Z] INFO: Pedido creado exitosamente - ID: 45, Usuario: 3
+[2025-11-29T21:50:40.408Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:50:53.105Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T21:50:53.110Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T21:50:53.111Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T21:50:55.460Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T21:50:55.461Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T21:50:57.471Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T21:50:57.472Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T21:50:58.867Z] INFO: Pedido creado exitosamente - ID: 46, Usuario: 3
+[2025-11-29T21:50:58.870Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:55:31.976Z] INFO: Pedido creado exitosamente - ID: 47, Usuario: 3
+[2025-11-29T21:55:31.982Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T21:58:51.295Z] INFO: Pedido creado exitosamente - ID: 48, Usuario: 3
+[2025-11-29T21:58:51.299Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:02:00.515Z] INFO: Pedido creado exitosamente - ID: 49, Usuario: 3
+[2025-11-29T22:02:00.520Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:06:26.501Z] INFO: Pedido creado exitosamente - ID: 50, Usuario: 3
+[2025-11-29T22:06:26.508Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:08:55.160Z] INFO: Pedido creado exitosamente - ID: 51, Usuario: 3
+[2025-11-29T22:08:55.164Z] ERROR: Error al crear pedido: Transaction cannot be rolled back because it has been finished with state: commit
+[2025-11-29T22:12:35.369Z] INFO: Pedido creado exitosamente - ID: 52
+[2025-11-29T22:12:35.374Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.block_index cannot be null,
+notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:12:35.375Z] INFO: Pedido creado con ID 52 por usuario ID 3
+[2025-11-29T22:12:35.376Z] ERROR: Error al crear pedido: notNull Violation: BlockchainBlock.block_index cannot be null,
+notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:48:34.669Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T22:48:34.671Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T22:48:35.401Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T22:48:35.436Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T22:48:35.436Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T22:48:46.075Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T22:48:46.076Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T22:48:47.212Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T22:48:47.213Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T22:48:48.826Z] INFO: Pedido creado exitosamente - ID: 53
+[2025-11-29T22:48:48.845Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:48:48.846Z] INFO: Pedido creado con ID 53 por usuario ID 3
+[2025-11-29T22:53:09.421Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T22:53:09.429Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T22:53:09.429Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T22:53:11.241Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T22:53:11.241Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T22:53:12.723Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T22:53:12.723Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T22:53:13.937Z] INFO: Pedido creado exitosamente - ID: 54
+[2025-11-29T22:53:13.946Z] ERROR: Blockchain error (CREATE): notNull Violation: BlockchainBlock.prev_Hash cannot be null
+[2025-11-29T22:53:13.947Z] INFO: Pedido creado con ID 54 por usuario ID 3
+[2025-11-29T22:54:50.442Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T22:54:50.444Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T22:54:50.448Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T22:54:55.030Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T22:54:55.030Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T22:54:55.953Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T22:54:55.954Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T22:54:57.387Z] INFO: Pedido creado exitosamente - ID: 55
+[2025-11-29T22:54:57.418Z] INFO: Pedido creado con ID 55 por usuario ID 3
+[2025-11-29T23:12:49.985Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T23:12:49.990Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T23:12:49.991Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T23:12:54.833Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T23:12:54.833Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T23:12:56.435Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T23:12:56.435Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T23:12:59.037Z] INFO: Pedido creado exitosamente - ID: 56
+[2025-11-29T23:12:59.058Z] INFO: Pedido creado con ID 56 por usuario ID 3
+[2025-11-29T23:21:00.698Z] INFO: Listado de todas las categorías obtenido
+[2025-11-29T23:21:00.706Z] INFO: Consulta de productos disponibles realizada
+[2025-11-29T23:21:00.707Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-29T23:21:04.199Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-29T23:21:04.200Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-29T23:21:05.373Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-29T23:21:05.373Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-29T23:21:06.256Z] INFO: Pedido creado exitosamente - ID: 57
+[2025-11-29T23:21:06.269Z] INFO: Pedido creado con ID 57 por usuario ID 3
+[2025-11-29T23:31:16.417Z] ERROR: Error en repairChain: db is not defined
+[2025-11-29T23:32:25.658Z] ERROR: Error en repairChain: db is not defined
+[2025-11-29T23:32:58.611Z] ERROR: Error en repairChain: db is not defined
+[2025-11-29T23:34:10.721Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 3
+[2025-11-30T01:26:38.237Z] WARN: Perfil no encontrado para el usuario ID: 3
+[2025-11-30T01:26:38.239Z] ERROR: Error al obtener perfil del usuario ID 3: Usuario no encontrado
+[2025-11-30T01:26:53.335Z] WARN: Login fallido - Usuario no encontrado o inactivo: luis@alumnos.udg.mx
+[2025-11-30T01:26:53.336Z] WARN: Error de login para luis@alumnos.udg.mx: Credenciales inválidas o cuenta inactiva
+[2025-11-30T01:27:35.453Z] INFO: Intento de registro para juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:27:35.455Z] INFO: Intento de registro para juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:27:35.565Z] INFO: Usuario creado exitosamente: juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:27:35.567Z] INFO: Token generado para: juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:27:35.568Z] INFO: Usuario registrado exitosamente: juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:27:35.650Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-11-30T01:27:35.651Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-11-30T01:27:36.177Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:27:36.179Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:27:36.182Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:27:36.182Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:27:36.183Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:27:36.184Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:28:19.596Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-11-30T01:28:19.596Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-11-30T01:28:37.822Z] INFO: Login exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:28:37.822Z] INFO: Inicio de sesión exitoso para: juan.lopez4572@alumnos.udg.mx
+[2025-11-30T01:28:37.874Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-11-30T01:28:37.874Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-11-30T01:28:38.371Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:28:39.078Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:28:39.078Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:28:42.032Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:29:23.800Z] INFO: Categoría creada: Dulces
+[2025-11-30T01:29:23.800Z] INFO: Categoría creada desde controlador: Dulces
+[2025-11-30T01:29:23.959Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:29:41.649Z] INFO: Categoría creada: Artesanías
+[2025-11-30T01:29:41.649Z] INFO: Categoría creada desde controlador: Artesanías
+[2025-11-30T01:29:41.747Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:29:58.291Z] INFO: Categoría creada: Snacks
+[2025-11-30T01:29:58.292Z] INFO: Categoría creada desde controlador: Snacks
+[2025-11-30T01:29:58.359Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:30:16.008Z] INFO: Categoría creada: Electrónica
+[2025-11-30T01:30:16.008Z] INFO: Categoría creada desde controlador: Electrónica
+[2025-11-30T01:30:16.095Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:30:30.024Z] INFO: Perfil solicitado para el usuario ID: 1
+[2025-11-30T01:30:30.025Z] INFO: Perfil consultado para el usuario ID: 1
+[2025-11-30T01:30:37.429Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:30:37.432Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:30:37.433Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:30:39.088Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-11-30T01:30:39.088Z] INFO: Productos consultados por categoría ID: 2
+[2025-11-30T01:30:39.497Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-11-30T01:30:39.497Z] INFO: Productos consultados por categoría ID: 1
+[2025-11-30T01:30:39.784Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-11-30T01:30:39.784Z] INFO: Productos consultados por categoría ID: 4
+[2025-11-30T01:32:36.925Z] INFO: Intento de registro para alondra.armenta4752@alumnos.udg.mx
+[2025-11-30T01:32:36.926Z] INFO: Intento de registro para alondra.armenta4752@alumnos.udg.mx
+[2025-11-30T01:32:37.010Z] INFO: Usuario creado exitosamente: alondra.armenta4752@alumnos.udg.mx
+[2025-11-30T01:32:37.011Z] INFO: Token generado para: alondra.armenta4752@alumnos.udg.mx
+[2025-11-30T01:32:37.012Z] INFO: Usuario registrado exitosamente: alondra.armenta4752@alumnos.udg.mx
+[2025-11-30T01:32:37.082Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T01:32:37.082Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T01:32:37.275Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:32:37.280Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:32:37.281Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:33:52.191Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:33:52.280Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:33:52.281Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:34:21.799Z] INFO: Producto creado: paleta, Vendedor ID: 2
+[2025-11-30T01:34:21.799Z] INFO: Producto creado por usuario ID 2 - ID: 1
+[2025-11-30T01:34:21.892Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:34:21.892Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:34:54.363Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:34:54.442Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:34:54.442Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:35:25.396Z] INFO: Producto creado: Chicle, Vendedor ID: 2
+[2025-11-30T01:35:25.397Z] INFO: Producto creado por usuario ID 2 - ID: 2
+[2025-11-30T01:35:25.439Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:35:25.439Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:36:05.211Z] INFO: Producto creado: Chocolate, Vendedor ID: 2
+[2025-11-30T01:36:05.211Z] INFO: Producto creado por usuario ID 2 - ID: 3
+[2025-11-30T01:36:05.274Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:36:05.274Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:37:01.662Z] INFO: Producto creado: Celular, Vendedor ID: 2
+[2025-11-30T01:37:01.662Z] INFO: Producto creado por usuario ID 2 - ID: 4
+[2025-11-30T01:37:01.951Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:37:01.951Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:37:53.357Z] INFO: Producto creado: Papas doradas, Vendedor ID: 2
+[2025-11-30T01:37:53.358Z] INFO: Producto creado por usuario ID 2 - ID: 5
+[2025-11-30T01:37:53.435Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:37:53.435Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:38:38.421Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:38:38.461Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T01:38:38.461Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T01:40:13.653Z] INFO: Intento de registro para carmen.mejia1379@alumnos.udg.mx
+[2025-11-30T01:40:13.653Z] INFO: Intento de registro para carmen.mejia1379@alumnos.udg.mx
+[2025-11-30T01:40:13.734Z] INFO: Usuario creado exitosamente: carmen.mejia1379@alumnos.udg.mx
+[2025-11-30T01:40:13.736Z] INFO: Token generado para: carmen.mejia1379@alumnos.udg.mx
+[2025-11-30T01:40:13.736Z] INFO: Usuario registrado exitosamente: carmen.mejia1379@alumnos.udg.mx
+[2025-11-30T01:40:13.798Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T01:40:13.799Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T01:40:13.928Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:40:13.943Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:40:13.944Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:40:18.798Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:40:18.871Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:40:18.872Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:40:53.531Z] INFO: Producto creado: Chokis, Vendedor ID: 3
+[2025-11-30T01:40:53.532Z] INFO: Producto creado por usuario ID 3 - ID: 6
+[2025-11-30T01:40:53.604Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:40:53.605Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:41:24.783Z] INFO: Producto creado: Barra energética, Vendedor ID: 3
+[2025-11-30T01:41:24.784Z] INFO: Producto creado por usuario ID 3 - ID: 7
+[2025-11-30T01:41:24.857Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:41:24.857Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:42:08.375Z] INFO: Producto creado: Jícama deshidratada, Vendedor ID: 3
+[2025-11-30T01:42:08.376Z] INFO: Producto creado por usuario ID 3 - ID: 8
+[2025-11-30T01:42:08.451Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:42:08.451Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:42:45.188Z] INFO: Producto creado: Betabel deshidratado, Vendedor ID: 3
+[2025-11-30T01:42:45.189Z] INFO: Producto creado por usuario ID 3 - ID: 9
+[2025-11-30T01:42:45.303Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:42:45.304Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:43:34.671Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:43:34.728Z] INFO: Productos del vendedor ID 3 consultados
+[2025-11-30T01:43:34.728Z] INFO: Productos del vendedor consultados - ID Vendedor: 3
+[2025-11-30T01:45:01.517Z] INFO: Intento de registro para luis@alumnos.udg.mx
+[2025-11-30T01:45:01.517Z] INFO: Intento de registro para luis@alumnos.udg.mx
+[2025-11-30T01:45:01.596Z] INFO: Usuario creado exitosamente: luis@alumnos.udg.mx
+[2025-11-30T01:45:01.598Z] INFO: Token generado para: luis@alumnos.udg.mx
+[2025-11-30T01:45:01.598Z] INFO: Usuario registrado exitosamente: luis@alumnos.udg.mx
+[2025-11-30T01:45:01.638Z] INFO: Perfil solicitado para el usuario ID: 4
+[2025-11-30T01:45:01.638Z] INFO: Perfil consultado para el usuario ID: 4
+[2025-11-30T01:45:01.760Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:45:01.766Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:45:01.766Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:45:14.185Z] INFO: Productos obtenidos por categoría - ID: 2
+[2025-11-30T01:45:14.185Z] INFO: Productos consultados por categoría ID: 2
+[2025-11-30T01:45:15.313Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:45:15.313Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:45:22.470Z] INFO: Productos obtenidos por categoría - ID: 1
+[2025-11-30T01:45:22.470Z] INFO: Productos consultados por categoría ID: 1
+[2025-11-30T01:45:30.605Z] INFO: Productos obtenidos por categoría - ID: 3
+[2025-11-30T01:45:30.605Z] INFO: Productos consultados por categoría ID: 3
+[2025-11-30T01:45:32.452Z] INFO: Productos obtenidos por categoría - ID: 4
+[2025-11-30T01:45:32.452Z] INFO: Productos consultados por categoría ID: 4
+[2025-11-30T01:45:35.140Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:45:35.140Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:45:53.167Z] INFO: Perfil solicitado para el usuario ID: 4
+[2025-11-30T01:45:53.168Z] INFO: Perfil consultado para el usuario ID: 4
+[2025-11-30T01:46:00.521Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T01:46:00.522Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T01:56:58.284Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T01:56:58.285Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T01:56:58.341Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T01:56:58.341Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T01:56:58.432Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T01:56:58.439Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T01:56:58.440Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T01:57:01.740Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T01:57:01.741Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T01:57:03.014Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T01:57:03.015Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T01:57:03.990Z] INFO: Pedido creado exitosamente - ID: 58
+[2025-11-30T01:57:04.019Z] INFO: Pedido creado con ID 58 por usuario ID 3
+[2025-11-30T01:57:33.382Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T01:57:41.369Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T01:57:41.369Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T01:57:42.492Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T01:58:14.756Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T01:58:14.756Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T01:58:16.093Z] ERROR: Error al obtener historial de pedidos: orderService.getOrderHistory is not a function
+[2025-11-30T02:01:11.508Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T02:01:11.518Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T02:01:11.519Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T02:01:13.062Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T02:01:13.062Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T02:03:40.674Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T02:03:40.675Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T02:03:42.660Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T02:03:42.660Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T02:03:48.349Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T02:03:48.349Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T02:03:49.687Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T02:03:49.688Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T02:04:07.728Z] INFO: Login exitoso para: juanclbici@gmail.com
+[2025-11-30T02:04:07.729Z] INFO: Inicio de sesión exitoso para: juanclbici@gmail.com
+[2025-11-30T02:04:07.771Z] INFO: Perfil solicitado para el usuario ID: 2
+[2025-11-30T02:04:07.772Z] INFO: Perfil consultado para el usuario ID: 2
+[2025-11-30T02:04:07.875Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T02:04:07.878Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T02:04:07.879Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T02:04:10.127Z] INFO: Historial de pedidos obtenido para usuario ID: 2
+[2025-11-30T02:04:10.127Z] INFO: Historial de pedidos consultado por usuario ID 2
+[2025-11-30T02:04:15.474Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:04:15.474Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:04:22.446Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T02:04:22.494Z] INFO: Productos del vendedor ID 2 consultados
+[2025-11-30T02:04:22.494Z] INFO: Productos del vendedor consultados - ID Vendedor: 2
+[2025-11-30T02:04:27.494Z] INFO: Lista de vendedores obtenida correctamente
+[2025-11-30T02:04:27.494Z] INFO: Consulta de todos los vendedores realizada
+[2025-11-30T02:04:35.023Z] INFO: Pedido confirmado - ID: 58
+[2025-11-30T02:04:35.050Z] INFO: Pedido confirmado ID 58 por vendedor ID 2
+[2025-11-30T02:04:35.153Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:04:35.154Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:04:39.498Z] INFO: Pedido entregado - ID: 58
+[2025-11-30T02:04:39.509Z] INFO: Pedido marcado como entregado ID 58 por vendedor ID 2
+[2025-11-30T02:04:39.544Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:04:39.545Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:11:26.199Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 3
+[2025-11-30T02:11:52.069Z] INFO: Pedido confirmado - ID: 57
+[2025-11-30T02:11:52.081Z] INFO: Pedido confirmado ID 57 por vendedor ID 2
+[2025-11-30T02:11:52.219Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:11:52.220Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:11:54.418Z] INFO: Pedido entregado - ID: 57
+[2025-11-30T02:11:54.427Z] INFO: Pedido marcado como entregado ID 57 por vendedor ID 2
+[2025-11-30T02:11:54.498Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:11:54.498Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:19:15.055Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 2
+[2025-11-30T02:19:30.890Z] INFO: Pedido confirmado - ID: 56
+[2025-11-30T02:19:30.891Z] INFO: Pedido confirmado ID 56 por vendedor ID 2
+[2025-11-30T02:19:30.990Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:19:30.991Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:19:33.474Z] INFO: Pedido entregado - ID: 56
+[2025-11-30T02:19:33.489Z] INFO: Pedido marcado como entregado ID 56 por vendedor ID 2
+[2025-11-30T02:19:33.525Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:19:33.525Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:20:18.786Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 1
+[2025-11-30T02:20:39.502Z] INFO: Pedido confirmado - ID: 37
+[2025-11-30T02:20:39.503Z] INFO: Pedido confirmado ID 37 por vendedor ID 2
+[2025-11-30T02:20:39.535Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:20:39.535Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:20:52.065Z] INFO: Pedido entregado - ID: 37
+[2025-11-30T02:20:52.074Z] INFO: Pedido marcado como entregado ID 37 por vendedor ID 2
+[2025-11-30T02:20:52.171Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:20:52.172Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:21:59.749Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 1
+[2025-11-30T02:22:42.016Z] INFO: Pedido confirmado - ID: 39
+[2025-11-30T02:22:42.018Z] INFO: Pedido confirmado ID 39 por vendedor ID 2
+[2025-11-30T02:22:42.058Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:22:42.058Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:22:52.455Z] INFO: Pedido entregado - ID: 39
+[2025-11-30T02:22:52.471Z] INFO: Pedido marcado como entregado ID 39 por vendedor ID 2
+[2025-11-30T02:22:52.564Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:22:52.564Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:29:10.614Z] INFO: Cadena blockchain reparada desde bloque 1. Bloques afectados: 1
+[2025-11-30T02:29:16.027Z] INFO: Pedido confirmado - ID: 55
+[2025-11-30T02:29:16.028Z] INFO: Pedido confirmado ID 55 por vendedor ID 2
+[2025-11-30T02:29:16.122Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:29:16.123Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:29:21.399Z] INFO: Pedido entregado - ID: 55
+[2025-11-30T02:29:21.411Z] INFO: Pedido marcado como entregado ID 55 por vendedor ID 2
+[2025-11-30T02:29:21.497Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:29:21.498Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:33:13.470Z] INFO: Pedido confirmado - ID: 54
+[2025-11-30T02:33:13.472Z] INFO: Pedido confirmado ID 54 por vendedor ID 2
+[2025-11-30T02:33:13.594Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:33:13.594Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:33:16.844Z] INFO: Pedido entregado - ID: 54
+[2025-11-30T02:33:16.858Z] INFO: Pedido marcado como entregado ID 54 por vendedor ID 2
+[2025-11-30T02:33:16.948Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:33:16.948Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:38:39.470Z] INFO: Cadena blockchain reparada desde bloque 0. Bloques afectados: 2
+[2025-11-30T02:38:49.370Z] INFO: Pedido confirmado - ID: 53
+[2025-11-30T02:38:49.370Z] INFO: Pedido confirmado ID 53 por vendedor ID 2
+[2025-11-30T02:38:49.459Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:38:49.460Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:38:51.009Z] INFO: Pedido entregado - ID: 53
+[2025-11-30T02:38:51.022Z] INFO: Pedido marcado como entregado ID 53 por vendedor ID 2
+[2025-11-30T02:38:51.091Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:38:51.091Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:10.394Z] INFO: Pedido confirmado - ID: 52
+[2025-11-30T02:39:10.394Z] INFO: Pedido confirmado ID 52 por vendedor ID 2
+[2025-11-30T02:39:10.503Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:10.503Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:12.445Z] INFO: Pedido entregado - ID: 52
+[2025-11-30T02:39:12.454Z] INFO: Pedido marcado como entregado ID 52 por vendedor ID 2
+[2025-11-30T02:39:12.542Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:12.543Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:13.393Z] INFO: Pedido confirmado - ID: 51
+[2025-11-30T02:39:13.394Z] INFO: Pedido confirmado ID 51 por vendedor ID 2
+[2025-11-30T02:39:13.469Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:13.470Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:14.910Z] INFO: Pedido entregado - ID: 51
+[2025-11-30T02:39:14.920Z] INFO: Pedido marcado como entregado ID 51 por vendedor ID 2
+[2025-11-30T02:39:15.000Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:15.001Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:15.799Z] INFO: Pedido confirmado - ID: 50
+[2025-11-30T02:39:15.799Z] INFO: Pedido confirmado ID 50 por vendedor ID 2
+[2025-11-30T02:39:15.822Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:15.823Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:39:17.487Z] INFO: Pedido entregado - ID: 50
+[2025-11-30T02:39:17.497Z] INFO: Pedido marcado como entregado ID 50 por vendedor ID 2
+[2025-11-30T02:39:17.578Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:39:17.579Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:41:25.095Z] INFO: Pedido confirmado - ID: 49
+[2025-11-30T02:41:25.097Z] INFO: Pedido confirmado ID 49 por vendedor ID 2
+[2025-11-30T02:41:25.210Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:41:25.211Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:41:26.970Z] INFO: Pedido entregado - ID: 49
+[2025-11-30T02:41:26.981Z] INFO: Pedido marcado como entregado ID 49 por vendedor ID 2
+[2025-11-30T02:41:28.020Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:41:28.021Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:41:45.182Z] INFO: Cadena blockchain reparada desde bloque 0. Bloques afectados: 6
+[2025-11-30T02:42:14.065Z] INFO: Cadena blockchain reparada desde bloque 0. Bloques afectados: 6
+[2025-11-30T02:42:23.907Z] INFO: Pedido confirmado - ID: 48
+[2025-11-30T02:42:23.908Z] INFO: Pedido confirmado ID 48 por vendedor ID 2
+[2025-11-30T02:42:24.029Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:24.030Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:42:25.578Z] INFO: Pedido entregado - ID: 48
+[2025-11-30T02:42:25.592Z] INFO: Pedido marcado como entregado ID 48 por vendedor ID 2
+[2025-11-30T02:42:25.653Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:25.654Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:42:26.450Z] INFO: Pedido confirmado - ID: 47
+[2025-11-30T02:42:26.450Z] INFO: Pedido confirmado ID 47 por vendedor ID 2
+[2025-11-30T02:42:26.536Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:26.536Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:42:28.076Z] INFO: Pedido entregado - ID: 47
+[2025-11-30T02:42:28.087Z] INFO: Pedido marcado como entregado ID 47 por vendedor ID 2
+[2025-11-30T02:42:28.153Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:28.154Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:42:33.162Z] INFO: Pedido confirmado - ID: 46
+[2025-11-30T02:42:33.162Z] INFO: Pedido confirmado ID 46 por vendedor ID 2
+[2025-11-30T02:42:33.274Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:33.274Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:42:35.238Z] INFO: Pedido entregado - ID: 46
+[2025-11-30T02:42:35.246Z] INFO: Pedido marcado como entregado ID 46 por vendedor ID 2
+[2025-11-30T02:42:35.305Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:42:35.306Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:45:24.126Z] INFO: Pedido confirmado - ID: 45
+[2025-11-30T02:45:24.127Z] INFO: Pedido confirmado ID 45 por vendedor ID 2
+[2025-11-30T02:45:24.229Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:45:24.229Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:45:25.838Z] INFO: Pedido entregado - ID: 45
+[2025-11-30T02:45:25.853Z] INFO: Pedido marcado como entregado ID 45 por vendedor ID 2
+[2025-11-30T02:45:25.975Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:45:25.975Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:49:52.120Z] INFO: Pedido cancelado - ID: 44
+[2025-11-30T02:49:52.121Z] INFO: Pedido cancelado ID 44 por usuario ID 2
+[2025-11-30T02:49:52.163Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:49:52.163Z] INFO: Pedidos del vendedor ID 2 consultados
