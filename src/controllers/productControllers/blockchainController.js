@@ -28,12 +28,10 @@ exports.verifyChain = async (req, res) => {
   }
 };
 
-// --- 4. Reparar cadena ---
+
 exports.repairChain = async (req, res) => {
   try {
     const { startBlockIndex = 0 } = req.body;
-    
-    // Validar que startBlockIndex sea un número válido
     const startIndex = parseInt(startBlockIndex);
     if (isNaN(startIndex) || startIndex < 0) {
       return res.status(400).json({

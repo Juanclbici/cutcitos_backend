@@ -2,13 +2,13 @@ const crypto = require("crypto");
 const { BlockchainBlock } = require("../models");
 const db = require("../models"); 
 
-// --- Función para calcular hash ---
+// Función para calcular hash
 function computeHash({ index, timestamp, data, previous_hash }) {
   // Normalizar todos los datos
   const normalizedData = {
     index: Number(index),
     timestamp: Number(timestamp),
-    data: JSON.parse(JSON.stringify(data)), // Deep clone para limpiar
+    data: JSON.parse(JSON.stringify(data)),
     previous_hash: String(previous_hash)
   };
   
@@ -26,7 +26,7 @@ function computeHash({ index, timestamp, data, previous_hash }) {
     .digest("hex");
 }
 
-// --- Función para crear bloque génesis ---
+// Función para crear bloque génesis
 async function createGenesisBlockIfNeeded() {
   const count = await BlockchainBlock.count();
   if (count === 0) {
@@ -56,7 +56,7 @@ async function createGenesisBlockIfNeeded() {
   }
 }
 
-// --- Agregar nuevo bloque ---
+// Agregar nuevo bloque
 exports.addRecord = async (data) => {
   try {
     // Asegurar que existe el bloque génesis
@@ -105,7 +105,7 @@ exports.addRecord = async (data) => {
   }
 };
 
-// --- Obtener todos los bloques ---
+// Obtener todos los bloques
 exports.getBlockchainRecords = async () => {
   const records = await BlockchainBlock.findAll({
     order: [["block_index", "ASC"]],
@@ -117,7 +117,7 @@ exports.getBlockchainRecords = async () => {
   };
 };
 
-// --- Verificar integridad (DETECTA MÚLTIPLES ERRORES) ---
+// Verificar integridad (DETECTA MÚLTIPLES ERRORES)
 exports.verifyChain = async () => {
   const blocks = await BlockchainBlock.findAll({
     order: [["block_index", "ASC"]],
@@ -128,7 +128,7 @@ exports.verifyChain = async () => {
   }
 
   const errors = [];
-  let chainBrokenAt = null; // Para marcar dónde se rompió la cadena
+  let chainBrokenAt = null;
 
   // Verificar bloque génesis
   const genesis = blocks[0];
@@ -154,7 +154,7 @@ exports.verifyChain = async () => {
         message: `Bloque afectado por corrupción en bloque ${chainBrokenAt}`,
         severity: "MEDIUM"
       });
-      continue; // Saltar verificación detallada
+      continue;
     }
 
     // Recalcular hash del bloque actual
@@ -238,7 +238,7 @@ exports.verifyChain = async () => {
   };
 };
 
-// --- Reparar cadena desde un bloque específico ---
+// Reparar cadena desde un bloque específico
 exports.repairChainFromBlock = async (startBlockIndex) => {
   const transaction = await db.sequelize.transaction();
   
@@ -275,7 +275,7 @@ exports.repairChainFromBlock = async (startBlockIndex) => {
       // Determinar el prev_hash correcto
       let previous_hash;
       if (i === 0) {
-        previous_hash = "0"; // Génesis
+        previous_hash = "0"; 
       } else {
         const previousBlock = blocks[i - 1];
         previous_hash = previousBlock.hash; // Usar el hash RECIÉN CALCULADO del bloque anterior

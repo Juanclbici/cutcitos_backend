@@ -92,56 +92,79 @@ const orderService = {
 
 
   // Cancelar pedido
-  async cancelOrder(userId, pedidoId, isVendor = false) {
-    const transaction = await db.sequelize.transaction();
+async cancelOrder(userId, pedidoId, isVendor = false) {
+  const transaction = await db.sequelize.transaction();
 
-    try {
-      const pedido = await db.Order.findOne({
-        where: { pedido_id: pedidoId },
+  try {
+    const pedido = await db.Order.findOne({
+      where: { pedido_id: pedidoId },
+      include: [{
+        model: db.Product,
+        as: 'Productos',
         include: [{
-          model: db.Product,
-          as: 'Productos',
-          include: [{
-            model: db.User,
-            as: 'Vendedor',
-            attributes: ['user_id']
-          }]
-        }],
-        transaction
-      });
+          model: db.User,
+          as: 'Vendedor',
+          attributes: ['user_id']
+        }]
+      }],
+      transaction
+    });
 
-      if (!pedido) throw new Error('Pedido no encontrado');
+    if (!pedido) throw new Error('Pedido no encontrado');
 
-      if (!['pendiente', 'confirmado'].includes(pedido.estado_pedido))
-        throw new Error('Este pedido no puede ser cancelado');
+    if (!['pendiente', 'confirmado'].includes(pedido.estado_pedido))
+      throw new Error('Este pedido no puede ser cancelado');
 
-      if (isVendor) {
-        const productos = pedido.Productos || [];
-        const esDelVendedor = productos.some(p => p.vendedor_id === userId);
-        if (!esDelVendedor)
-          throw new Error('No autorizado: este pedido no pertenece a este vendedor');
-      } else {
-        if (pedido.usuario_id !== userId)
-          throw new Error('No autorizado: este pedido no pertenece a este usuario');
-      }
-
-      await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
-
-      await transaction.commit();
-      logger.info(`Pedido cancelado - ID: ${pedidoId}`);
-
-      return pedido;
-
-    } catch (error) {
-      await transaction.rollback();
-      logger.error("Error al cancelar pedido: " + error.message);
-      throw error;
+    // Validar quien elimina
+    if (isVendor) {
+      const productos = pedido.Productos || [];
+      const esDelVendedor = productos.some(p => p.vendedor_id === userId);
+      if (!esDelVendedor)
+        throw new Error('No autorizado: este pedido no pertenece a este vendedor');
+    } else {
+      if (pedido.usuario_id !== userId)
+        throw new Error('No autorizado: este pedido no pertenece a este usuario');
     }
-  },
+
+    // Guardar estado anterior para aber si el bloque es creado o no
+    const estadoAnterior = pedido.estado_pedido;
+
+    await pedido.update({ estado_pedido: 'cancelado' }, { transaction });
+
+    await transaction.commit();
+    logger.info(`Pedido cancelado - ID: ${pedidoId}`);
+
+    // BLOCKCHAIN SOLO para cancelaciones CONFIRMADAS
+    if (estadoAnterior === 'confirmado') {
+      try {
+        await addRecord({
+          action: "CANCELACION_CONFIRMADA",
+          order_id: pedidoId,
+          user_id: pedido.usuario_id,
+          vendor_id: isVendor ? userId : null,
+          canceled_by: isVendor ? "vendedor" : "cliente",
+          monto_perdido: pedido.total,
+          razon: "cancelacion_confirmada",
+          timestamp_cancelacion: new Date().toISOString(),
+          productos_count: pedido.Productos?.length || 0,
+          dias_confirmado: Math.floor((new Date() - new Date(pedido.fecha_confirmacion_vendedor)) / (1000 * 60 * 60 * 24))
+        });
+      } catch (err) {
+        logger.error("Blockchain error (CANCELAR): " + err.message);
+      }
+    }
+
+    return pedido;
+
+  } catch (error) {
+    await transaction.rollback();
+    logger.error("Error al cancelar pedido: " + error.message);
+    throw error;
+  }
+},
 
 
-  // Marcar como entregado
-// Marcar como entregado - VERSIÓN CORREGIDA
+// Marcar como entregado
 async markAsDelivered(vendorId, pedidoId) {
   const transaction = await db.sequelize.transaction();
 
@@ -184,17 +207,16 @@ async markAsDelivered(vendorId, pedidoId) {
     await transaction.commit();
     logger.info(`Pedido entregado - ID: ${pedidoId}`);
 
-    // 🔥 BLOCKCHAIN SOLO EN ENTREGAR - DATOS CONSISTENTES
+    // BLOCKCHAIN SOLO EN ENTREGAR
     try {
       await addRecord({
         action: "VENTA_COMPLETADA",
         order_id: pedidoId,
         vendor_id: vendorId,
         user_id: pedido.usuario_id,
-        total: pedido.total, // ← Incluir total para consistencia
+        total: pedido.total,
         estado_final: "entregado",
-        timestamp_entrega: new Date().toISOString(), // ← Timestamp consistente
-        // Incluir info de productos para hacer único el bloque
+        timestamp_entrega: new Date().toISOString(),
         productos: pedido.Productos.map(p => ({
           producto_id: p.producto_id,
           nombre: p.nombre,

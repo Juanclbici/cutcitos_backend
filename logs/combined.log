@@ -1423,3 +1423,64 @@ notNull Violation: BlockchainBlock.prev_Hash cannot be null
 [2025-11-30T02:49:52.121Z] INFO: Pedido cancelado ID 44 por usuario ID 2
 [2025-11-30T02:49:52.163Z] INFO: Pedidos del vendedor ID 2 obtenidos
 [2025-11-30T02:49:52.163Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:58:44.478Z] INFO: Pedido confirmado - ID: 43
+[2025-11-30T02:58:44.479Z] INFO: Pedido confirmado ID 43 por vendedor ID 2
+[2025-11-30T02:58:44.566Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:58:44.567Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:58:47.409Z] INFO: Pedido cancelado - ID: 43
+[2025-11-30T02:58:47.422Z] INFO: Pedido cancelado ID 43 por usuario ID 2
+[2025-11-30T02:58:47.460Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:58:47.461Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:58:53.115Z] INFO: Pedido confirmado - ID: 42
+[2025-11-30T02:58:53.115Z] INFO: Pedido confirmado ID 42 por vendedor ID 2
+[2025-11-30T02:58:53.189Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:58:53.190Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:58:55.322Z] INFO: Pedido cancelado - ID: 42
+[2025-11-30T02:58:55.331Z] INFO: Pedido cancelado ID 42 por usuario ID 2
+[2025-11-30T02:58:55.358Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:58:55.358Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:00.262Z] INFO: Pedido cancelado - ID: 41
+[2025-11-30T02:59:00.262Z] INFO: Pedido cancelado ID 41 por usuario ID 2
+[2025-11-30T02:59:00.334Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:00.334Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:05.522Z] INFO: Pedido cancelado - ID: 40
+[2025-11-30T02:59:05.523Z] INFO: Pedido cancelado ID 40 por usuario ID 2
+[2025-11-30T02:59:05.582Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:05.582Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:07.965Z] INFO: Pedido confirmado - ID: 38
+[2025-11-30T02:59:07.965Z] INFO: Pedido confirmado ID 38 por vendedor ID 2
+[2025-11-30T02:59:08.042Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:08.042Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:09.968Z] INFO: Pedido entregado - ID: 38
+[2025-11-30T02:59:09.977Z] INFO: Pedido marcado como entregado ID 38 por vendedor ID 2
+[2025-11-30T02:59:10.098Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:10.098Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:33.434Z] INFO: Pedido confirmado - ID: 36
+[2025-11-30T02:59:33.435Z] INFO: Pedido confirmado ID 36 por vendedor ID 2
+[2025-11-30T02:59:33.532Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:33.532Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:35.677Z] INFO: Pedido confirmado - ID: 35
+[2025-11-30T02:59:35.677Z] INFO: Pedido confirmado ID 35 por vendedor ID 2
+[2025-11-30T02:59:35.703Z] INFO: Pedidos del vendedor ID 2 obtenidos
+[2025-11-30T02:59:35.703Z] INFO: Pedidos del vendedor ID 2 consultados
+[2025-11-30T02:59:53.528Z] WARN: Login fallido - Contraseña incorrecta para: luis@alumnos.udg.mx
+[2025-11-30T02:59:53.528Z] WARN: Error de login para luis@alumnos.udg.mx: Credenciales inválidas
+[2025-11-30T02:59:56.887Z] WARN: Login fallido - Contraseña incorrecta para: luis@alumnos.udg.mx
+[2025-11-30T02:59:56.888Z] WARN: Error de login para luis@alumnos.udg.mx: Credenciales inválidas
+[2025-11-30T03:00:08.644Z] INFO: Login exitoso para: luis@alumnos.udg.mx
+[2025-11-30T03:00:08.644Z] INFO: Inicio de sesión exitoso para: luis@alumnos.udg.mx
+[2025-11-30T03:00:08.685Z] INFO: Perfil solicitado para el usuario ID: 3
+[2025-11-30T03:00:08.686Z] INFO: Perfil consultado para el usuario ID: 3
+[2025-11-30T03:00:08.833Z] INFO: Listado de todas las categorías obtenido
+[2025-11-30T03:00:08.860Z] INFO: Consulta de productos disponibles realizada
+[2025-11-30T03:00:08.860Z] INFO: Listado de todos los productos disponibles consultado
+[2025-11-30T03:00:14.679Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T03:00:14.680Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T03:00:22.601Z] INFO: Pedido cancelado - ID: 36
+[2025-11-30T03:00:22.615Z] INFO: Pedido cancelado ID 36 por usuario ID 3
+[2025-11-30T03:00:22.659Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T03:00:22.660Z] INFO: Historial de pedidos consultado por usuario ID 3
+[2025-11-30T03:00:59.997Z] INFO: Pedido cancelado - ID: 35
+[2025-11-30T03:01:00.006Z] INFO: Pedido cancelado ID 35 por usuario ID 3
+[2025-11-30T03:01:00.056Z] INFO: Historial de pedidos obtenido para usuario ID: 3
+[2025-11-30T03:01:00.057Z] INFO: Historial de pedidos consultado por usuario ID 3
