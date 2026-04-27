@@ -9,7 +9,7 @@ beforeAll(async () => {
   await db.sequelize.sync({ force: true });
   await new Promise(resolve => setTimeout(resolve, 500));
 
-  // ✅ Usar dominio válido
+  // Usar dominio válido
   const email = `notificador_${Date.now()}@alumnos.udg.mx`;
 
   // 1. Registrar usuario

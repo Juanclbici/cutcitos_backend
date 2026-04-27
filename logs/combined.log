@@ -985,3 +985,43 @@
 [2025-05-07 09:27:06] INFO: Perfil solicitado para el usuario ID: 9
 [2025-05-07 09:27:06] INFO: Perfil consultado para el usuario ID: 9
 [2025-05-07 09:27:06] INFO: ::1 - - [07/May/2025:15:27:06 +0000] "GET /api/users/profile HTTP/1.1" 304 - "http://localhost:3000/api-docs/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0"
+[2025-05-07 10:03:15] INFO: Intento de registro para remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Intento de registro para remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Usuario creado exitosamente: remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Token generado para: remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Usuario registrado exitosamente: remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:15 +0000] "POST /api/auth/register HTTP/1.1" 200 426 "-" "-"
+[2025-05-07 10:03:15] INFO: Intento de registro para destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Intento de registro para destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Usuario creado exitosamente: destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Token generado para: destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Usuario registrado exitosamente: destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:15 +0000] "POST /api/auth/register HTTP/1.1" 200 439 "-" "-"
+[2025-05-07 10:03:15] INFO: Login exitoso para: remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: Inicio de sesión exitoso para: remitente_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:15] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:15 +0000] "POST /api/auth/login HTTP/1.1" 200 503 "-" "-"
+[2025-05-07 10:03:16] INFO: Login exitoso para: destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:16] INFO: Inicio de sesión exitoso para: destinatario_1746633795706@alumnos.udg.mx
+[2025-05-07 10:03:16] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:16 +0000] "POST /api/auth/login HTTP/1.1" 200 519 "-" "-"
+[2025-05-07 10:03:16] INFO: Mensaje creado en la DB de 1 a 2
+[2025-05-07 10:03:16] INFO: Mensaje enviado de 1 a 2
+[2025-05-07 10:03:16] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:16 +0000] "POST /api/messages HTTP/1.1" 201 236 "-" "-"
+[2025-05-07 10:03:16] INFO: Inbox generado para usuario ID 1 con 1 conversaciones
+[2025-05-07 10:03:16] INFO: Inbox obtenido para usuario ID: 1
+[2025-05-07 10:03:16] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:16 +0000] "GET /api/messages/inbox HTTP/1.1" 200 108 "-" "-"
+[2025-05-07 10:03:16] INFO: Mensajes entre 1 y 1 marcados como leídos
+[2025-05-07 10:03:16] INFO: Conversación entre 1 y 1 consultada
+[2025-05-07 10:03:16] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:16 +0000] "GET /api/messages/conversation/1 HTTP/1.1" 200 2 "-" "-"
+[2025-05-07 10:03:16] INFO: Conversaciones del usuario 1 obtenidas
+[2025-05-07 10:03:16] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:16 +0000] "GET /api/messages/conversations HTTP/1.1" 200 139 "-" "-"
+[2025-05-07 10:03:37] INFO: Intento de registro para notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: Intento de registro para notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: Usuario creado exitosamente: notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: Token generado para: notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: Usuario registrado exitosamente: notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:37 +0000] "POST /api/auth/register HTTP/1.1" 200 426 "-" "-"
+[2025-05-07 10:03:37] INFO: Login exitoso para: notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: Inicio de sesión exitoso para: notificador_1746633817373@alumnos.udg.mx
+[2025-05-07 10:03:37] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:37 +0000] "POST /api/auth/login HTTP/1.1" 200 496 "-" "-"
+[2025-05-07 10:03:37] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:37 +0000] "GET /api/notifications/unread-count HTTP/1.1" 200 15 "-" "-"
+[2025-05-07 10:03:37] INFO: ::ffff:127.0.0.1 - - [07/May/2025:16:03:37 +0000] "GET /api/notifications/unread-count HTTP/1.1" 401 36 "-" "-"
