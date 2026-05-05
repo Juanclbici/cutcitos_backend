@@ -10,8 +10,8 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:3000/api',
-        description: 'Servidor local',
+        url: process.env.API_URL || `http://localhost:${process.env.PORT || 3000}`,
+        description: 'Servidor Actual',
       },
     ],
     components: {
