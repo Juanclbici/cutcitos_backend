@@ -1,10 +1,11 @@
+require('dotenv').config();
 const app = require('./app');
 const db = require('./models');
-require('dotenv').config();
 
 const PORT = process.env.PORT || 3000;
 
-// Quitamos el .sync() para evitar el error de Duplicate Foreign Key
+// Arrancamos directamente
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo`);
+  console.log(`Servidor Cutcitos corriendo en puerto ${PORT}`);
+  console.log(`API URL: ${process.env.API_URL}`);
 });
