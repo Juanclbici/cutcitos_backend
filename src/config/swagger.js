@@ -10,8 +10,12 @@ const options = {
     },
     servers: [
       {
-        url: process.env.API_URL || `http://localhost:${process.env.PORT || 3000}`,
-        description: 'Servidor Actual',
+        url: "/api", 
+        description: 'Servidor en la Nube (ALB)',
+      },
+      {
+        url: "http://localhost:3000/api",
+        description: 'Servidor Local',
       },
     ],
     components: {
