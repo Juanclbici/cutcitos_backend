@@ -2,6 +2,11 @@
     "name": "cutcitos-backend",
     "version": "1.0.0",
     "description": "Backend para aplicación Cutcitos",
+    "author": {
+        "name": "Juan Carlos",
+        "email": "juanclbici@gmail.com",
+        "url": "https://github.com/Juanclbici"
+    },
     "main": "src/app.js",
     "scripts": {
         "start": "node src/server.js",
