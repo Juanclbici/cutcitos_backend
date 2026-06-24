@@ -1,4 +1,3 @@
-import { stack } from 'sequelize/lib/utils';
 import { createLogger, format, transports } from 'winston';
 
 export const logger = createLogger({
