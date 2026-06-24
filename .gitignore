@@ -2,3 +2,6 @@ node_modules/
 .env
 .env.production
 .env.test
+docker-compose.yml
+logs/
+comandos.txt
