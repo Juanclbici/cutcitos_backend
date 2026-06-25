@@ -1,12 +1,14 @@
-const express = require('express');
-const cors = require('cors');
-const db = require('./models');
-const swaggerUi = require('swagger-ui-express');
-const swaggerSpec = require('./config/swagger');
-const simpleLogger = require('./middlewares/simpleLogger');
-require('dotenv').config();
+import express, { Request, Response, NextFunction } from 'express';
+import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
+import { env } from './config/env.js';
+import { swaggerSpec } from './config/swagger.js';
+import { errorMiddleware } from './middlewares/errorMiddleware.js';
+import { logger } from './utils/logger.js';
+//const db = require('./models');
 
-// Importar rutas
+// Import routes
+/*
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const orderRoutes = require('./routes/orderRoutes');
@@ -17,11 +19,11 @@ const messageRoutes = require('./routes/messageRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const favoritesRoutes = require('./routes/favoriteRoutes');
 const blockchainRoutes = require("./routes/blockchainRoutes.js");
-
+*/
 const app = express();
 
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: env.Frontend_URL,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
   credentials: true,
@@ -31,16 +33,21 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(simpleLogger);
+// Log each request that arrives at the API
+app.use((req: Request, res: Response, next: NextFunction) => {
+  logger.info(`Incoming Request: [${req.method}] ${req.path}`);
+  next();
+});
 
 // Swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.get('/swagger.json', (req, res) => {
+app.get('/swagger', (req: Request, res: Response) => {
   res.setHeader('Content-Type', 'application/json');
   res.send(swaggerSpec);
 });
 
-// Rutas
+// Routes
+/*
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
@@ -51,19 +58,19 @@ app.use('/api/favorites', favoritesRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use("/api/blockchain", blockchainRoutes);
-
-// Prueba
-app.get('/', (req, res) => {
-  res.send('API de Cutcitos funcionando');
-});
-app.get('/ping', (req, res) => {
-  res.status(200).json({ message: 'Servidor activo ✅' });
+*/
+// Test route
+app.get('/', (req: Request, res: Response) => {
+  res.send('Cutcitos API is running successfully');
 });
 
-// Errores globales
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Ocurrió un error en el servidor' });
+app.get('/ping', (req: Request, res: Response) => {
+  res.status(200).json({ message: 'Server active' });
 });
 
-module.exports = app;
+// Global errors
+app.use(errorMiddleware);
+
+export default app;
+
+

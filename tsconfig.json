@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
+    "rootDir": "./src",
     "target": "es2022",
-    "module": "Node16",                      /* El estándar nativo e infalible para backend Node */
-    "moduleResolution": "nodenext",              /* Obliga a TS a mapear node_modules físicamente */
+    "module": "nodenext",                   
+    "moduleResolution": "nodenext",   
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "allowJs": true,                           /* Mantiene la convivencia con tus archivos .js */
+    "allowJs": true,                           
     "noEmit": true,
-    "typeRoots": ["./node_modules/@types"]
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
   },
-  "include": ["src/**/*", "tests/test-env.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }

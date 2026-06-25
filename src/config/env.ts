@@ -17,6 +17,7 @@ const requiredEnvVariables = [
   'MYSQL_PASSWORD',
   'MYSQL_DATABASE',
   'MYSQL_PORT',
+  'DATABASE_URL',
   'JWT_SECRET',
   'EMAIL_USER',
   'EMAIL_PASS',
@@ -49,6 +50,7 @@ export const env = {
     password: process.env.MYSQL_PASSWORD!,
     name: process.env.MYSQL_DATABASE!,
     port: parseInt(process.env.MYSQL_PORT!, 10),
+    url: process.env.DATABASE_URL,
   },
   JWT_Secret: process.env.JWT_SECRET!,
   email: {
