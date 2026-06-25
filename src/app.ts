@@ -1,13 +1,13 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
-import { env } from './config/env';
-import { swaggerSpec } from './config/swagger';
-import { errorMiddleware } from './middlewares/errorMiddleware';
-import { logger } from './utils/logger';
+import { env } from './config/env.js';
+import { swaggerSpec } from './config/swagger.js';
+import { errorMiddleware } from './middlewares/errorMiddleware.js';
+import { logger } from './utils/logger.js';
 //const db = require('./models');
 
-// Importar rutas
+// Import routes
 /*
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -46,7 +46,7 @@ app.get('/swagger', (req: Request, res: Response) => {
   res.send(swaggerSpec);
 });
 
-// Rutas
+// Routes
 /*
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
@@ -68,7 +68,7 @@ app.get('/ping', (req: Request, res: Response) => {
   res.status(200).json({ message: 'Server active' });
 });
 
-// Errores globales
+// Global errors
 app.use(errorMiddleware);
 
 export default app;

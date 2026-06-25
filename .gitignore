@@ -4,4 +4,5 @@ node_modules/
 .env.test
 docker-compose.yml
 logs/
-comandos.txt
+src/generated/prisma/
+others/
